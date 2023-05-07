@@ -3,8 +3,19 @@
     --coral: #F48364;
 }
 
+body {
+    margin: 0;
+}
+
+a{
+    font-family: 'Lexend';
+    text-decoration: none;
+    color: var(--coral);
+}
+
 h1, h2{
     font-family: 'Lexend';
+    margin: 0px;
 }
 
 p{

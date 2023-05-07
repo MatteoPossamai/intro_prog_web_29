@@ -16,7 +16,7 @@
 </h1>
 <br/>
 <a href="activities.jsp">Activiteis</a>
-<a href="chi-siamo.jsp">Chi siamo</a>
+<a href="about.jsp">Chi siamo</a>
 <a href="invio-confermato.jsp">Invio</a>
 
 </body>

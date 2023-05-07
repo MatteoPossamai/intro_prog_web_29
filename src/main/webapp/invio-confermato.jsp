@@ -15,6 +15,9 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body class="invio-confermato">
+<jsp:include page="header.jsp"/>
+
+
 
 <div class="text-image">
     <img src="./images/placeholder.jpeg" class="image">
@@ -23,6 +26,8 @@
             a breve</h1>
     </div>
 </div>
+<jsp:include page="phrase.jsp" />
+<jsp:include page="footer.jsp"/>
 
 </body>
 </html>

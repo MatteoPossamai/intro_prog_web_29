@@ -1,0 +1,47 @@
+:root{
+    --green: #C2D9C0;
+    --coral: #F48364;
+}
+
+a{
+    color: black;
+    margin-top: 10px;
+}
+
+a:hover{
+    color: white;
+}
+
+.title{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 40pt;
+}
+
+.header{
+    background-color: coral;
+    height: 200px;
+}
+
+.header-menu{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    justify-content: center;
+    gap: 100px;
+    text-decoration: none;
+}
+
+.menu-item{
+    padding-top: 10px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.menu-item:hover{
+    background-color:  black;
+}

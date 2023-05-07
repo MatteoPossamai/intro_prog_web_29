@@ -10,11 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/invio-confermato.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/invio-confermato.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/header.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/chi-siamo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/chi-siamo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/chi-siamo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/invio-confermato.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/invio-confermato.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Jsp File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -172,6 +173,7 @@
       <updated>1683138986185</updated>
       <workItem from="1683138987349" duration="3000" />
       <workItem from="1683384025843" duration="3048000" />
+      <workItem from="1683463979547" duration="2157000" />
     </task>
     <servers />
   </component>

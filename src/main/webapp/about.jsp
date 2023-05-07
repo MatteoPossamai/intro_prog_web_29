@@ -14,7 +14,9 @@
     <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
+<jsp:include page="header.jsp"/>
 <body>
+
     <div class="title">
     <h1>Chi siamo</h1>
     </div>
@@ -31,5 +33,9 @@
         </div>
 
     </div>
+
+    <jsp:include page="phrase.jsp" />
+    <jsp:include page="footer.jsp"/>
+
 </body>
 </html>
