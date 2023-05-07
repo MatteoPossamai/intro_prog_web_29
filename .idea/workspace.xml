@@ -10,16 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/contact.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/phrase.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/footer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/phrase.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/phrase.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/header.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +170,7 @@
       <updated>1683138986185</updated>
       <workItem from="1683138987349" duration="3000" />
       <workItem from="1683384025843" duration="3048000" />
-      <workItem from="1683463979547" duration="6934000" />
+      <workItem from="1683463979547" duration="9066000" />
     </task>
     <servers />
   </component>
