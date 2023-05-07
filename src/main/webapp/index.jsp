@@ -11,7 +11,13 @@
     <title>Title</title>
 </head>
 <body>
+
+<h1><%= "Hello World!" %>
+</h1>
+<br/>
 <a href="activities.jsp">Activiteis</a>
+<a href="chi-siamo.jsp">Chi siamo</a>
+<a href="invio-confermato.jsp">Invio</a>
 
 </body>
 </html>

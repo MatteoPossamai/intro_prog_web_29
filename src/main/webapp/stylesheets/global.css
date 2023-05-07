@@ -1,0 +1,21 @@
+:root{
+    --green: #C2D9C0;
+    --coral: #F48364;
+}
+
+h1, h2{
+    font-family: 'Lexend';
+}
+
+p{
+    font-family: 'Lato';
+}
+
+.title{
+    text-align: center;
+    width: 100%;
+    height: 100px;
+}
+
+
+

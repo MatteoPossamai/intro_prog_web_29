@@ -1,0 +1,30 @@
+:root{
+    --green: #C2D9C0;
+    --coral: #F48364;
+}
+
+.invio-confermato{
+    width: 100%;
+    height: 100%;
+    background-color: var(--green);
+}
+
+.text-image{
+    margin-top: 100px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+}
+
+.image {
+    max-width: 400px;
+}
+
+.text{
+    display: grid;
+    max-width: 500px;
+    align-content: center;
+    font-size: 15pt;
+}
