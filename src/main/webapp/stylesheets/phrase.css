@@ -1,0 +1,26 @@
+:root{
+    --green: #C2D9C0;
+    --coral: #F48364;
+}
+
+.phrase{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    height: 200px;
+    background-color: var(--green) ;
+}
+
+.quote{
+    margin: 0px;
+    font-weight: bold;
+    font-size: 30pt;
+}
+
+.author{
+    margin-bottom: 20px;
+    color: grey;
+    opacity: 60%;
+}
