@@ -1,16 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Tum4World</title>
-</head>
-<body>
-    <jsp:include page="header.jsp"/>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
+<t:base>
     <h1>Contatti</h1>
 
     <p>Ci puoi venire a trovare in Via Sommarive 29000, Trento, Italia. Se hai bisogno di ulteriori informazioni puoi chiamarci al numero 0461 827188 oppure compila il form sottostante e ti risponderemo via email.</p>
 
-    <form>
+    <form method="post">
         <label>
             Nome
             <input type="text" name="nome">
@@ -39,9 +35,7 @@
             Messaggio
             <textarea></textarea>
         </label>
-    </form>
 
-    <jsp:include page="phrase.jsp" />
-    <jsp:include page="footer.jsp"/>
-</body>
-</html>
+        <input type="submit" value="Invia">
+    </form>
+</t:base>

@@ -1,10 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Tum4World</title>
-</head>
-  <body>
-    <jsp:include page="header.jsp"/>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+
+<t:base>
     <h1>Attivita' 1: Random</h1>
 
     Hello World!
@@ -13,5 +10,4 @@
 
     <jsp:include page="phrase.jsp" />
     <jsp:include page="footer.jsp"/>
-  </body>
-</html>
+</t:base>

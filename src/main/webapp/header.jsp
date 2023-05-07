@@ -1,14 +1,13 @@
 <header class="header">
   <h1 class="title">TUM4World</h1>
 
-  <table class="header-menu">
-    <tr>
-      <td><a href="index.jsp">Home</a></td>
-      <td><a href="about.jsp">Chi siamo</a></td>
-      <td><a href="activities.jsp">Attivita'</a></td>
-      <td><a href="contact.jsp">Contatti</a></td>
-      <td><a href="login.jsp">Sign In</a></td>
-      <td><a href="register.jsp">Login</a></td>
-    </tr>
-  </table>
+  <main class="header-menu">
+      <a href="index.jsp" class="header-link">Home</a>
+      <a href="about.jsp" class="header-link">Chi siamo</a>
+      <a href="activities.jsp" class="header-link">Attivita'</a>
+      <a href="contact.jsp" class="header-link">Contatti</a>
+      <a href="login.jsp" class="header-link">Sign In</a>
+      <a href="register.jsp" class="header-link">Login</a>
+      <a href="logout.jsp" class="header-link">Logout</a>
+  </main>
 </header>
