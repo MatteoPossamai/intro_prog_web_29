@@ -6,7 +6,7 @@
     <a href="about.jsp"><div class="menu-item">CHI SIAMO</div></a>
     <a href="activities.jsp"><div class="menu-item">ATTIVITA'</div></a>
     <a href="contact.jsp"><div class="menu-item">CONTATTI</div></a>
-    <a href="login.jsp"><div class="menu-item">SIGN IN</div></a>
-    <a href="register.jsp"><div class="menu-item">LOGIN</div></a>
+    <a href="register.jsp"><div class="menu-item">SIGN IN</div></a>
+    <a href="login.jsp"><div class="menu-item">LOGIN</div></a>
   </div>
 </header>

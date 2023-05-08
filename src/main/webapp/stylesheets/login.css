@@ -1,0 +1,124 @@
+
+
+/* Rectangle 11 */
+.userbar {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 300px;
+    height: 32px;
+    left: 734px;
+    top: 360px;
+
+    border: 2px solid #000000;
+}
+
+/* Username o email */
+.usermail {
+    position: absolute;
+    width: 205px;
+    height: 38px;
+    left: 734px;
+    top: 310px;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+
+/* Rectangle 12 */
+.passbar {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 300px;
+    height: 32px;
+    left: 734px;
+    top: 450px;
+
+    border: 2px solid #000000;
+}
+
+/* Password */
+.password {
+    position: absolute;
+    width: 205px;
+    height: 38px;
+    left: 734px;
+    top: 400px;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+
+/* Non sei dei nostri? Puoi registrarti qui */
+.lasttext {
+    position: absolute;
+    width: 372px;
+    height: 38px;
+    left: 734px;
+    top: 550px;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+
+
+
+/* Rectangle 3 */
+.button {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 734px;
+    top: 501px;
+
+    background: #000000;
+}
+.text-image{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+}
+.image {
+
+    max-width: 300px;
+    max-height: 300px;
+}
+.image-holder {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 280px;
+    top: 280px;
+}
+.login-form{
+    margin-top: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+}
+
+
+
