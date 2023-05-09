@@ -29,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="Jsp File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -51,7 +51,9 @@
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2PIK78EjAPfuWMJACehgNInajBz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -64,16 +66,19 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/ivan/Documents/Unitn/Web/Tum4World/intro_prog_web_29&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/stylesheets" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
@@ -89,6 +94,7 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="790be40b-2451-412e-8046-37d44b1ef96d" />
         <option name="HTTP_PORT" value="8084" />
+        <option name="BASE_DIRECTORY_NAME" value="f2469253-8e55-4a0e-ab8c-b605c532f063" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -174,13 +180,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683138986185</updated>
-      <workItem from="1683138987349" duration="3000" />
-      <workItem from="1683384025843" duration="3048000" />
-      <workItem from="1683463979547" duration="6934000" />
+      <workItem from="1683138987349" duration="164000" />
+      <workItem from="1683139192733" duration="28000" />
+      <workItem from="1683386163146" duration="5359000" />
+      <workItem from="1683467463785" duration="2667000" />
     </task>
+    <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
+      <created>1683391009313</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683391009313</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code." />
   </component>
 </project>
