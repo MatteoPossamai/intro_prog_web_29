@@ -2,6 +2,8 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:base>
+    <link rel="stylesheet" type="text/css" href="stylesheets/contact.css" />
+
     <h1>Contatti</h1>
 
     <div class="text-container">
@@ -42,8 +44,6 @@
         <input class="button" type="reset">
         <input class="button" type="submit" value="Invia" >
         </div>
-    </form>
 
-        <input type="submit" value="Invia">
     </form>
 </t:base>

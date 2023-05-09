@@ -7,7 +7,4 @@
     Hello World!
 
     this is a random activity lorem ipsum ...
-
-    <jsp:include page="phrase.jsp" />
-    <jsp:include page="footer.jsp"/>
 </t:base>

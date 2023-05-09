@@ -57,6 +57,12 @@ textarea{
     border: none;
 }
 
+.button:hover{
+    background-color: white;
+    border: solid;
+    color: black;
+}
+
 .text-image{
     margin-top: 100px;
     width: 100%;
