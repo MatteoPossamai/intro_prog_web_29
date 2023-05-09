@@ -19,7 +19,7 @@
             <p class="password">Password</p>
             <input type="password" class="passbar">
             <input type="submit" value="Sign in" class="button">
-            <p class="lasttext">Non sei dei nostri? Puoi registrarti <a href="register.jsp">qui</a></p>
+            <p class="lasttext">hai già un account? <a href="login.jsp">Accedi</a></p>
         </section>
 
     </main>
