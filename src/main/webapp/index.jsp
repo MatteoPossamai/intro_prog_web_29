@@ -21,7 +21,7 @@
 <div class="cta">
     <img src="./images/placeholder.jpeg" class="logo">
     <div class="button-container">
-        <button class="button" style="width: 400px;">Vuoi saperne di piu?</button>
+        <button class="button index-button">Vuoi saperne di piu?</button>
     </div>
 </div>
 
