@@ -1,0 +1,21 @@
+.description{
+    margin-left: 50px;
+    font-size: 17pt;
+}
+
+.activities-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 100px;
+}
+
+.activity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text{
+    max-width: 200px;
+}

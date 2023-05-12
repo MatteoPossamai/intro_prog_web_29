@@ -4,8 +4,7 @@
 <t:base>
     <link rel="stylesheet" type="text/css" href="stylesheets/contact.css" />
 
-    <h1>Contatti</h1>
-
+    <h1 class="title">Contatti</h1>
     <div class="text-container">
     <p class="text">Ci puoi venire a trovare in Via Sommarive 29000, Trento, Italia. Se hai bisogno di ulteriori informazioni puoi chiamarci al numero 0461 827188 oppure compila il form sottostante e ti risponderemo via email.</p>
     </div>

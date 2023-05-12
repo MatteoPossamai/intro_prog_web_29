@@ -11,11 +11,17 @@
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/base.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/base.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/activities.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/activities.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/activity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/activity.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/invio-confermato.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/invio-confermato.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/chi-siamo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/chi-siamo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/phrase.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/phrase.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +33,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="Jsp File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
