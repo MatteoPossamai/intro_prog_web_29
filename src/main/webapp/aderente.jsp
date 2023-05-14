@@ -13,7 +13,7 @@
 
 <main class="content">
 <div>
-    <h1>Benvenuto/a Aderente!</h1>
+    <h1 class="title">Benvenuto/a Aderente!</h1>
     <div style="display: flex; gap: 100px">
     <button class="button" onclick="show('popup-profilo')">Visualizza i tuoi dati</button>
     <button class="button" id="elimina-iscrizione" value="Cancella la mia iscrizione" onclick="show('popup-cancella')">Cancella la mia iscrizione</button>

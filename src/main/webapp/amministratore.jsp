@@ -1,31 +1,27 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 
-  <html>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-  <head>
-    <style>
-    </style>
-    <link href="stylesheets/amministratore.css" rel="stylesheet" type="text/css">
-    <link href="stylesheets/global.css" rel="stylesheet" type="text/css">
-    <title>Tum4World</title>
-  </head>
 
-  <body>
-    <jsp:include page="menu-private.jsp" />
+    <link href="stylesheets/amministratore.css" rel="stylesheet" type="text/css">   <title>Tum4World</title>
 
-    <main>
+<t:base>
 
-      <h1>Benvenuto/a Amministratore!</h1>
-      <button class="amministratore-button" onclick="get('utenti')">Visualizza gli utenti del sito</button>
-      <button class="amministratore-button" onclick="get('simpatizzanti')">Visualizza i simpatizzanti del sito</button>
-      <button class="amministratore-button" onclick="get('aderenti')">Visualizza gli aderenti al sito</button>
+    <main class="content">
 
-      <button class="amministratore-button" id="mostra-visite" onclick="print_visits()">Mostra le visite del sito</button>
-      <button class="amministratore-button" id="mostra-donazioni" onclick="print_donations()">Mostra le visite del sito</button>
-
+      <h1 class="title">Benvenuto/a Amministratore!</h1>
+      <div class="button-container">
+        <button class="button" onclick="get('utenti')">Visualizza gli utenti del sito</button>
+        <button class="button" onclick="get('simpatizzanti')">Visualizza i simpatizzanti del sito</button>
+        <button class="button" onclick="get('aderenti')">Visualizza gli aderenti al sito</button>
+      </div>
+      <div class="button-container">
+        <button class="button" id="mostra-visite" onclick="print_visits()">Mostra le visite del sito</button>
+        <button class="button" id="mostra-donazioni" onclick="print_donations()">Mostra le donazioni del sito</button>
+      </div>
     </main>
-    <jsp:include page="phrase.jsp" />
-    <jsp:include page="footer.jsp" />
+  </t:base>
+
     <!--
     <div id="popup-profilo" class="amministratore-popup-profilo">
       <div class="amministratore-popup-content">
@@ -53,6 +49,3 @@
         // prende dal db i dati e li stampa con una lista <li>
       }
     </script>
-  </body>
-
-  </html>
