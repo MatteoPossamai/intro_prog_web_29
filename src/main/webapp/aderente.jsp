@@ -2,53 +2,8 @@
 
 <html>
 <head>
-    <style>
-        .aderente-popup-cancella {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-        }
-
-        .aderente-popup-profilo {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-        }
-
-        .aderente-popup-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link href="stylesheets/aderente.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/global.css" rel="stylesheet" type="text/css">
     <title>Tum4World</title>
@@ -56,11 +11,15 @@
 <body>
 <jsp:include page="menu-private.jsp"/>
 
-<main>
-
+<main class="content">
+<div>
     <h1>Benvenuto/a Aderente!</h1>
-    <button class="aderente-button" onclick="show('popup-profilo')">Visualizza i tuoi dati</button>
-
+    <div style="display: flex; gap: 100px">
+    <button class="button" onclick="show('popup-profilo')">Visualizza i tuoi dati</button>
+    <button class="button" id="elimina-iscrizione" value="Cancella la mia iscrizione" onclick="show('popup-cancella')">Cancella la mia iscrizione</button>
+    </div>
+    </div>
+    <div>
     <h2>Scegli a quali attività vuoi iscriverti!</h2>
 
     <form class="aderente-form" method="post">
@@ -88,7 +47,7 @@
                 </td>
             </tr>
         </table>
-        <button type="submit" value="Iscriviti" class="aderente-button">Iscriviti</button>
+        <button type="submit" value="Iscriviti" class="button">Iscriviti</button>
         <%
             String[] selected = request.getParameterValues("option");
             if (selected != null) {
@@ -97,16 +56,16 @@
                     out.println("<li>" + option + "</li>");
                 }
             } else {
-                out.println("No options selected.");
+                out.println("<p>No options selected.</p>");
             }
         %>
     </form>
+    </div>
     <form class="aderente-form">
         <label>Effettua una donazione (euro)</label>
         <input type="number" value="0">
         <input type="submit" value="Dona">
     </form>
-    <button class="aderente-button" id="elimina-iscrizione" value="Cancella la mia iscrizione" onclick="show('popup-cancella')">Cancella la mia iscrizione</button>
 </main>
 <jsp:include page="phrase.jsp" />
 <jsp:include page="footer.jsp"/>
