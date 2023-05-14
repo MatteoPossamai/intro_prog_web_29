@@ -18,7 +18,7 @@ a{
     color: var(--coral);
 }
 
-h1, h2{
+h1, h2, h3{
     font-family: 'Lexend';
     margin: 0px;
 }
