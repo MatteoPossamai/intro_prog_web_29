@@ -1,23 +1,29 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<title>Login</title>
-<link rel="stylesheet" href="stylesheets/login.css">
-<link rel="stylesheet" href="stylesheets/global.css"
+<title>LogIn</title>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/stylesheets/login.css" type="text/css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/stylesheets/global.css" type="text/css"/>
+
 <t:base>
     <main>
         <section class="text-image" id="1">
             <img src="images/placeholder.jpeg" alt="placeholder" height="30px" width="30px" class="image-holder">
         </section>
-
-        <section class="login-form" id="2">
-            <p class="usermail">Username o email</p>
-            <input type="text" class="userbar">
-            <p class="password">Password</p>
-            <input type="password" class="passbar">
-            <input type="submit" value="Login" class="button">
-            <p class="lasttext">Non sei dei nostri? Puoi registrarti <a href="register.jsp">qui</a></p>
-        </section>
+        <div class="container">
+            <form id="form" class="form">
+                <div class="form-control">
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Username" id="username" />
+                </div>
+                <div class="form-control">
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Password" id="password">
+                </div>
+                <button>Submit</button>
+            Non sei dei nostri? Puoi registrarti <a href="register.jsp">qui</a></p>
+            </form>
+        </div>
     </main>
 
 </t:base>
