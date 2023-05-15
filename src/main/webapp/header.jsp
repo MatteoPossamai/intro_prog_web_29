@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <link href="stylesheets/header.css" rel="stylesheet" type="text/css">
 <header class="header">
   <h1 class="header-title title">TUM4World</h1>
