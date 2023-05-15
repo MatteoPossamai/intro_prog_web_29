@@ -36,6 +36,15 @@
     margin-top: 20px;
     width: 100%;
 }
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: compact;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
 .text-image{
     margin-top: 100px;
     width: 100%;

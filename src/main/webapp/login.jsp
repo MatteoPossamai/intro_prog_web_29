@@ -15,6 +15,8 @@
                 <div class="form-control">
                     <label for="username">Username</label>
                     <input type="text" placeholder="Username" id="username" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
                 </div>
                 <div class="form-control">
                     <label for="password">Password</label>
