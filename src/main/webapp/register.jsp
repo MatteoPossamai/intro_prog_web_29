@@ -3,7 +3,6 @@
 
 <title>SignIn</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/stylesheets/register.css" type="text/css"/>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/stylesheets/global.css" type="text/css"/>
 
 
 <t:base>
@@ -55,8 +54,8 @@
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
-        <button>Submit</button>
-        <button>Reset</button>
+        <button class="button">Submit</button>
+        <button class="button">Reset</button>
     </form>
 </div>
 </main>

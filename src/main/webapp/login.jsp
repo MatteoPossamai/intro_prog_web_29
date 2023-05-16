@@ -2,9 +2,10 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <title>LogIn</title>
-<link rel="stylesheet" href="/stylesheets/login.css" type="text/css"/>
 
 <t:base>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/stylesheets/login.css" type="text/css"/>
+
     <main>
         <section class="text-image" id="1">
             <img src="images/placeholder.jpeg" alt="placeholder" height="30px" width="30px" class="image-holder">
@@ -21,8 +22,8 @@
                     <label for="password">Password</label>
                     <input type="password" placeholder="Password" id="password">
                 </div>
-                <button>Submit</button>
-            Non sei dei nostri? Puoi registrarti <a href="register.jsp">qui</a></p>
+                <button class="button">Submit</button>
+            Non sei dei nostri? Puoi registrarti <a class="link" href="register.jsp">qui</a></p>
             </form>
         </div>
     </main>

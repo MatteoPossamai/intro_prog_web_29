@@ -3,7 +3,7 @@
 
 .container {
     position: relative;
-    margin-top: 130px;
+    margin-top: 300px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -79,3 +79,6 @@
 }
 
 
+.link:hover{
+    color: #F48364;
+}

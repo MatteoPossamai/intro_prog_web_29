@@ -11,16 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/base.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/base.tag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/aderente.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/aderente.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/register.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

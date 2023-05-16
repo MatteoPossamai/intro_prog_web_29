@@ -39,6 +39,7 @@ a:hover{
 }
 
 .header{
+    z-index: 2;
     background-color: coral;
     height: 150px;
     position: fixed;
