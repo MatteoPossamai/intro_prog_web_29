@@ -1,0 +1,106 @@
+:root{
+    --green: #C2D9C0;
+    --coral: #F48364;
+    --red: #880D1E;
+    --myrtle: #357266
+}
+
+footer{
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+
+a{
+    font-family: 'Lexend';
+    text-decoration: none;
+    color: var(--coral);
+}
+
+h1, h2, h3{
+    font-family: 'Lexend';
+    margin: 0px;
+}
+
+p{
+    font-family: 'Lato';
+}
+
+label {
+    font-family: 'Lato';
+    font-size: 15pt;
+    display: flex;
+    flex-direction: column;
+}
+
+select{
+    font-family: 'Lato';
+    font-size: 15pt;
+    border: solid 3px;
+
+}
+
+input{
+    border: solid 3px;
+    font-family: 'Lato';
+    font-size: 15pt;
+}
+
+textarea{
+    width: 800px;
+    border: solid 3px;
+    font-size: 15pt;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.button{
+    background-color: black;
+    color: white;
+    width: 150px;
+    height: 50px;
+    border: none;
+}
+
+.button:hover{
+    background-color: white;
+    border: solid;
+    color: black;
+}
+
+.text-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 100px;
+}
+
+
+.image {
+
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.text{
+    max-width: 400px;
+    justify-content: center;
+}
+
+.title{
+    margin-top: 150px;
+    padding-top: 25px;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+}

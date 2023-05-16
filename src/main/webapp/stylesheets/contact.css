@@ -1,0 +1,25 @@
+.text-container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.text{
+    max-width: 600px;
+    text-align: center;
+    font-size: 20pt;
+    margin-bottom: 50px;
+}
+
+.contact-form{
+    margin: 0 auto;
+    width: 800px;
+    display: grid;
+    grid-template-row: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.row{
+    display: flex;
+    gap: 150px;
+}

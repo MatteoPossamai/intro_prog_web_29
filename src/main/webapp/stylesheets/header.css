@@ -1,0 +1,72 @@
+:root{
+    --green: #C2D9C0;
+    --coral: #F48364;
+}
+
+a{
+    color: black;
+    margin-top: 10px;
+}
+
+a:hover{
+    color: white;
+}
+
+
+.header-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    align-items: center;
+}
+
+.logo-header{
+    max-width: 75px;
+    max-height: 75px;
+}
+
+.logo-title{
+    color: black;
+    max-width: 400px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 25pt;
+    text-align: left;
+}
+
+.title-hover:hover{
+    color: black;
+}
+
+.header{
+    z-index: 2;
+    background-color: coral;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header-menu{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    justify-content: center;
+    gap: 100px;
+    text-decoration: none;
+}
+
+.menu-item{
+    color: black;
+    padding-top: 10px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.menu-item:hover{
+    background-color:  black;
+}

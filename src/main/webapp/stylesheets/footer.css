@@ -1,0 +1,13 @@
+:root{
+    --green: #C2D9C0;
+    --coral: #F48364;
+}
+
+.footer {
+    margin-bottom: 0px;
+    padding-top: 5px;
+    height:55px;
+    width:100%;
+    background:var(--coral);
+    text-align: center;
+}

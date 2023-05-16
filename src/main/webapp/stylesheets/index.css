@@ -1,0 +1,32 @@
+:root{
+    --green: #C2D9C0;
+    --coral: #F48364;
+}
+
+
+.cta{
+    width: 100%;
+    height: 250px;
+    background-color: var(--myrtle);
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-content: center;
+}
+
+.logo{
+    margin: 0 auto;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.index-button{
+    width: 400px;
+    height: 50px;
+    font-size: 20pt;
+    margin-top: 75px;
+}
