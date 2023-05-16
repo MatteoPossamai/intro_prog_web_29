@@ -25,7 +25,7 @@
     position: relative;
 }
 .form button {
-    background-color: coral;
+    background-color: var(--coral);
     border: 2px solid orange;
     border-radius: 4px;
     color: #fff;

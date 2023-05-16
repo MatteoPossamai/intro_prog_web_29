@@ -1,6 +1,8 @@
 :root{
     --green: #C2D9C0;
     --coral: #F48364;
+    --red: #880D1E;
+    --myrtle: #357266
 }
 
 footer{
@@ -59,7 +61,6 @@ textarea{
     flex-direction: column;
     gap: 50px;
     margin-bottom: 100px;
-    margin-left: 100px;
 }
 
 .button{
@@ -97,6 +98,7 @@ textarea{
 }
 
 .title{
+    margin-top: 150px;
     padding-top: 25px;
     text-align: center;
     width: 100%;

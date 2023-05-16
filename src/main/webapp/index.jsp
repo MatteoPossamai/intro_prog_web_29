@@ -7,7 +7,7 @@
 
     <title>Homepage</title>
     <link href="stylesheets/index.css" rel="stylesheet" type="text/css">
-
+<div class="content">
 <br class="title">
 <div class="text-image">
     <img src="./images/placeholder.jpeg" class="image">
@@ -24,5 +24,5 @@
         <button class="button index-button">Vuoi saperne di piu?</button>
     </div>
 </div>
-
+</div>
 </t:base>

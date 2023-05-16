@@ -2,8 +2,7 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <title>LogIn</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/stylesheets/login.css" type="text/css"/>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/stylesheets/global.css" type="text/css"/>
+<link rel="stylesheet" href="/stylesheets/login.css" type="text/css"/>
 
 <t:base>
     <main>
