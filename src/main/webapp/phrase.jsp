@@ -2,5 +2,5 @@
 
 <aside class="phrase">
   <p class="quote" id="phrase-content"></p>
-  <p class="author">AUTORE CHE PRENDIAMO DAL DB</p>
+  <p class="author">Jason Query</p>
 </aside>
