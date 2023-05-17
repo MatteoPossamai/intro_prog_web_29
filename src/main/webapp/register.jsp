@@ -55,7 +55,7 @@
             <small>Error message</small>
         </div>
         <button class="button">Submit</button>
-        <button class="button">Reset</button>
+        <button class="button" onclick="reset()">Reset</button>
     </form>
 </div>
 </main>
@@ -127,6 +127,10 @@
 
     function isEmail(email) {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    }
+
+    function reset(){
+        document.getElementById('form').reset();
     }
 
 
