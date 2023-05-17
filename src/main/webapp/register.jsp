@@ -55,7 +55,7 @@
             <small>Error message</small>
         </div>
         <button class="button">Submit</button>
-        <button class="button">Reset</button>
+        <button class="button" onclick="reset()">Reset</button>
     </form>
 </div>
 </main>
@@ -66,7 +66,7 @@
     const email = document.getElementById('email');
     const password = document.getElementById('password');
     const password2 = document.getElementById('password2');
-    const  passwordPattern = /^(?=.*[0-9])(?=.*[$!?])(?=.*[Mm])(?=.*[Ii])(?=.*[Vv])(?=.*[Dd])[a-zA-Z0-9!@#$%^&*]{9}$/;
+    const  passwordPattern = /^(?=.*\d)(?=.*[$!?])(?=.*[Mm])(?=.*[Ii])(?=.*[Vv])(?=.*[Dd])(?=.*[A-Z])[A-Za-z\d$!?]{8,8}$/;
 
     form.addEventListener('submit', e => {
         e.preventDefault();
@@ -128,6 +128,11 @@
     function isEmail(email) {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
     }
+
+    function reset(){
+        document.getElementById('form').reset();
+    }
+
 
 </script>
 
