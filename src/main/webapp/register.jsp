@@ -11,50 +11,50 @@
         <img src="images/placeholder.jpeg" alt="placeholder" height="30px" width="30px" class="image-holder-register">
     </section>
 <div class="container">
-    <form id="form" class="form">
+    <form id="form" class="form" method="post" action="signin">
         <div class="form-control">
             <label for="username">Username</label>
-            <input type="text" placeholder="Username" id="username" />
+            <input type="text" placeholder="Username" id="username" name="username" />
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div class="form-control">
             <label for="username">Email</label>
-            <input type="email" placeholder="prova@test.qualcosa" id="email" />
+            <input type="email" placeholder="prova@test.qualcosa" id="email" name="email" />
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div class="form-control">
             <label for="username">Password</label>
-            <input type="password" placeholder="Password" id="password"/>
+            <input type="password" placeholder="Password" id="password" name="password"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div class="form-control">
             <label for="username">Data di nascita</label>
-            <input type="month" id="date"/>
+            <input type="month" id="date" name="data_nascita"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div class="form-control">
             <label for="username">Telefono</label>
-            <input type="tel" id="telefono"/>
+            <input type="tel" id="telefono" name="telefono"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div class="form-control">
             <label for="username">Password check</label>
-            <input type="password" placeholder="Password two" id="password2"/>
+            <input type="password" placeholder="Password two" id="password2" name="password_check"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
-        <button class="button">Submit</button>
+        <button class="button" type="submit">Submit</button>
         <button class="button" onclick="reset()">Reset</button>
     </form>
 </div>
