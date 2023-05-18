@@ -11,7 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Final modifications to phrase section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,6 +194,7 @@
       <workItem from="1683820882568" duration="4399000" />
       <workItem from="1683922668389" duration="2737000" />
       <workItem from="1684408575012" duration="967000" />
+      <workItem from="1684410950986" duration="1104000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>

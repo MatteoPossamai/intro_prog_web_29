@@ -11,18 +11,18 @@
             <img src="images/placeholder.jpeg" alt="placeholder" height="30px" width="30px" class="image-holder">
         </section>
         <div class="container">
-            <form id="form" class="form">
+            <form id="form" class="form" method="post" action="login">
                 <div class="form-control">
                     <label for="username">Username</label>
-                    <input type="text" placeholder="Username" id="username" />
+                    <input type="text" placeholder="Username" id="username" name="username" />
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                 </div>
                 <div class="form-control">
                     <label for="password">Password</label>
-                    <input type="password" placeholder="Password" id="password">
+                    <input type="password" placeholder="Password" id="password" name="password">
                 </div>
-                <button class="button">Submit</button>
+                <button class="button" type="submit">Submit</button>
             Non sei dei nostri? Puoi registrarti <a class="link" href="register.jsp">qui</a></p>
             </form>
         </div>
