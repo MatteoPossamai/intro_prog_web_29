@@ -43,17 +43,10 @@ public class Login extends HttpServlet {
             }
         }
 
-        // If the username and password are correct, redirect to the home page
-        Map<String, String> redirect_pages  = new HashMap<String, String>() {{
-            put("AM", "/amministratore.jsp");
-            put("SI", "/simpatizzante.jsp");
-            put("AD", "/aderente.jsp");
-        }};
-
         if (isCorrect) {
             request.getSession().setAttribute("username", username);
             request.getSession().setAttribute("userType", userType);
-            response.sendRedirect(request.getContextPath() + redirect_pages.get(userType));
+            response.sendRedirect(request.getContextPath() + AuthBasic.redirect_pages.get(userType));
         } else {
             // If the username and password are incorrect, redirect to the login page
             request.setAttribute("error", "Invalid username or password");
