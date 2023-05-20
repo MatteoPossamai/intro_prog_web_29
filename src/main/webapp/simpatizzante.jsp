@@ -1,66 +1,20 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<html>
-    <head>
-        <style>
-            .simpatizzante-popup-cancella {
-                display: none;
-                position: fixed;
-                z-index: 1;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: auto;
-                background-color: rgba(0,0,0,0.4);
-            }
 
-            .simpatizzante-popup-profilo {
-                display: none;
-                position: fixed;
-                z-index: 1;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: auto;
-                background-color: rgba(0,0,0,0.4);
-            }
-
-            .simpatizzante-popup-content {
-                background-color: #fefefe;
-                margin: 15% auto;
-                padding: 20px;
-                border: 1px solid #888;
-                width: 80%;
-            }
-
-            .close {
-                color: #aaa;
-                float: right;
-                font-size: 28px;
-                font-weight: bold;
-            }
-
-            .close:hover,
-            .close:focus {
-                color: black;
-                text-decoration: none;
-                cursor: pointer;
-            }
-        </style>
-        <link href="stylesheets/simpatizzante.css" rel="stylesheet" type="text/css">
-        <link href="stylesheets/global.css" rel="stylesheet" type="text/css">
-        <title>Tum4World</title>
-    </head>
+<t:base>
+    <link href="stylesheets/simpatizzante.css" rel="stylesheet" type="text/css">
     <body>
-    <jsp:include page="menu-private.jsp"/>
+    <main class="content">
 
-    <main>
-
-        <h1>Benvenuto/a Simpatizzante!</h1>
-        <button class="simpatizzante-button" onclick="show('popup-profilo')">Visualizza i tuoi dati</button>
-
+        <div>
+        <h1 class="title">Benvenuto/a Simpatizzante!</h1>
+            <div style="display: flex; gap: 100px">
+        <button class="button" onclick="show('popup-profilo')">Visualizza i tuoi dati</button>
+        <button class="button" id="elimina-iscrizione" value="Cancella la mia iscrizione" onclick="show('popup-cancella')">Cancella la mia iscrizione</button>
+            </div>
+        </div>
+        <div>
         <h2>Scegli a quali attività vuoi iscriverti!</h2>
 
         <form class="simpatizzante-form" method="post">
@@ -88,12 +42,16 @@
                     </td>
                 </tr>
             </table>
-            <button type="submit" value="Iscriviti" class="simpatizzante-button">Iscriviti</button>
+            <button class="button" type="submit" value="Iscriviti" class="simpatizzante-button">Conferma</button>
         </form>
-        <button class="simpatizzante-button" id="elimina-iscrizione" value="Cancella la mia iscrizione" onclick="show('popup-cancella')">Cancella la mia iscrizione</button>
+        </div>
+
+
+
+
     </main>
-    <jsp:include page="phrase.jsp" />
-    <jsp:include page="footer.jsp"/>
+
+</t:base>
     <div id="popup-profilo" class="simpatizzante-popup-profilo">
         <div class="simpatizzante-popup-content">
             <span class="close" onclick="hide('popup-profilo')">&times;</span>

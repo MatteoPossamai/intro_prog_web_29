@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Page phrase updated, and now changes live">
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/phrase.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/phrase.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,10 +22,12 @@
       <list>
         <option value="JavaScript File" />
         <option value="Jsp File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -75,7 +77,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.79" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8084/intro_prog_web_29/simpatizzante.jsp" />
       <deployment>
         <artifact name="intro_prog_web_29:war exploded">
@@ -181,6 +183,7 @@
       <workItem from="1683467463785" duration="2667000" />
       <workItem from="1683633561084" duration="388000" />
       <workItem from="1683633985278" duration="2350000" />
+      <workItem from="1683896971528" duration="641000" />
       <workItem from="1683737337903" duration="5136000" />
       <workItem from="1683820882568" duration="4399000" />
       <workItem from="1683922668389" duration="2737000" />
@@ -194,14 +197,33 @@
       <option name="project" value="LOCAL" />
       <updated>1683391009313</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Page phrase updated, and now changes live">
+      <created>1684329804002</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684329804002</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code." />
+    <MESSAGE value="Page phrase updated, and now changes live" />
+    <option name="LAST_COMMIT_MESSAGE" value="Page phrase updated, and now changes live" />
   </component>
 </project>

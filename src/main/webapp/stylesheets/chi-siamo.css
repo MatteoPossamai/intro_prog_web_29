@@ -3,17 +3,6 @@
     --coral: #F48364;
 }
 
-
-.text-image{
-    margin-top: 100px;
-    width: 100%;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    column-gap: 100px;
-}
-
-
 .image {
     max-width: 300px;
 }

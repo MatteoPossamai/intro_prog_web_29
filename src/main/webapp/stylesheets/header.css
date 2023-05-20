@@ -12,15 +12,39 @@ a:hover{
     color: white;
 }
 
+
 .header-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    align-items: center;
+}
+
+.logo-header{
+    max-width: 75px;
+    max-height: 75px;
+}
+
+.logo-title{
+    color: black;
+    max-width: 400px;
     padding-top: 25px;
     padding-bottom: 25px;
-    font-size: 40pt;
+    font-size: 25pt;
+    text-align: left;
+}
+
+.title-hover:hover{
+    color: black;
 }
 
 .header{
+    z-index: 2;
     background-color: coral;
-    height: 200px;
+    height: 150px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .header-menu{
@@ -34,6 +58,7 @@ a:hover{
 }
 
 .menu-item{
+    color: black;
     padding-top: 10px;
     height: 30px;
     display: flex;

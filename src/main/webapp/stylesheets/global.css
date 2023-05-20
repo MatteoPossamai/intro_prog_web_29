@@ -1,11 +1,18 @@
 :root{
     --green: #C2D9C0;
     --coral: #F48364;
+    --red: #880D1E;
+    --myrtle: #357266
+}
+
+footer{
+    margin: 0;
 }
 
 body {
     margin: 0;
 }
+
 
 a{
     font-family: 'Lexend';
@@ -13,7 +20,7 @@ a{
     color: var(--coral);
 }
 
-h1, h2{
+h1, h2, h3{
     font-family: 'Lexend';
     margin: 0px;
 }
@@ -49,6 +56,13 @@ textarea{
 
 }
 
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
 .button{
     background-color: black;
     color: white;
@@ -64,7 +78,6 @@ textarea{
 }
 
 .text-image{
-    margin-top: 100px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -85,6 +98,7 @@ textarea{
 }
 
 .title{
+    margin-top: 150px;
     padding-top: 25px;
     text-align: center;
     width: 100%;
