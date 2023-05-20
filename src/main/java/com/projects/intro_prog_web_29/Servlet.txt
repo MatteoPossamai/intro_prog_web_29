@@ -1,0 +1,46 @@
+package com.projects.intro_prog_web_29;
+import java.io.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
+@WebServlet(name = "Servlet", urlPatterns = {"/Servlet"})
+public class Servlet extends HttpServlet {
+Counter counter;
+public void init() {
+File counterData = new File("./counterFile.bin");
+if(counterData.exists()){
+ObjectInputStream oi = null;
+try {
+oi = new ObjectInputStream(newFileInputStream(counterData));
+} catch (IOException e) {}
+try {
+counter = (Counter) oi.readObject();
+} catch (IOException e) {
+} catch (ClassNotFoundException e) {}
+} else counter=new Counter();
+}
+@Override
+protected void doGet( HttpServletRequest request,
+HttpServletResponse response)
+throws ServletException, IOException {
+response.setContentType("text/html;charset=UTF-8");
+try (PrintWriter out = response.getWriter()) {
+request.getRequestDispatcher("/fragment1.html").include(
+request, response);
+counter.increase();
+out.println(counter);
+request.getRequestDispatcher("/fragment2.html").include(
+request, response);
+}
+}
+public void destroy() {
+File counterData = new File("./counterFile.bin");
+ObjectOutputStream oo = null;
+try {
+oo = new ObjectOutputStream(new FileOutputStream(counterData));
+} catch (IOException e) {}
+try {
+oo.writeObject(counter);
+} catch (IOException e) { }
+}
+}
