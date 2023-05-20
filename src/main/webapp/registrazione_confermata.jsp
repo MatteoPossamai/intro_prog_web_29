@@ -3,7 +3,7 @@
 
 <title>Login</title>
 <link rel="stylesheet" href="stylesheets/login.css">
-<link rel="stylesheet" href="stylesheets/global.css"
+<link rel="stylesheet" href="stylesheets/global.css">
 <t:base>
     <main>
         <section class="text-image" id="1">

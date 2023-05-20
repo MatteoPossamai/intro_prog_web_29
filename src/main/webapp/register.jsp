@@ -20,35 +20,35 @@
             <small>Error message</small>
         </div>
         <div class="form-control">
-            <label for="username">Email</label>
+            <label for="email">Email</label>
             <input type="email" placeholder="prova@test.qualcosa" id="email" name="email" />
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div class="form-control">
-            <label for="username">Password</label>
+            <label for="password">Password</label>
             <input type="password" placeholder="Password" id="password" name="password"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div class="form-control">
-            <label for="username">Data di nascita</label>
+            <label for="date">Data di nascita</label>
             <input type="month" id="date" name="data_nascita"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div class="form-control">
-            <label for="username">Telefono</label>
+            <label for="telefono">Telefono</label>
             <input type="tel" id="telefono" name="telefono"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
         </div>
         <div class="form-control">
-            <label for="username">Password check</label>
+            <label for="password2">Password check</label>
             <input type="password" placeholder="Password two" id="password2" name="password_check"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
@@ -66,15 +66,20 @@
     const email = document.getElementById('email');
     const password = document.getElementById('password');
     const password2 = document.getElementById('password2');
-    const  passwordPattern = /^(?=.*\d)(?=.*[$!?])(?=.*[Mm])(?=.*[Ii])(?=.*[Vv])(?=.*[Dd])(?=.*[A-Z])[A-Za-z\d$!?]{8,8}$/;
+    const  passwordPattern = /^(?=.*\d)(?=.*[$!?])(?=.*[Mm])(?=.*[Ii])(?=.*[Vv])(?=.*[Dd])(?=.*[A-Z])[A-Za-z\d$!?]{8}$/;
 
     form.addEventListener('submit', e => {
         e.preventDefault();
 
-        checkInputs();
+        // If all the check succeed, send the form
+        if(checkInputs()) {
+            form.submit();
+        }
+
     });
 
     function checkInputs() {
+        let res = true;
         // trim to remove the whitespaces
         const usernameValue = username.value.trim();
         const emailValue = email.value.trim();
@@ -83,34 +88,42 @@
 
         if(usernameValue === '') {
             setErrorFor(username, 'Username cannot be blank');
+            res = false;
         } else {
             setSuccessFor(username);
         }
 
         if(emailValue === '') {
+            res = false;
             setErrorFor(email, 'Email cannot be blank');
         } else if (!isEmail(emailValue)) {
+            res = false;
             setErrorFor(email, 'Not a valid email');
         } else {
             setSuccessFor(email);
         }
 
         if(passwordValue === '') {
+            res = false;
             setErrorFor(password, 'Password cannot be blank');
         } else {
             setSuccessFor(password);
         }
         if(!passwordPattern.test(passwordValue)) {
+            res = false;
             setErrorFor(password, '8 caratteri, [($,?,!),0-9,m,i,d,v]')
         }
 
         if(password2Value === '') {
+            res = false;
             setErrorFor(password2, 'Password2 cannot be blank');
         } else if(passwordValue !== password2Value) {
+            res = false;
             setErrorFor(password2, 'Passwords does not match');
         } else{
             setSuccessFor(password2);
         }
+        return res;
     }
 
     function setErrorFor(input, message) {

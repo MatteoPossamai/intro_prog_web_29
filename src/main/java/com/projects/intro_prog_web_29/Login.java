@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,29 +26,31 @@ public class Login extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        // Check if the username and password are correct
-        boolean isCorrect = false;
-        String userType = "";
+        Connection con = null;
+        try{
+            con = DriverManager.getConnection("jdbc:derby://127.0.0.1:1527/rubbish");
+            String query = "SELECT * FROM users WHERE username = '" + username + "'";
+            Statement stmt = con.createStatement();
+            ResultSet res = stmt.executeQuery(query);
 
-        // Query the database to check if the username and password are correct
+            // Get the user result of the query
+            // If the user doesn't exist, res.next() will return false
+            String db_password = res.getString("password");
+            boolean password_correct = password.equals(db_password);
+            String userType = res.getString("userType");
 
-        for (String[] user : users) {
-            if (user[0].equals(username) && user[1].equals(password)) {
-                isCorrect = true;
-                userType = user[2];
+            if (res.next() && password_correct) {
+                request.getSession().setAttribute("username", username);
+                request.getSession().setAttribute("userType", userType);
+                response.sendRedirect(request.getContextPath() + AuthBasic.redirect_pages.get(userType));
+            } else {
+                // If the username and password are incorrect, redirect to the login page
+                request.setAttribute("error", "Invalid username or password");
+                request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
+        }catch (SQLException e){
+            e.printStackTrace();
         }
-
-        if (isCorrect) {
-            request.getSession().setAttribute("username", username);
-            request.getSession().setAttribute("userType", userType);
-            response.sendRedirect(request.getContextPath() + AuthBasic.redirect_pages.get(userType));
-        } else {
-            // If the username and password are incorrect, redirect to the login page
-            request.setAttribute("error", "Invalid username or password");
-            request.getRequestDispatcher("/login.jsp").forward(request, response);
-        }
-
     }
 
 }
