@@ -1,3 +1,7 @@
+body {
+    background-color: #9197AE;
+}
+
 .simpatizzante-popup-cancella {
     display: none;
     position: fixed;

@@ -1,3 +1,7 @@
+body {
+    background-color: var(--green);
+}
+
 .aderente-popup-cancella {
     display: none;
     position: fixed;
