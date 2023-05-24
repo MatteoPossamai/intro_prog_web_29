@@ -20,7 +20,6 @@ public class Login extends HttpServlet {
         Connection con;
         try{
             // Connect to the database to check if the user exists
-            System.out.println(System.getProperty("java.class.path"));
             Class.forName("org.apache.derby.jdbc.ClientDriver");
             con = DriverManager.getConnection("jdbc:derby://localhost:1527/rubbish");
 
@@ -29,13 +28,16 @@ public class Login extends HttpServlet {
             Statement stmt = con.createStatement();
             ResultSet res = stmt.executeQuery(query);
 
-            // Get the user result of the query
-            // If the user doesn't exist, res.next() will return false
-            String db_password = res.getString("password");
-            boolean password_correct = password.equals(db_password);
-            String userType = res.getString("userType");
+            // Check if the user exists and if the password is correct
+            boolean password_correct = false;
+            String userType = "";
+            if(res.next()){
+                String password_db = res.getString("password");
+                password_correct = password.equals(password_db);
+                userType = res.getString("userType");
+            }
 
-            if (res.next() && password_correct) {
+            if (password_correct) {
                 // If the user exists and the password provided is correct, then log the user in
                 request.getSession().setAttribute("username", username);
                 request.getSession().setAttribute("userType", userType);
