@@ -9,13 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Final modifications to phrase section">
+    <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Added initializer for the database on launch if it does not exists. Then, fixed the login form and functionalities. Now login is working quite well. Then there is to test signup, to backpropagate errors, and the hashing if necessary. Then, everything is done">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7c124110-6764-4a53-8f3a-291bdb5dd206.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7c124110-6764-4a53-8f3a-291bdb5dd206.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/AuthBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/AuthBasic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Initializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Signin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Signin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +213,8 @@
       <workItem from="1684591945011" duration="1553000" />
       <workItem from="1684594818232" duration="2381000" />
       <workItem from="1684867218147" duration="591000" />
-      <workItem from="1684954259983" duration="1565000" />
+      <workItem from="1684954259983" duration="1719000" />
+      <workItem from="1685031552607" duration="2452000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>
@@ -235,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684329984345</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added initializer for the database on launch if it does not exists. Then, fixed the login form and functionalities. Now login is working quite well. Then there is to test signup, to backpropagate errors, and the hashing if necessary. Then, everything is done">
+      <created>1684955969524</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684955969524</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,6 +265,7 @@
     <MESSAGE value="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code." />
     <MESSAGE value="Page phrase updated, and now changes live" />
     <MESSAGE value="Final modifications to phrase section" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final modifications to phrase section" />
+    <MESSAGE value="Added initializer for the database on launch if it does not exists. Then, fixed the login form and functionalities. Now login is working quite well. Then there is to test signup, to backpropagate errors, and the hashing if necessary. Then, everything is done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added initializer for the database on launch if it does not exists. Then, fixed the login form and functionalities. Now login is working quite well. Then there is to test signup, to backpropagate errors, and the hashing if necessary. Then, everything is done" />
   </component>
 </project>

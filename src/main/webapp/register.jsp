@@ -35,7 +35,7 @@
         </div>
         <div class="form-control">
             <label for="date">Data di nascita</label>
-            <input type="month" id="date" name="data_nascita"/>
+            <input type="date" id="date" name="data_nascita"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>

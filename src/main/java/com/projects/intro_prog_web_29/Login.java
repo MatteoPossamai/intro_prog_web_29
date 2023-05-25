@@ -21,7 +21,7 @@ public class Login extends HttpServlet {
         try{
             // Connect to the database to check if the user exists
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            con = DriverManager.getConnection("jdbc:derby://localhost:1527/rubbish");
+            con = DriverManager.getConnection("jdbc:derby://localhost:1527/Mydb");
 
             // Query the database to get the user
             String query = "SELECT * FROM users WHERE username = '" + username + "'";

@@ -18,16 +18,17 @@ public class Signin extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String data_nascita = request.getParameter("data_nascita");
+        // Make the date format compatible with the database
+        String data_nascita_date = data_nascita.substring(0,4) + "-" + data_nascita.substring(5,7) + "-" + data_nascita.substring(8,10) + " 12:00:00";
         String telefono = request.getParameter("telefono");
-        String password_check = request.getParameter("password_check");
         // The password check is already done on the frontend, so it is not necessary to check it here
 
         // Connect to the database and query it
-        Connection con = null;
+        Connection con;
         try{
             // Connect to derby database, to check if the user exists
             Class.forName("org.apache.derby.jdbc.ClientDriver");
-            con = DriverManager.getConnection("jdbc:derby://localhost:1527/rubbish");
+            con = DriverManager.getConnection("jdbc:derby://localhost:1527/Mydb");
 
             // Check if the username already exists
             String query = "SELECT * FROM users WHERE username = '" + username + "'";
@@ -42,7 +43,8 @@ public class Signin extends HttpServlet {
                 request.getRequestDispatcher("/register.jsp").forward(request, response);
             }  else {
                 // Otherwise write the user in the database, and redirect him to the success page
-                query = "INSERT INTO users VALUES ('" + username + "', '" + email + "', '" + password + "', '" + data_nascita + "', '" + telefono + "', 'SI ')";
+                query = "INSERT INTO users VALUES ('" + username + "', '" + email + "', '" + password +
+                        "', '" + data_nascita_date + "', '" + telefono + "', 'SIMPA')";
                 stmt.executeUpdate(query);
                 request.getRequestDispatcher("/registrazione_confermata.jsp").forward(request, response);
             }
