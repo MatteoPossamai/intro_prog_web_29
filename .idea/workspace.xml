@@ -10,10 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Page phrase updated, and now changes live">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/activities.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/activities.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/activity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/activity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getAbout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getAbout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,7 +192,7 @@
       <workItem from="1684910131928" duration="724000" />
       <workItem from="1684935980292" duration="54000" />
       <workItem from="1684938312783" duration="326000" />
-      <workItem from="1685009901834" duration="7593000" />
+      <workItem from="1685009901834" duration="9342000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>
