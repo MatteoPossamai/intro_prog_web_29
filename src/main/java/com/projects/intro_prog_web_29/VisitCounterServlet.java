@@ -12,31 +12,6 @@ import java.sql.*;
 public class VisitCounterServlet extends HttpServlet {
   VisitCounter visitCounter;
 
-  public void init() {
-    // codice per prendere i dati del counter per ogni pagina dal database derby
-    // e metterli in visitCounter
-
-    /*
-     * if (esiste gia roba nel database derby) {
-     * try {
-     * //prendere dal db
-     * } catch (IOException e) {
-     * }
-     * 
-     * } else {
-     *  visitCounter = new VisitCounter();
-     * }
-     */
-    //fatto dal nulla ogni volta solo finchè non abbiamo db
-    //visitCounter = new VisitCounter();
-   /* Connection con = null;
-    String createTableCoffee = "CREATE TABLE visitCounter " + "(PageName VARCHAR(32), " + "visits INTEGER)";
-    Statement stmt = con.createStatement();
-    stmt.executeUpdate(createTableCoffee);
-*/
-    System.out.println("Entro in init******************************************************************************************************************");
-  }
-
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     response.setContentType("text/html;charset=UTF-8");
@@ -45,32 +20,27 @@ public class VisitCounterServlet extends HttpServlet {
     try{
       // Connect to derby database, to check if the user exists
       Class.forName("org.apache.derby.jdbc.ClientDriver");
-      con = DriverManager.getConnection("jdbc:derby://localhost:1527/rubbish");
-      //Check if the Visits table exists in db
+      con = DriverManager.getConnection("jdbc:derby://localhost:1527/Mydb");
 
-      // Else creates it
-      String createVisitsTable = "CREATE TABLE visitCounter " + "(PageName VARCHAR(32), " + "visits INTEGER)";
-      Statement stmt = con.createStatement();
-      stmt.executeUpdate(createVisitsTable);
       // Check if the username already exists
-      String query = "SELECT visits FROM visitCounter WHERE PageName = '" + pageName + "'";
+      String query = "SELECT visits FROM visit_counter WHERE pageName = '" + pageName + "'";
+      Statement stmt = con.createStatement();
       ResultSet res = stmt.executeQuery(query);
-      visitCounter.count=res.getInt("visit");
+      visitCounter.count=res.getInt("visits"); // TODO aggiustare, dà errore runtime
       if( ! res.next() ){
         visitCounter.count=0;
-        query = "INSERT INTO visitCounter VALUES ('" + pageName + "', '" + visitCounter.count + "' )";
+        query = "INSERT INTO visit_counter VALUES ('" + pageName + "', '" + visitCounter.count + "' )";
         stmt.executeUpdate(query);
       }
     }catch (SQLException | ClassNotFoundException e){
       e.printStackTrace();
     }
+    // TODO incremento counter
+    //
+    // TODO salvare dato nel db
+    //
     PrintWriter out = response.getWriter();
     out.println("Entro in doGet*********************************************************************************************************************");
     System.out.println("Entro in doGet*********************************************************************************************************************");
-  }
-
-  public void destroy() {
-    // salva il nuovo dato nel db
-    System.out.println("Entro in destroy*******************************************************************************************************************************");
   }
 }
