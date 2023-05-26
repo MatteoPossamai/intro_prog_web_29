@@ -104,3 +104,11 @@ textarea{
     width: 100%;
     height: 100px;
 }
+
+.error {
+    margin: auto;
+    border: #880D1E 1px solid;
+    padding: 5px;
+    background-color: #F48364;
+    font-size: 13pt;
+}
