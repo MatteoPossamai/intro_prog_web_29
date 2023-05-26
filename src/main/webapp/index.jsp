@@ -7,16 +7,24 @@
 <div class="content">
 <br class="title">
 <div class="text-image">
-    <img src="./images/placeholder.jpeg" class="image">
-    <div>
+    <img src="./images/placeholder.jpeg" class="image" alt="template_image">
+    <div style="margin-top: 90px">
         <h1>La nostra missione</h1>
-        <p class="text"> enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="text">
+            Benvenuti nel sito di Tum4world, un'associazione no profit impegnata nel fornire aiuto umanitario e beneficienza nelle zone dell'Africa centromeridionale. Siamo mossi da una profonda passione per fare la differenza e lavoriamo instancabilmente per migliorare le vite delle persone che vivono in comunità svantaggiate.
+            <br><br>
+            La nostra missione è semplice ma potente: combattere la povertà estrema, alleviare la sofferenza e promuovere lo sviluppo sostenibile in queste regioni. Attraverso progetti mirati, forniamo assistenza medica, cibo, acqua potabile, educazione e supporto per l'empowerment delle donne.
+            <br><br>
+            Crediamo fermamente che ogni individuo meriti un futuro dignitoso e che l'aiuto umanitario possa fare una differenza duratura. Collaboriamo con le comunità locali, i partner internazionali e i volontari per creare un impatto positivo e sostenibile.
+            <br><br>
+            Unisciti a noi in questa missione di speranza e solidarietà. Insieme possiamo costruire un mondo più giusto e equo per tutti. Esplora il nostro sito per saperne di più sui nostri progetti, scoprire come puoi contribuire e unirti alla nostra causa. Grazie per il tuo sostegno.
+        </p>
 
     </div>
 </div>
 
 <div class="cta">
-    <img src="./images/placeholder.jpeg" class="logo">
+    <img src="./images/placeholder.jpeg" class="logo" alt="template_image">
     <div class="button-container">
         <button id="download" class="button index-button">Vuoi saperne di piu?</button>
     </div>
@@ -26,9 +34,9 @@
     <script>
 
         document.getElementById('download').addEventListener('click', function() {
-            var fileUrl = "./images/08-JSP.pdf";
+            let fileUrl = "./images/08-JSP.pdf";
 
-            var link = document.createElement('a');
+            let link = document.createElement('a');
             link.href = fileUrl;
             link.download = 'filename.pdf';
 
