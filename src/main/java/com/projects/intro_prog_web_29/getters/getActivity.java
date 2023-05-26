@@ -26,9 +26,8 @@ public class getActivity extends HttpServlet {
 
         request.setAttribute("activity",activity);
 
-        RequestDispatcher
-                rd=getServletContext().getRequestDispatcher("/activity.jsp");
-        rd.forward(request,response);
+
+        request.getRequestDispatcher("/activity.jsp").forward(request,response);
 
 
     }
