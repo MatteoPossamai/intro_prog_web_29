@@ -1,14 +1,11 @@
 package com.projects.intro_prog_web_29;
 
 import java.io.Serializable;
-import java.util.Calendar;
 
 public class VisitCounter implements Serializable {
     int count = 0;
-    Calendar timeStamp = Calendar.getInstance();
     public void increase() {
         count++;
-        timeStamp = Calendar.getInstance();
     }
     @Override
     public String toString() {
@@ -17,8 +14,6 @@ public class VisitCounter implements Serializable {
             s = new StringBuffer("<p>no hits yet</p>");
         else {
             s = new StringBuffer("<p>hits = ");
-            s.append(count).append("<br>last hit on ")
-                    .append(timeStamp.getTime().toString());
         }
         return s.toString();
     }

@@ -7,6 +7,8 @@
 
 <t:base>
 
+  <script> fetch("visits")</script>
+
     <main class="content">
 
       <h1 class="title">Benvenuto/a Amministratore!</h1>
