@@ -41,6 +41,7 @@ public class Signin extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String data_nascita = request.getParameter("data_nascita");
+        String role = request.getParameter("role");
         // Make the date format compatible with the database
         String data_nascita_date = data_nascita.substring(0,4) + "-" + data_nascita.substring(5,7) + "-" + data_nascita.substring(8,10) + " 12:00:00";
         String telefono = request.getParameter("telefono");
@@ -65,7 +66,7 @@ public class Signin extends HttpServlet {
             }  else {
                 // Otherwise write the user in the database, and redirect him to the success page
                 query = "INSERT INTO users VALUES ('" + username + "', '" + email + "', '" + password +
-                        "', '" + data_nascita_date + "', '" + telefono + "', 'SIMPA')";
+                        "', '" + data_nascita_date + "', '" + telefono + "', '" + role + "')";
                 stmt.executeUpdate(query);
                 request.getRequestDispatcher("/registrazione_confermata.jsp").forward(request, response);
             }

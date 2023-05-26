@@ -52,6 +52,13 @@
             <small>Error message</small>
         </div>
         <div class="form-control">
+            <label for="role">Ruolo</label>
+            <select id="role" name="role">
+                <option value="SIMPA">Simpatizzante</option>
+                <option value="ADERE">Aderente</option>
+            </select>
+        </div>
+        <div class="form-control">
             <label for="password2">Password check</label>
             <input type="password" placeholder="Password two" id="password2" name="password_check"/>
             <i class="fas fa-check-circle"></i>

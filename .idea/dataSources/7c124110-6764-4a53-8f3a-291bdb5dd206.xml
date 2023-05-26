@@ -17,49 +17,5 @@
     <schema id="10" parent="1" name="SYSIBM"/>
     <schema id="11" parent="1" name="SYSPROC"/>
     <schema id="12" parent="1" name="SYSSTAT"/>
-    <table id="13" parent="2" name="FIRSTTABLE"/>
-    <table id="14" parent="2" name="USERS"/>
-    <column id="15" parent="13" name="ID">
-      <DasType>INTEGER|4s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="16" parent="13" name="NAME">
-      <DasType>VARCHAR(12)|12s</DasType>
-      <Position>2</Position>
-    </column>
-    <index id="17" parent="13" name="SQL0000000081-36e280fc-0188-39c7-4594-00000f0288e0">
-      <ColNames>ID</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Unique>1</Unique>
-    </index>
-    <key id="18" parent="13" name="SQL0000000081-36e280fc-0188-39c7-4594-00000f0288e0">
-      <ColNames>ID</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-    </key>
-    <column id="19" parent="14" name="USERNAME">
-      <DasType>VARCHAR(255)|12s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="20" parent="14" name="PASSWORD">
-      <DasType>VARCHAR(255)|12s</DasType>
-      <Position>2</Position>
-    </column>
-    <column id="21" parent="14" name="USERTYPE">
-      <DasType>VARCHAR(255)|12s</DasType>
-      <Position>3</Position>
-    </column>
-    <index id="22" parent="14" name="SQL0000000000-40348015-0188-4f20-f1ff-00000ef867d0">
-      <ColNames>USERNAME</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Unique>1</Unique>
-    </index>
-    <key id="23" parent="14" name="SQL0000000000-40348015-0188-4f20-f1ff-00000ef867d0">
-      <ColNames>USERNAME</ColNames>
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-    </key>
   </database-model>
 </dataSource>
