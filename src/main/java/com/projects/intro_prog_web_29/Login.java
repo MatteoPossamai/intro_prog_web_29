@@ -39,8 +39,6 @@ public class Login extends HttpServlet {
         // Get the username and password from the request
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-
-        Connection con;
         try{
             // Query the database to get the user
             String query = "SELECT * FROM users WHERE username = '" + username + "'";

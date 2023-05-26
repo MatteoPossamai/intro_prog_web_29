@@ -47,8 +47,6 @@ public class Signin extends HttpServlet {
         String telefono = request.getParameter("telefono");
         // The password check is already done on the frontend, so it is not necessary to check it here
 
-        // Connect to the database and query it
-        Connection con;
         try{
             // Connect to derby database, to check if the user exists
 
