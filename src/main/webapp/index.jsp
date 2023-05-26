@@ -3,9 +3,6 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:base>
-
-
-    <title>Homepage</title>
     <link href="stylesheets/index.css" rel="stylesheet" type="text/css">
 <div class="content">
 <br class="title">

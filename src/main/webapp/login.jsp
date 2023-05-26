@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<title>LogIn</title>
 
 <t:base>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/stylesheets/login.css" type="text/css"/>

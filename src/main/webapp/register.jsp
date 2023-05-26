@@ -1,7 +1,6 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<title>SignIn</title>
 <link rel="stylesheet" href="${pageContext.request.contextPath}/stylesheets/register.css" type="text/css"/>
 
 
