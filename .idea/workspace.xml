@@ -9,8 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Page phrase updated, and now changes live">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/phrase.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/phrase.jsp" afterDir="false" />
+    <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Signin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Signin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,12 +27,18 @@
       <list>
         <option value="JavaScript File" />
         <option value="Jsp File" />
+        <option value="CSS File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -64,7 +75,15 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.43800697&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;derby&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -187,9 +206,17 @@
       <workItem from="1683737337903" duration="5136000" />
       <workItem from="1683820882568" duration="4399000" />
       <workItem from="1683922668389" duration="2737000" />
-      <workItem from="1683975597434" duration="845000" />
-      <workItem from="1684078679153" duration="501000" />
-      <workItem from="1684575284897" duration="2622000" />
+      <workItem from="1684408575012" duration="967000" />
+      <workItem from="1684410950986" duration="1104000" />
+      <workItem from="1684510122590" duration="1620000" />
+      <workItem from="1684591945011" duration="1553000" />
+      <workItem from="1684594818232" duration="2381000" />
+      <workItem from="1684867218147" duration="591000" />
+      <workItem from="1684954259983" duration="1719000" />
+      <workItem from="1685031552607" duration="2639000" />
+      <workItem from="1685040463559" duration="957000" />
+      <workItem from="1685103814735" duration="127000" />
+      <workItem from="1685103958482" duration="2058000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>
@@ -205,7 +232,28 @@
       <option name="project" value="LOCAL" />
       <updated>1684329804002</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Final modifications to phrase section">
+      <created>1684329984345</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684329984345</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added initializer for the database on launch if it does not exists. Then, fixed the login form and functionalities. Now login is working quite well. Then there is to test signup, to backpropagate errors, and the hashing if necessary. Then, everything is done">
+      <created>1684955969524</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1684955969524</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
+      <created>1685034154949</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685034154949</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +273,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code." />
     <MESSAGE value="Page phrase updated, and now changes live" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page phrase updated, and now changes live" />
+    <MESSAGE value="Final modifications to phrase section" />
+    <MESSAGE value="Added initializer for the database on launch if it does not exists. Then, fixed the login form and functionalities. Now login is working quite well. Then there is to test signup, to backpropagate errors, and the hashing if necessary. Then, everything is done" />
+    <MESSAGE value="Tested the signup and the login for normal users, modifying the SQL schema and the date format." />
+    <option name="LAST_COMMIT_MESSAGE" value="Tested the signup and the login for normal users, modifying the SQL schema and the date format." />
   </component>
 </project>
