@@ -37,6 +37,20 @@ public class Initializer extends HttpServlet {
                 stmt.executeUpdate(query);
             }
 
+            // Check with a SQL query if the table of visits exists, otherwise create it
+            query = "SELECT COUNT(*) FROM SYS.SYSTABLES WHERE TABLENAME = 'VISIT_COUNTER'";
+            stmt = con.createStatement();
+            res = stmt.executeQuery(query);
+
+            // If the table doesn't exist, create it
+            if (res.next() && res.getInt(1) == 0) {
+                query = "CREATE TABLE visit_counter (\n" +
+                        "    pageName VARCHAR(255) PRIMARY KEY,\n" +
+                        "    visits INTEGER\n" +
+                        ")";
+                stmt.executeUpdate(query);
+            }
+
 
         }catch (SQLException | ClassNotFoundException e){
             e.printStackTrace();
