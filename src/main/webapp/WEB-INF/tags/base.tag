@@ -1,6 +1,10 @@
 <%@tag description="Template page to wrap everything else" pageEncoding="UTF-8"%>
 <html>
 <head>
+    <head>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <title>Tum4World</title>
     <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>

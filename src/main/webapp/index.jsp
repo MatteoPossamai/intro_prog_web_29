@@ -3,9 +3,6 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:base>
-
-
-    <title>Homepage</title>
     <link href="stylesheets/index.css" rel="stylesheet" type="text/css">
 <div class="content">
 <br class="title">
@@ -21,8 +18,21 @@
 <div class="cta">
     <img src="./images/placeholder.jpeg" class="logo">
     <div class="button-container">
-        <button class="button index-button">Vuoi saperne di piu?</button>
+        <button id="download" class="button index-button">Vuoi saperne di piu?</button>
     </div>
 </div>
 </div>
+
+    <script>
+
+        document.getElementById('download').addEventListener('click', function() {
+            var fileUrl = "./images/08-JSP.pdf";
+
+            var link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'filename.pdf';
+
+            link.dispatchEvent(new MouseEvent('click'));
+        });
+    </script>
 </t:base>

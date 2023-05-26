@@ -17,6 +17,17 @@
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
     </list>
+    <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Page phrase updated, and now changes live">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/base.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/base.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/aderente.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/aderente.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/amministratore.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/amministratore.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/simpatizzante.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/simpatizzante.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +79,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ivan/Documents/Unitn/Web/Tum4World/intro_prog_web_29&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ivan/Documents/Unitn/Web/Tum4World/intro_prog_web_29/src/main/webapp/images&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -87,12 +98,15 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags" />
       <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\webapp" />
       <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\webapp\WEB-INF" />
       <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\webapp\stylesheets" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/stylesheets" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags" />
     </key>
   </component>
   <component name="RunManager">
@@ -217,6 +231,13 @@
       <workItem from="1685040463559" duration="957000" />
       <workItem from="1685103814735" duration="127000" />
       <workItem from="1685103958482" duration="2058000" />
+      <workItem from="1684910131928" duration="724000" />
+      <workItem from="1684935980292" duration="54000" />
+      <workItem from="1684938312783" duration="326000" />
+      <workItem from="1685009901834" duration="12142000" />
+      <workItem from="1685103974099" duration="478000" />
+      <workItem from="1684498543042" duration="4435000" />
+      <workItem from="1684586541195" duration="761000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>
