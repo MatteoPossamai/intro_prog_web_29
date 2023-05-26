@@ -11,6 +11,11 @@
         <img src="images/placeholder.jpeg" alt="placeholder" height="30px" width="30px" class="image-holder-register">
     </section>
 <div class="container">
+    <c:if test="${not empty error}">
+        <div class="error">
+            <p>${error}</p>
+        </div>
+    </c:if>
     <form id="form" class="form" method="post" action="signin">
         <div class="form-control">
             <label for="username">Username</label>

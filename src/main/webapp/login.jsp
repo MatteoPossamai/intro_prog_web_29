@@ -11,6 +11,12 @@
             <img src="images/placeholder.jpeg" alt="placeholder" height="30px" width="30px" class="image-holder">
         </section>
         <div class="container">
+            <!-- Add the error from the request of the servlet -->
+            <c:if test="${not empty error}">
+                <div class="error">
+                    <p>${error}</p>
+                </div>
+            </c:if>
             <form id="form" class="form" method="post" action="login">
                 <div class="form-control">
                     <label for="username">Username</label>

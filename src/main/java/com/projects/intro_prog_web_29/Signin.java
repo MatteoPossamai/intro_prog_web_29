@@ -11,6 +11,29 @@ import java.sql.*;
 @WebServlet(name = "signin", value = "/signin")
 public class Signin extends HttpServlet {
 
+    String dbURL = "jdbc:derby://localhost:1527/Mydb";
+    String user = "App";
+    String password = "pw";
+    Connection con;
+
+    public void init() {
+        // Initialize the database connection for the entire servlet
+        try {
+            Class.forName("org.apache.derby.jdbc.ClientDriver");
+            con = DriverManager.getConnection(dbURL, user, password);
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void destroy() {
+        try {
+            con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         // Get all the data from the form
@@ -27,12 +50,10 @@ public class Signin extends HttpServlet {
         Connection con;
         try{
             // Connect to derby database, to check if the user exists
-            Class.forName("org.apache.derby.jdbc.ClientDriver");
-            con = DriverManager.getConnection("jdbc:derby://localhost:1527/Mydb");
 
             // Check if the username already exists
             String query = "SELECT * FROM users WHERE username = '" + username + "'";
-            Statement stmt = con.createStatement();
+            Statement stmt = this.con.createStatement();
             ResultSet res = stmt.executeQuery(query);
             boolean username_exists = res.next();
 
@@ -48,7 +69,7 @@ public class Signin extends HttpServlet {
                 stmt.executeUpdate(query);
                 request.getRequestDispatcher("/registrazione_confermata.jsp").forward(request, response);
             }
-        }catch (SQLException | ClassNotFoundException e){
+        }catch (SQLException e){
             e.printStackTrace();
         }
     }
