@@ -8,7 +8,7 @@
     <div class="text-container">
     <p class="text">Ci puoi venire a trovare in Via Sommarive 29000, Trento, Italia. Se hai bisogno di ulteriori informazioni puoi chiamarci al numero 0461 827188 oppure compila il form sottostante e ti risponderemo via email.</p>
     </div>
-    <form class="contact-form"  method="post">
+    <form action="EmailHandler" class="contact-form"  method="post">
         <label>
             Nome
             <input type="text" name="nome">
@@ -23,21 +23,21 @@
 
         <label>
             Email
-            <input type="email" name="email">
+            <input type="email" id="from" name="from">
         </label>
 
         <label>
             Motivazione
-            <select>
-                <option value="1">Informazioni</option>
-                <option value="2">Reclami</option>
-                <option value="3">Altro</option>
+            <select id="subject" name="subject">
+                <option value="Informazioni">Informazioni</option>
+                <option value="Reclami">Reclami</option>
+                <option value="Altro">Altro</option>
             </select>
         </label>
         </div>
         <label>
             Messaggio
-            <textarea rows="5"></textarea>
+            <textarea id="content" name="content" rows="5"></textarea>
         </label>
         <div class="row" style="justify-content: center">
         <input class="button" type="reset">
