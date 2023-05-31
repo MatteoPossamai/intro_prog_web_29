@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.*;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 @WebServlet(name = "Amministratore", urlPatterns = { "/admin" })
@@ -19,6 +21,8 @@ public class Amministratore extends HttpServlet {
   Connection con;
   Set<User> users = new HashSet<User>();
   float[] donations = new float[12];
+  Map<String, Integer> visits = new HashMap<String, Integer>();
+  int totalVisits = 0;
 
   public void init() {
     // Initialize the database connection for the entire servlet
@@ -60,10 +64,17 @@ public class Amministratore extends HttpServlet {
       while (res.next()) {
           donations[i] = res.getFloat(2);
           i++;
-
       }
 
-      // stampa di controllo per me
+      query = "SELECT * FROM visits ";
+      stmt = con.createStatement();
+      res = stmt.executeQuery(query);
+      while (res.next()) {
+        visits.put(res.getString(1), res.getInt(2));
+        totalVisits += res.getInt(2);
+      }
+
+      // stampa di controllo per me -------------------------
       System.out.println("utenti: ");
       for (User user : users) {
         System.out.println("° " + user.username);
@@ -73,8 +84,17 @@ public class Amministratore extends HttpServlet {
       for (float donation : donations) {
         System.out.println("° " + donation);
       }
-      // ----------------------------------------
-      RequestDispatcher rd = getServletContext().getRequestDispatcher("/amministratore.jsp");
+
+      System.out.println("visite: ");
+      for (Map.Entry<String, Integer> entry : visits.entrySet()) {
+        System.out.println("° " + entry.getKey() + " " + entry.getValue());
+      }
+      System.out.println("totale visite: " + totalVisits);
+      
+      // -----------------------------------------------------
+      request.setAttribute("usersList", users);
+      request.setAttribute("donations", donations);
+      RequestDispatcher rd = request.getRequestDispatcher("/amministratore.jsp");
       rd.forward(request, response);
 
     } catch (SQLException e) {
