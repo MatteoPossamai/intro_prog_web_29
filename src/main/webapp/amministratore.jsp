@@ -7,7 +7,15 @@
 
 <t:base>
 
-  <script> fetch("visits")</script>
+  <script>
+      fetch("visits", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'body='+ encodeURIComponent("amministratore")
+      })
+  </script>
 
     <main class="content">
 

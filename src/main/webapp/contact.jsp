@@ -2,6 +2,15 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:base>
+    <script>
+        fetch("visits", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'body='+ encodeURIComponent("contact")
+        })
+    </script>
     <link rel="stylesheet" type="text/css" href="stylesheets/contact.css" />
 
     <h1 class="title">Contatti</h1>

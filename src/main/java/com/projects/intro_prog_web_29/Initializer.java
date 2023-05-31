@@ -29,6 +29,7 @@ public class Initializer extends HttpServlet {
                         "    data_nascita DATE,\n" +
                         "    telefono VARCHAR(255),\n" +
                         "    userType VARCHAR(255)\n" +
+                        // lista dell attività a cui è iscritto (?)
                         ")";
                 stmt.executeUpdate(query);
 

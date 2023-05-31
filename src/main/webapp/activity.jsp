@@ -15,6 +15,16 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 <body>
+
+<script>
+    fetch("visits", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'body='+ encodeURIComponent(<%=activity.getTitle()%>)
+    })
+</script>
      <h1 class="title"><%=activity.getTitle()%></h1>
      <div class="content">
 

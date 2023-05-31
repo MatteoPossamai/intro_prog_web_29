@@ -5,6 +5,15 @@
 
 
 <t:base>
+    <script>
+        fetch("visits", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'body='+ encodeURIComponent("register")
+        })
+    </script>
 <main>
     <section class="text-image" id="1">
         <img src="images/placeholder.jpeg" alt="placeholder" height="30px" width="30px" class="image-holder-register">

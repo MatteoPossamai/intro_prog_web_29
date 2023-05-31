@@ -10,11 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7c124110-6764-4a53-8f3a-291bdb5dd206.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7c124110-6764-4a53-8f3a-291bdb5dd206/storage_v2/_src_/schema/SYS.rUIBAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7c124110-6764-4a53-8f3a-291bdb5dd206/storage_v2/_src_/schema/SYSCS_UTIL.JC_i2A.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7c124110-6764-4a53-8f3a-291bdb5dd206/storage_v2/_src_/schema/SYSIBM.hzyvkg.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Servlet.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/VisitCounter.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Initializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/VisitCounterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/VisitCounterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/activities.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/activities.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/activity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/activity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/aderente.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/aderente.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/invio-confermato.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/invio-confermato.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/registrazione_confermata.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/registrazione_confermata.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +82,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ivan/Documents/Unitn/Web/Tum4World/intro_prog_web_29/src/main/webapp/images&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ivan/Documents/Unitn/Web/Tum4World/intro_prog_web_29&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -86,19 +101,17 @@
   }
 }</component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags" />
       <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\webapp" />
       <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\webapp\WEB-INF" />
       <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\webapp\stylesheets" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/stylesheets" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.79" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8084/intro_prog_web_29/simpatizzante.jsp" />
       <deployment>
         <artifact name="intro_prog_web_29:war exploded">
           <settings>
@@ -218,13 +231,10 @@
       <workItem from="1685040463559" duration="957000" />
       <workItem from="1685103814735" duration="127000" />
       <workItem from="1685103958482" duration="2058000" />
-      <workItem from="1684910131928" duration="724000" />
-      <workItem from="1684935980292" duration="54000" />
-      <workItem from="1684938312783" duration="326000" />
-      <workItem from="1685009901834" duration="12142000" />
-      <workItem from="1685103974099" duration="478000" />
-      <workItem from="1684498543042" duration="4435000" />
-      <workItem from="1684586541195" duration="761000" />
+      <workItem from="1685111199215" duration="3305000" />
+      <workItem from="1685372673541" duration="4824000" />
+      <workItem from="1685450027241" duration="7604000" />
+      <workItem from="1685522065402" duration="602000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>

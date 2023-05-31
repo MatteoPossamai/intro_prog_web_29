@@ -3,6 +3,15 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:base>
+    <script>
+        fetch("visits", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'body='+ encodeURIComponent("home")
+        })
+    </script>
     <link href="stylesheets/index.css" rel="stylesheet" type="text/css">
 <div class="content">
 <br class="title">

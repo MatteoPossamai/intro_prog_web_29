@@ -9,6 +9,15 @@
     <title>Tum4World</title>
 </head>
 <body>
+<script>
+    fetch("visits", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'body='+ encodeURIComponent("aderente")
+    })
+</script>
 <jsp:include page="menu-private.jsp"/>
 
 <main class="content">

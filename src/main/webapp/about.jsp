@@ -3,6 +3,17 @@
 
 <t:base>
 
+
+    <script>
+        fetch("visits", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'body='+ encodeURIComponent("about")
+        })
+    </script>
+
     <link href="stylesheets/chi-siamo.css" rel="stylesheet" type="text/css">
 
     <h1 class="title">Chi siamo</h1>
