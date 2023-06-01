@@ -58,6 +58,7 @@ public class Login extends HttpServlet {
                 // If the user exists and the password provided is correct, then log the user in
                 request.getSession().setAttribute("username", username);
                 request.getSession().setAttribute("userType", userType);
+                User.LoggedUser=username;
                 response.sendRedirect(request.getContextPath() + AuthBasic.redirect_pages.get(userType));
             } else {
                 // If the username and password are incorrect, redirect to the login page

@@ -7,13 +7,22 @@
 
 <t:base>
 
-  <script> fetch("visits")</script>
+  <script>
+      fetch("visits", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'body='+ encodeURIComponent("amministratore")
+      })
+  </script>
 
     <main class="content">
 
       <h1 class="title">Benvenuto/a Amministratore!</h1>
+      <div id="basic-container">
       <div class="button-container">
-        <button class="button" onclick="get('utenti')">Visualizza gli utenti del sito</button>
+        <button class="button" onclick="changeAppearance()">Visualizza gli utenti del sito</button>
         <button class="button" onclick="get('simpatizzanti')">Visualizza i simpatizzanti del sito</button>
         <button class="button" onclick="get('aderenti')">Visualizza gli aderenti al sito</button>
       </div>
@@ -21,23 +30,28 @@
         <button class="button" id="mostra-visite" onclick="print_visits()">Mostra le visite del sito</button>
         <button class="button" id="mostra-donazioni" onclick="print_donations()">Mostra le donazioni del sito</button>
       </div>
+      </div>
+
+
+
+      <div class="info-container" id="info-container">
+        <div class="vertical-buttons">
+          <button class="button" onclick="get('utenti')">Visualizza gli utenti del sito</button>
+          <button class="button" onclick="get('simpatizzanti')">Visualizza i simpatizzanti del sito</button>
+          <button class="button" onclick="get('aderenti')">Visualizza gli aderenti al sito</button>
+
+          <button class="button" id="mostra-visite2" onclick="print_visits()">Mostra le visite del sito</button>
+          <button class="button" id="mostra-donazioni2" onclick="print_donations()">Mostra le donazioni del sito</button>
+        </div>
+        <div class="info">
+
+        </div>
+
+          <img class="close" src="images/x-symbol.svg" onclick="closeInfo()">
+      </div>
     </main>
   </t:base>
 
-    <!--
-    <div id="popup-profilo" class="amministratore-popup-profilo">
-      <div class="amministratore-popup-content">
-        <span class="close" onclick="hide('popup-profilo')">&times;</span>
-        <p>Informazioni del profilo</p>
-      </div>
-    </div>
-    <div id="popup-cancella" class="amministratore-popup-cancella">
-      <div class="amministratore-popup-content">
-        <span class="close" onclick="hide('popup-cancella')">&times;</span>
-        <p>La cancellazione dal sito è andata a buon fine</p>
-      </div>
-    </div>
-    -->
     <script>
       function print_donations() {
         // prende da derby i dati e li stampa in un grafico
@@ -50,4 +64,29 @@
       function get(element) {
         // prende dal db i dati e li stampa con una lista <li>
       }
+
+      function closeInfo(){
+        var hide = document.getElementById("info-container")
+        var show = document.getElementById("basic-container")
+        if (hide.style.display === "none") {
+          hide.style.display = "block";
+        } else {
+          show.style.display= "block"
+          hide.style.display = "none";
+        }
+      }
+
+      function changeAppearance() {
+        console.log("entro in funzione")
+        var hide = document.getElementById("basic-container");
+        var show = document.getElementById("info-container");
+        if (hide.style.display === "none") {
+          hide.style.display = "block";
+        } else {
+          show.style.display= "block"
+          hide.style.display = "none";
+        }
+      }
+
+
     </script>

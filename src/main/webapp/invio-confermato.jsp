@@ -9,7 +9,15 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:base>
-
+    <script>
+        fetch("visits", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'body='+ encodeURIComponent("invio-confermato")
+        })
+    </script>
     <link href="stylesheets/invio-confermato.css" rel="stylesheet" type="text/css">
 
 <div class="text-image">

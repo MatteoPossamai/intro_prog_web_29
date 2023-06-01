@@ -3,6 +3,15 @@
 
 
 <t:base>
+    <script>
+        fetch("visits", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'body='+ encodeURIComponent("simpatizzante")
+        })
+    </script>
     <link href="stylesheets/simpatizzante.css" rel="stylesheet" type="text/css">
     <body>
     <main class="content">
