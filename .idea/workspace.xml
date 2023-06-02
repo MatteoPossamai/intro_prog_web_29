@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7c124110-6764-4a53-8f3a-291bdb5dd206.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7c124110-6764-4a53-8f3a-291bdb5dd206.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Added first text to the pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -225,6 +224,9 @@
       <workItem from="1685103974099" duration="478000" />
       <workItem from="1684498543042" duration="4435000" />
       <workItem from="1684586541195" duration="761000" />
+      <workItem from="1685459684546" duration="35000" />
+      <workItem from="1685724403444" duration="1034000" />
+      <workItem from="1685732152783" duration="731000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>

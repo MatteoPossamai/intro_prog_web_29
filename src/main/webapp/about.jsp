@@ -8,7 +8,7 @@
     <h1 class="title">Chi siamo</h1>
     <div class="content">
     <div class="text-image">
-        <img src="./images/placeholder.jpeg" class="image">
+        <img src="./images/img1.jpg" class="image">
         <p class="text">
             Tum4world nasce dall'incontro di un gruppo di persone unite dalla volontà comune di fare la differenza nelle zone dell'Africa centromeridionale. Nel lontano anno 2003, un piccolo nucleo di individui con una grande voglia di auitare si riunì e decise di fondare un'organizzazione no profit con un obiettivo: maggior benessere nelle comunità più bisognose.
             <br><br>
@@ -23,11 +23,11 @@
                 Ogni successo che abbiamo raggiunto è stato possibile grazie al sostegno generoso di donatori, partner internazionali e volontari che credono nella nostra causa. La loro fiducia e il loro impegno ci spingono a continuare a lavorare duramente per cambiare la realtà di molte persone.
 
             </p>
-            <img src="./images/placeholder.jpeg" class="image">
+            <img src="./images/img2.jpg" class="image">
         </div>
 
         <div class="text-image">
-            <img src="./images/placeholder.jpeg" class="image">
+            <img src="./images/img3.jpg" class="image">
             <p class="text">
                 La trasparenza e l'accountability sono valori fondamentali per Tum4world. Siamo impegnati a gestire in modo responsabile e accurato le risorse che ci vengono affidate. Pubblichiamo regolarmente rapporti finanziari e rendiconti delle attività, al fine di mantenere la fiducia dei nostri sostenitori e di dimostrare l'impatto concreto che otteniamo grazie alla loro generosità.
                 <br><br>
@@ -41,7 +41,7 @@
                 <br><br>
                 Grazie per il tuo sostegno.
             </p>
-            <img src="./images/placeholder.jpeg" class="image">
+            <img src="./images/img4.jpg" class="image">
         </div>
 
     </div>

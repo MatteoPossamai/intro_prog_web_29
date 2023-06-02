@@ -7,7 +7,7 @@
 
     <main>
         <section class="text-image" id="1">
-            <img src="images/placeholder.jpeg" alt="placeholder" height="30px" width="30px" class="image-holder">
+            <img src="images/logo.png" alt="placeholder" height="30px" width="30px" class="image-holder">
         </section>
         <div class="container">
             <!-- Add the error from the request of the servlet -->
