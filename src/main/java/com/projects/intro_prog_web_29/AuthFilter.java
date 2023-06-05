@@ -3,9 +3,13 @@ package com.projects.intro_prog_web_29;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.sql.SQLException;
+
+import com.projects.intro_prog_web_29.CookieCheck;
 
 @WebFilter(filterName = "auth", urlPatterns = {"/amministratore.jsp", "/aderente.jsp", "/simpatizzante.jsp"})
 public class AuthFilter implements Filter {
@@ -24,11 +28,21 @@ public class AuthFilter implements Filter {
         // Read the request and get the session
         HttpServletRequest hreq=(HttpServletRequest) request;
         HttpSession session = hreq.getSession(false);
+        System.out.println("Entro nel doFilter");
+        Cookie[] cookieArray = hreq.getCookies();
+        for(Cookie cookieFake: cookieArray)
+        {
+            System.out.println("Cookie: " + cookieFake.getValue());
+        }
+        try {
+            CookieCheck.manageCookie(cookieArray,hreq);
+        } catch (SQLException e) {
+            System.out.println("Si pezza");
+            throw new RuntimeException(e);
+        }
 
         // Get from the URL the jsp page we are in
         String page = hreq.getRequestURI().substring(hreq.getContextPath().length());
-
-
         if(session == null || session.getAttribute("username") == null){
             // If the user is not logged in, redirect to the login page, because no page in the array
             // is accessible if not logged in

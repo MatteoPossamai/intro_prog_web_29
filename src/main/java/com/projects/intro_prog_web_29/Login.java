@@ -2,6 +2,7 @@ package com.projects.intro_prog_web_29;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -56,8 +57,11 @@ public class Login extends HttpServlet {
 
             if (password_correct) {
                 // If the user exists and the password provided is correct, then log the user in
+                Cookie ck = new Cookie("username", username);
                 request.getSession().setAttribute("username", username);
                 request.getSession().setAttribute("userType", userType);
+                ck.setMaxAge(3600);
+                response.addCookie(ck);
                 User.LoggedUser=username;
                 response.sendRedirect(request.getContextPath() + AuthBasic.redirect_pages.get(userType));
             } else {
