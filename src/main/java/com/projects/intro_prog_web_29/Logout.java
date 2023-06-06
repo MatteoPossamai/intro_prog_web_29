@@ -11,7 +11,7 @@ import java.sql.*;
 @WebServlet(name = "logout", value = "/logout")
 public class Logout extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Get the current user session, if it exists and invalidate it
         if(request.getSession(false) != null){
             request.getSession(false).invalidate();
