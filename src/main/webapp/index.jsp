@@ -34,7 +34,7 @@
     <script>
 
         document.getElementById('download').addEventListener('click', function() {
-            let fileUrl = "./images/08-JSP.pdf";
+            let fileUrl = "./images/TUM4World.pdf";
 
             let link = document.createElement('a');
             link.href = fileUrl;
