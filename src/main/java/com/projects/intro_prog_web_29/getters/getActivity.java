@@ -16,7 +16,7 @@ public class getActivity extends HttpServlet {
         Activity activity = new Activity();
 
         if(activityID.equals("1")){
-                createActivity(activity,"1  ", "asd", "asd", "");
+                    createActivity(activity,"Mensa", "asd", "asd", "");
         } else if(activityID.equals("2") ){
             createActivity(activity,"2", "asd", "asd", "");
         } else if (activityID.equals("3")){

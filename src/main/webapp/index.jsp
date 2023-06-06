@@ -9,15 +9,9 @@
 <div class="text-image">
     <img src="./images/placeholder.jpeg" class="image" alt="template_image">
     <div style="margin-top: 90px">
-        <h1>La nostra missione</h1>
-        <p class="text">
-            Benvenuti nel sito di Tum4world, un'associazione no profit impegnata nel fornire aiuto umanitario e beneficienza nelle zone dell'Africa centromeridionale. Siamo mossi da una profonda passione per fare la differenza e lavoriamo instancabilmente per migliorare le vite delle persone che vivono in comunità svantaggiate.
-            <br><br>
-            La nostra missione è semplice ma potente: combattere la povertà estrema, alleviare la sofferenza e promuovere lo sviluppo sostenibile in queste regioni. Attraverso progetti mirati, forniamo assistenza medica, cibo, acqua potabile, educazione e supporto per l'empowerment delle donne.
-            <br><br>
-            Crediamo fermamente che ogni individuo meriti un futuro dignitoso e che l'aiuto umanitario possa fare una differenza duratura. Collaboriamo con le comunità locali, i partner internazionali e i volontari per creare un impatto positivo e sostenibile.
-            <br><br>
-            Unisciti a noi in questa missione di speranza e solidarietà. Insieme possiamo costruire un mondo più giusto e equo per tutti. Esplora il nostro sito per saperne di più sui nostri progetti, scoprire come puoi contribuire e unirti alla nostra causa. Grazie per il tuo sostegno.
+        <h1 id="title"></h1>
+        <p id="description" class="text">
+
         </p>
 
     </div>
@@ -33,6 +27,8 @@
 
     <script>
 
+
+
         document.getElementById('download').addEventListener('click', function() {
             let fileUrl = "./images/08-JSP.pdf";
 
@@ -42,5 +38,28 @@
 
             link.dispatchEvent(new MouseEvent('click'));
         });
+
+
+        let filePath = './content.json';
+        let request = new XMLHttpRequest();
+        request.open('GET',filePath,true);
+
+
+        request.onreadystatechange = function () {
+            let titleElement = document.getElementById("title");
+            let descriptionElement = document.getElementById("description");
+
+            if (request.readyState === 4 && request.status === 200){
+
+                let jsonData = JSON.parse(request.responseText).indexContent;
+                let title = jsonData.title;
+                let description = jsonData.description;
+
+                titleElement.innerHTML = title;
+                descriptionElement.innerHTML = description;
+            }
+        }
+        request.send();
+
     </script>
 </t:base>
