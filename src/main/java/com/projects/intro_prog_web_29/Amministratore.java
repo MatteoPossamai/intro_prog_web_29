@@ -8,10 +8,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 @WebServlet(name = "Amministratore", urlPatterns = { "/admin" })
 public class Amministratore extends HttpServlet {
@@ -19,7 +18,8 @@ public class Amministratore extends HttpServlet {
   String user = "App";
   String password = "pw";
   Connection con;
-  Set<User> users = new HashSet<User>();
+  String simpatizzanti[] ;
+  String aderenti [];
   float[] donations = new float[12];
   Map<String, Integer> visits = new HashMap<String, Integer>();
   int totalVisits = 0;
@@ -39,20 +39,34 @@ public class Amministratore extends HttpServlet {
     response.setContentType("text/html;charset=UTF-8");
 
     try {
-      // Check if there are users in the database
-      String query = "SELECT username, userType FROM users WHERE userType!='ADMIN'";
+      String query = "SELECT COUNT(CASE WHEN userType = 'SIMPA' THEN 1 END) AS simpa, " +
+              "       COUNT(CASE WHEN userType = 'ADERE' THEN 1 END) AS ader " +
+              "FROM users WHERE userType!='ADMIN'";
       Statement stmt = con.createStatement();
       ResultSet res = stmt.executeQuery(query);
+      int simpa;
+      int ader;
+      if (res.next()){
+        simpa = res.getInt(1);
+        ader = res.getInt(2);
+        System.out.println(simpa+"-"+ader);
+        simpatizzanti=new String[simpa];
+        aderenti=new String[ader];
 
+      // Check if there are users in the database
+      query = "SELECT username, userType FROM users WHERE userType!='ADMIN'";
+      stmt = con.createStatement();
+      res = stmt.executeQuery(query);
       while (res.next()) {
         String username = res.getString(1);
         if (res.getString(2).equals("SIMPA")) {
-          Simpatizzante user = new Simpatizzante(username);
-          users.add(user);
+          simpatizzanti[simpa-1]=res.getString(1);
+          simpa--;
         } else if (res.getString(2).equals("ADERE")) {
-          Aderente user = new Aderente(username);
-          users.add(user);
+          aderenti[ader-1]=res.getString(1);
+          ader--;
         }
+      }
       }
       // gets donations from database and saves them by month
       query = "SELECT MONTH(date) AS month, SUM(amount) AS monthly_sum " +
@@ -66,7 +80,7 @@ public class Amministratore extends HttpServlet {
           i++;
       }
 
-      query = "SELECT * FROM visits ";
+      query = "SELECT * FROM visit_counter ";
       stmt = con.createStatement();
       res = stmt.executeQuery(query);
       while (res.next()) {
@@ -76,8 +90,11 @@ public class Amministratore extends HttpServlet {
 
       // stampa di controllo per me -------------------------
       System.out.println("utenti: ");
-      for (User user : users) {
-        System.out.println("° " + user.username);
+      for (String user : simpatizzanti) {
+        System.out.println("° " + user);
+      }
+      for (String user : aderenti) {
+        System.out.println("° " + user);
       }
       // print all donation by month
       System.out.println("donazioni: ");  
@@ -92,8 +109,11 @@ public class Amministratore extends HttpServlet {
       System.out.println("totale visite: " + totalVisits);
       
       // -----------------------------------------------------
-      request.setAttribute("usersList", users);
+      request.setAttribute("simpatizzanti", simpatizzanti);
+      request.setAttribute("aderenti", aderenti);
       request.setAttribute("donations", donations);
+      request.setAttribute("visitsPages", visits);
+      request.setAttribute("totalVisits", totalVisits);
       RequestDispatcher rd = request.getRequestDispatcher("/amministratore.jsp");
       rd.forward(request, response);
 

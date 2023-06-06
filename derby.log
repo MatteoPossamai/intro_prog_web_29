@@ -1,0 +1,27 @@
+Tue Jun 06 15:33:55 CEST 2023 : Server di rete Apache Derby: 10.16.1.1 - (1901046) avviato e pronto ad accettare connessioni sulla porta 1527
+----------------------------------------------------------------
+Tue Jun 06 15:34:28 CEST 2023:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): istanza a816c00e-0188-90ea-00e8-000007489b90
+sulla directory di database D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\MyDerbydb con caricatore classi jdk.internal.loader.ClassLoaders$AppClassLoader@2a139a55 
+Caricato da file:/D:/Valeria/Uni/ESAMI/Intro_Prog_Web/db-derby-10.16.1.1-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.6+9-LTS-190
+user.dir=D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Programma di caricamento classe database avviato - derby.database.classpath=''
+----------------------------------------------------------------
+Tue Jun 06 15:41:49 CEST 2023:
+Avvio della versione di Derby The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): istanza 601a400f-0188-90ea-00e8-000007489b90
+sulla directory di database D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\Mydb con caricatore classi jdk.internal.loader.ClassLoaders$AppClassLoader@2a139a55 
+Caricato da file:/D:/Valeria/Uni/ESAMI/Intro_Prog_Web/db-derby-10.16.1.1-bin/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.6+9-LTS-190
+user.dir=D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Programma di caricamento classe database avviato - derby.database.classpath=''

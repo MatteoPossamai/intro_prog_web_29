@@ -7,7 +7,7 @@ public class AuthBasic {
     // This map is used to redirect the user to the correct page after the login
     // It has been put in a different file to avoid code duplication
     public static Map<String, String> redirect_pages  = new HashMap<String, String>() {{
-        put("ADMIN", "/amministratore.jsp");
+        put("ADMIN", "/admin");
         put("SIMPA", "/simpatizzante.jsp");
         put("ADERE", "/aderente.jsp");
     }};
