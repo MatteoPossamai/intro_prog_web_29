@@ -18,8 +18,8 @@ public class Amministratore extends HttpServlet {
   String user = "App";
   String password = "pw";
   Connection con;
-  String simpatizzanti[] ;
-  String aderenti [];
+  ArrayList<String> simpatizzanti = new ArrayList<String>();
+  ArrayList<String> aderenti = new ArrayList<String>();
   float[] donations = new float[12];
   Map<String, Integer> visits = new HashMap<String, Integer>();
   int totalVisits = 0;
@@ -39,34 +39,17 @@ public class Amministratore extends HttpServlet {
     response.setContentType("text/html;charset=UTF-8");
 
     try {
-      String query = "SELECT COUNT(CASE WHEN userType = 'SIMPA' THEN 1 END) AS simpa, " +
-              "       COUNT(CASE WHEN userType = 'ADERE' THEN 1 END) AS ader " +
-              "FROM users WHERE userType!='ADMIN'";
+      // Check if there are users in the database
+      String query = "SELECT username, userType FROM users WHERE userType!='ADMIN'";
       Statement stmt = con.createStatement();
       ResultSet res = stmt.executeQuery(query);
-      int simpa;
-      int ader;
-      if (res.next()){
-        simpa = res.getInt(1);
-        ader = res.getInt(2);
-        System.out.println(simpa+"-"+ader);
-        simpatizzanti=new String[simpa];
-        aderenti=new String[ader];
-
-      // Check if there are users in the database
-      query = "SELECT username, userType FROM users WHERE userType!='ADMIN'";
-      stmt = con.createStatement();
-      res = stmt.executeQuery(query);
       while (res.next()) {
-        String username = res.getString(1);
         if (res.getString(2).equals("SIMPA")) {
-          simpatizzanti[simpa-1]=res.getString(1);
-          simpa--;
+          //simpatizzanti[simpa-1]=
+          simpatizzanti.add(res.getString(1));
         } else if (res.getString(2).equals("ADERE")) {
-          aderenti[ader-1]=res.getString(1);
-          ader--;
+          aderenti.add(res.getString(1));
         }
-      }
       }
       // gets donations from database and saves them by month
       query = "SELECT MONTH(date) AS month, SUM(amount) AS monthly_sum " +
