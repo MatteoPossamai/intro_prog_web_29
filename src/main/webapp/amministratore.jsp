@@ -62,11 +62,12 @@
               <button class="button" id="mostra-donazioni2" onclick="print_donations()">Mostra le donazioni del
                 sito</button>
           </div>
+        <div class="super-info">
           <div class="info">
-            <h2 id="info-title" class="info"></h2>
+            <h2 id="info-title"></h2>
             <div id="info-div"></div>
           </div>
-
+        </div>
           <img class="close" src="images/x-symbol.svg" onclick="closeInfo()">
         </div>
         </main>
@@ -153,7 +154,10 @@
             if (hide.style.display === "none") {
               hide.style.display = "block";
             } else {
-              show.style.display = "block"
+              show.style.display = "flex";
+              show.style.flexDirection="row";
+              show.style.alignContent = "center";
+              show.style.gap = "100px";
               hide.style.display = "none";
             }
           }
