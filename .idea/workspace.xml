@@ -10,19 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c4b0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c4b0.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c4c1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c4c1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Amministratore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Amministratore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/amministratore.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/amministratore.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

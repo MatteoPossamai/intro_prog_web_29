@@ -161,7 +161,29 @@
               hide.style.display = "none";
             }
           }
+          visits = {}
+          donations= {}
+          function getJson(path, type){
+            let request = new XMLHttpRequest();
+            request.open('GET', path, true);
 
+            request.onreadystatechange = function ()
+              if (request.readyState === 4 && request.status === 200) {
+                let jsonData = JSON.parse(request.responseText).aboutUsContent;
+                let title = jsonData.title;
+                titleElement.innerHTML = title;
+
+                let textData = jsonData.textContent;
+                for (var i = 0; i < 4; i++) {
+                  textElements[i] = document.getElementById("text-" + i);
+                  textElements[i].name;
+                  textElements[i].innerHTML = textData[i];
+                }
+
+              }
+            };
+            request.send();
+          }
 
         </script>
   </body>
