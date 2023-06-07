@@ -10,6 +10,7 @@ body {
 }
 
 .info-container{
+    margin-top: -100px;
     display: none;
     background-color: pink;
     width: 100%;
@@ -19,12 +20,14 @@ body {
 .vertical-buttons{
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 50px;
     margin-left: 50px;
+    margin-top: 25px;
 
 }
 
 .info{
+    background-color: green;
 
 }
 

@@ -32,6 +32,7 @@
       Iterator aderIterator = aderenti.iterator();
       float[] donations = (float[]) request.getAttribute("donations");
       Map<String, Integer> visits = (Map<String, Integer>) request.getAttribute("visits");
+      //Iterator visitsIterator = visits.iterator();
     %>
       <main class=" content">
 
@@ -81,7 +82,6 @@
             // poi crea un grafico per ogni pagina e stampa anche quello
             // crea un pulsante per resettare i contatori
             var totalVisits = '${totalVisits}';
-            console.log("*********************************" + totalVisits);
             document.getElementById('info-div').innerHTML = "total visits: " + totalVisits;
 
           }
@@ -138,7 +138,8 @@
             var hide = document.getElementById("info-container")
             var show = document.getElementById("basic-container")
             if (hide.style.display === "none") {
-              hide.style.display = "block";
+              hide.style.display = "flex";
+              hide.style.flexDirection = "row";
             } else {
               show.style.display = "block"
               hide.style.display = "none";

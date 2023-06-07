@@ -18,8 +18,8 @@ public class Amministratore extends HttpServlet {
   String user = "App";
   String password = "pw";
   Connection con;
-  ArrayList<String> simpatizzanti = new ArrayList<String>();
-  ArrayList<String> aderenti = new ArrayList<String>();
+  ArrayList<String> simpatizzanti;
+  ArrayList<String> aderenti;
   float[] donations = new float[12];
   Map<String, Integer> visits = new HashMap<String, Integer>();
   int totalVisits = 0;
@@ -43,6 +43,8 @@ public class Amministratore extends HttpServlet {
       String query = "SELECT username, userType FROM users WHERE userType!='ADMIN'";
       Statement stmt = con.createStatement();
       ResultSet res = stmt.executeQuery(query);
+      simpatizzanti = new ArrayList<String>();
+      aderenti = new ArrayList<String>();
       while (res.next()) {
         if (res.getString(2).equals("SIMPA")) {
           //simpatizzanti[simpa-1]=
