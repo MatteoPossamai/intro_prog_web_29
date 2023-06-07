@@ -10,31 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/content.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7c124110-6764-4a53-8f3a-291bdb5dd206.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Signin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Signin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/base.tag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags/base.tag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/contact.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/content.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/content.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/aderente.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/aderente.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/amministratore.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/amministratore.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/footer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/simpatizzante.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/simpatizzante.css" afterDir="false" />
->>>>>>> adminStyle
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +43,6 @@
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LogFilters">
@@ -94,15 +79,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.43800697&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;derby&quot;
-    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -119,6 +96,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8084/intro_prog_web_29/simpatizzante.jsp" />
       <deployment>
         <artifact name="intro_prog_web_29:war exploded">
           <settings>
@@ -227,22 +205,6 @@
       <workItem from="1683737337903" duration="5136000" />
       <workItem from="1683820882568" duration="4399000" />
       <workItem from="1683922668389" duration="2737000" />
-      <workItem from="1684408575012" duration="967000" />
-      <workItem from="1684410950986" duration="1104000" />
-      <workItem from="1684510122590" duration="1620000" />
-      <workItem from="1684591945011" duration="1553000" />
-      <workItem from="1684594818232" duration="2381000" />
-      <workItem from="1684867218147" duration="591000" />
-      <workItem from="1684954259983" duration="1719000" />
-      <workItem from="1685031552607" duration="2639000" />
-      <workItem from="1685040463559" duration="957000" />
-      <workItem from="1685103814735" duration="127000" />
-      <workItem from="1685103958482" duration="2058000" />
-      <workItem from="1684910131928" duration="724000" />
-      <workItem from="1684935980292" duration="54000" />
-      <workItem from="1684938312783" duration="326000" />
-      <workItem from="1685009901834" duration="12142000" />
-      <workItem from="1685103974099" duration="478000" />
       <workItem from="1684498543042" duration="4435000" />
       <workItem from="1684586541195" duration="761000" />
       <workItem from="1685457532373" duration="1838000" />
@@ -263,28 +225,7 @@
       <option name="project" value="LOCAL" />
       <updated>1684329804002</updated>
     </task>
-    <task id="LOCAL-00003" summary="Final modifications to phrase section">
-      <created>1684329984345</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1684329984345</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added initializer for the database on launch if it does not exists. Then, fixed the login form and functionalities. Now login is working quite well. Then there is to test signup, to backpropagate errors, and the hashing if necessary. Then, everything is done">
-      <created>1684955969524</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1684955969524</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
-      <created>1685034154949</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1685034154949</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,9 +245,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code." />
     <MESSAGE value="Page phrase updated, and now changes live" />
-    <MESSAGE value="Final modifications to phrase section" />
-    <MESSAGE value="Added initializer for the database on launch if it does not exists. Then, fixed the login form and functionalities. Now login is working quite well. Then there is to test signup, to backpropagate errors, and the hashing if necessary. Then, everything is done" />
-    <MESSAGE value="Tested the signup and the login for normal users, modifying the SQL schema and the date format." />
-    <option name="LAST_COMMIT_MESSAGE" value="Tested the signup and the login for normal users, modifying the SQL schema and the date format." />
+    <option name="LAST_COMMIT_MESSAGE" value="Page phrase updated, and now changes live" />
   </component>
 </project>
