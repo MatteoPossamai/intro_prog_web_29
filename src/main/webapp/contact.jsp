@@ -2,11 +2,36 @@
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:base>
+    <script>
+        let filePath = './content.json';
+        let request = new XMLHttpRequest();
+        request.open('GET',filePath,true);
+
+
+        request.onreadystatechange = function () {
+
+            let titleElement = document.getElementById("title");
+            let descriptionElement = document.getElementById("description");
+
+            if (request.readyState === 4 && request.status === 200){
+                let jsonData = JSON.parse(request.responseText).contactsContent;
+                let title = jsonData.title;
+                let description = jsonData.description;
+
+                titleElement.innerHTML = title;
+                descriptionElement.innerHTML = description;
+            }
+        }
+        request.send();
+
+
+
+    </script>
     <link rel="stylesheet" type="text/css" href="stylesheets/contact.css" />
 
-    <h1 class="title">Contatti</h1>
+    <h1 id="title" class="title"></h1>
     <div class="text-container">
-    <p class="text">Ci puoi venire a trovare in Via Sommarive 29000, Trento, Italia. Se hai bisogno di ulteriori informazioni puoi chiamarci al numero 0461 827188 oppure compila il form sottostante e ti risponderemo via email.</p>
+    <p id="description" class="text"></p>
     </div>
     <form class="contact-form"  method="post">
         <label>
@@ -45,4 +70,6 @@
         </div>
 
     </form>
+
+
 </t:base>
