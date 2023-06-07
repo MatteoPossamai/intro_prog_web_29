@@ -70,3 +70,13 @@ a:hover{
 .menu-item:hover{
     background-color:  black;
 }
+
+.private-menu{
+    margin-left: 50px;
+    margin-right: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 100px;
+    text-decoration: none;
+}
