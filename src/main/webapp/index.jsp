@@ -7,7 +7,7 @@
 <div class="content">
 <br class="title">
 <div class="text-image">
-    <img src="./images/placeholder.jpeg" class="image" alt="template_image">
+    <img src="./images/img5.jpg" class="image" alt="template_image">
     <div style="margin-top: 90px">
         <h1>La nostra missione</h1>
         <p class="text">
@@ -24,7 +24,7 @@
 </div>
 
 <div class="cta">
-    <img src="./images/placeholder.jpeg" class="logo" alt="template_image">
+    <img src="./images/img6.jpg" class="logo" alt="template_image">
     <div class="button-container">
         <button id="download" class="button index-button">Vuoi saperne di piu?</button>
     </div>

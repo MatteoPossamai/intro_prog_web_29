@@ -7,7 +7,7 @@
 <t:base>
 <main>
     <section class="text-image" id="1">
-        <img src="images/placeholder.jpeg" alt="placeholder" height="30px" width="30px" class="image-holder-register">
+        <img src="images/logo.png" alt="placeholder" height="30px" width="30px" class="image-holder-register">
     </section>
 <div class="container">
     <c:if test="${not empty error}">
