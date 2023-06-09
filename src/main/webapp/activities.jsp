@@ -12,6 +12,7 @@
 
 <html>
 <head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <link href="stylesheets/activities.css" rel="stylesheet" type="text/css">
@@ -22,10 +23,10 @@
     <jsp:include page="header.jsp"></jsp:include>
 
 <body>
-    <h1 class="title">Attivita'</h1>
+    <h1 id="title" class="title">Attivita'</h1>
     <div class="content">
     <main>
-        <p class="description"> La nostra associazione da molti anni porta avanti vari progetti di utilita' varia ecc ecc </p>
+        <p id="description" class="description"> La nostra associazione da molti anni porta avanti vari progetti di utilita' varia ecc ecc </p>
         <div class="activities-container">
         <section class="activity" id="1">
             <a href="getActivity?activityID=1">
@@ -55,5 +56,31 @@
     </div>
 </body>
 <jsp:include page="footer.jsp"></jsp:include>
+
+<script>
+    let filePath = './content.json';
+    let request = new XMLHttpRequest();
+    request.open('GET',filePath,true);
+
+
+    request.onreadystatechange = function () {
+
+        let titleElement = document.getElementById("title");
+        let descriptionElement = document.getElementById("description");
+
+        if (request.readyState === 4 && request.status === 200){
+            let jsonData = JSON.parse(request.responseText).activitiesContent;
+            let title = jsonData.title;
+            let description = jsonData.description;
+
+            titleElement.innerHTML = title;
+            descriptionElement.innerHTML = description;
+        }
+    }
+    request.send();
+
+
+
+</script>
 
 </html>

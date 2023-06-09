@@ -66,9 +66,13 @@ public class Signin extends HttpServlet {
                 query = "INSERT INTO users VALUES ('" + username + "', '" + email + "', '" + password +
                         "', '" + data_nascita_date + "', '" + telefono + "', '" + role + "')";
                 stmt.executeUpdate(query);
+                System.out.println("CIAO");
                 request.getRequestDispatcher("/registrazione_confermata.jsp").forward(request, response);
             }
         }catch (SQLException e){
+            System.out.println("CIAO2");
+
+
             e.printStackTrace();
         }
     }
