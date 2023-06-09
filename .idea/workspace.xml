@@ -14,6 +14,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Signin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Signin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getActivities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getActivities.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/getters/getActivity.java" afterDir="false" />
@@ -202,8 +205,9 @@
       <workItem from="1683922668389" duration="2737000" />
       <workItem from="1684498543042" duration="4435000" />
       <workItem from="1684586541195" duration="761000" />
-      <workItem from="1685457532373" duration="1838000" />
-      <workItem from="1685522055760" duration="298000" />
+      <workItem from="1685459684546" duration="35000" />
+      <workItem from="1685724403444" duration="1034000" />
+      <workItem from="1685732152783" duration="731000" />
       <workItem from="1685699867011" duration="990000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
