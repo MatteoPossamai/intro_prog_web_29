@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/stylesheet/global.css" />
 </head>
     <body>
-
+        <jsp:include page="cookie.jsp" />
         <jsp:include page="header.jsp"/>
 
             <jsp:doBody />

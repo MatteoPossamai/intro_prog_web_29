@@ -40,7 +40,7 @@ public class Login extends HttpServlet {
         // Get the username and password from the request
         String username = request.getParameter("username");
         String password = request.getParameter("password");
-        try{
+        try {
             // Query the database to get the user
             String query = "SELECT * FROM users WHERE username = '" + username + "'";
             Statement stmt = this.con.createStatement();
@@ -49,7 +49,7 @@ public class Login extends HttpServlet {
             // Check if the user exists and if the password is correct
             boolean password_correct = false;
             String userType = "";
-            if(res.next()){
+            if (res.next()) {
                 String password_db = res.getString("password");
                 password_correct = password.equals(password_db);
                 userType = res.getString("userType");
@@ -57,20 +57,31 @@ public class Login extends HttpServlet {
 
             if (password_correct) {
                 // If the user exists and the password provided is correct, then log the user in
-                Cookie ck = new Cookie("username", username);
                 request.getSession().setAttribute("username", username);
                 request.getSession().setAttribute("userType", userType);
-                ck.setMaxAge(3600);
-                response.addCookie(ck);
-                User.LoggedUser=username;
-                response.sendRedirect(request.getContextPath() + AuthBasic.redirect_pages.get(userType));
+                String encode_url = request.getContextPath() + AuthBasic.redirect_pages.get(userType);
+                boolean cookiesEnabled = (boolean) request.getServletContext().getAttribute("cookiesEnabled");
+                System.out.println("I cookie abilitati ? " + cookiesEnabled);
+                if (cookiesEnabled) {
+                    if (CookieCheck.checkCookie(request.getCookies(), request)) {
+                        System.out.println("Ora creo il cookie con username " + username);
+                        Cookie ck = new Cookie("username", username);
+                        ck.setMaxAge(3600);
+                        response.addCookie(ck);
+                    }
+                    User.LoggedUser = username;
+                    response.sendRedirect(encode_url);
+                } else if (!cookiesEnabled) {
+                    User.LoggedUser = username;
+                    response.sendRedirect(response.encodeURL(encode_url));
+                }
             } else {
                 // If the username and password are incorrect, redirect to the login page
                 // with an error message, to let the user know that the username or password is incorrect
                 request.setAttribute("error", "Invalid username or password");
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }

@@ -5,6 +5,7 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -28,22 +29,25 @@ public class AuthFilter implements Filter {
         // Read the request and get the session
         HttpServletRequest hreq=(HttpServletRequest) request;
         HttpSession session = hreq.getSession(false);
+        boolean cookiesEnabled = (boolean) hreq.getServletContext().getAttribute("cookiesEnabled");
+        System.out.println("Attributo servlet Context : " + cookiesEnabled);
         System.out.println("Entro nel doFilter");
         Cookie[] cookieArray = hreq.getCookies();
-        for(Cookie cookieFake: cookieArray)
-        {
-            System.out.println("Cookie: " + cookieFake.getValue());
-        }
-        try {
-            CookieCheck.manageCookie(cookieArray,hreq);
-        } catch (SQLException e) {
-            System.out.println("Si pezza");
-            throw new RuntimeException(e);
-        }
+        hreq.setAttribute("invalidate", false);
+        if(cookiesEnabled) {
+            System.out.println("I cookie sono abilitati");
+            try {
+                CookieCheck.manageCookie(cookieArray, hreq);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            } {
 
+            }
+        }
         // Get from the URL the jsp page we are in
+        boolean invalidate = (boolean) request.getAttribute("invalidate");
         String page = hreq.getRequestURI().substring(hreq.getContextPath().length());
-        if(session == null || session.getAttribute("username") == null){
+        if(session == null || session.getAttribute("username") == null || invalidate){
             // If the user is not logged in, redirect to the login page, because no page in the array
             // is accessible if not logged in
             request.setAttribute("error", "Non sei loggato, effettua il login per accedere a questa pagina");
@@ -53,7 +57,6 @@ public class AuthFilter implements Filter {
             // Otherwise check if the user has the permission to access the page, if it is the correct page to stay in
             String role = (String) session.getAttribute("userType");
             String page_url = AuthBasic.redirect_pages.get(role);
-
             // Otherwise, it gets redirected to the page that corresponds to the user role
             if(!page.equals(page_url)){
                 request.setAttribute("error", "Non hai i permessi per accedere a questa pagina");
