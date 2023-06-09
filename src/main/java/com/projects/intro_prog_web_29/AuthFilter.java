@@ -5,12 +5,9 @@ import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.sql.SQLException;
-
-import com.projects.intro_prog_web_29.CookieCheck;
 
 @WebFilter(filterName = "auth", urlPatterns = {"/amministratore.jsp", "/aderente.jsp", "/simpatizzante.jsp"})
 public class AuthFilter implements Filter {
