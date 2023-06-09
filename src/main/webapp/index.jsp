@@ -11,7 +11,6 @@
     <div style="margin-top: 90px">
         <h1 id="title"></h1>
         <p id="description" class="text">
-
         </p>
 
     </div>

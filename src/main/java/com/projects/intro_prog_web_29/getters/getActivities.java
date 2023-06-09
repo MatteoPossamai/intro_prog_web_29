@@ -26,15 +26,20 @@ public class getActivities extends HttpServlet {
                 "\n" +
                 "Oltre alle scuole, ci impegniamo anche nella costruzione di abitazioni per le persone che ne hanno bisogno. Sappiamo che una casa stabile e sicura è fondamentale per la stabilità e il benessere delle famiglie. Lavoriamo per fornire abitazioni accessibili e di qualità, che creino un ambiente accogliente e promuovano il senso di appartenenza alla comunità.";
         String description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labor";
-        String imageSource = "src/main/webapp/images/placeholder.jpeg";
+
+        String contextPath = getServletContext().getRealPath("/");
+
+        String imageSource1 = "images/act-1.jpg";
+        String imageSource2 = "images/act-2.jpeg";
+        String imageSource3 = "images/act-3.jpeg";
 
         Activity a1 = new Activity();
         Activity a2 = new Activity();
         Activity a3 = new Activity();
 
-        this.createActivity(a1,titles[0],previewMensa,description, imageSource);
-        this.createActivity(a2,titles[1],previewEdilizia,description, imageSource);
-        this.createActivity(a3,titles[2],previewMensa,description, imageSource);
+        this.createActivity(a1,titles[0],previewMensa,description, imageSource1);
+        this.createActivity(a2,titles[1],previewEdilizia,description, imageSource2);
+        this.createActivity(a3,titles[2],previewMensa,description, imageSource3);
         request.setAttribute("activity1",a1);
         request.setAttribute("activity2",a2);
         request.setAttribute("activity3",a3);

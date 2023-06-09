@@ -38,11 +38,11 @@ public class getActivity extends HttpServlet {
                 "Ci preoccupiamo anche di garantire che i nostri corsi siano pertinenti e utili per le comunità. Perciò, lavoriamo in stretta collaborazione con esperti locali, leader comunitari e organizzazioni partner per identificare le esigenze specifiche e sviluppare programmi formativi che rispondano alle sfide e alle opportunità del contesto africano.";
 
         if(activityID.equals("1")){
-                    createActivity(activity,"Mensa", previewMensa, descriptionMensa, "");
+                    createActivity(activity,"Mensa", previewMensa, descriptionMensa, "src/main/webapp/images/act-1.jpg");
         } else if(activityID.equals("2") ){
-            createActivity(activity,"Edilizia", previewEdilizia, descriptionEdilizia, "");
+            createActivity(activity,"Edilizia", previewEdilizia, descriptionEdilizia, "src/main/webapp/images/act-2.jpeg");
         } else if (activityID.equals("3")){
-            createActivity(activity,"Corsi di formazione", previewCorsi, descriptionCorsi, "");
+            createActivity(activity,"Corsi di formazione", previewCorsi, descriptionCorsi, "src/main/webapp/images/act-3.jpg");
         }
 
 
@@ -59,6 +59,7 @@ public class getActivity extends HttpServlet {
         activity.setPreview(preview);
         activity.setDescription(description);
         activity.setImageSource(imageSource);
+        System.out.println(activity.getImageSource());
     }
 
 }

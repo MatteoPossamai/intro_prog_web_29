@@ -30,7 +30,7 @@
         <div class="activities-container">
         <section class="activity" id="1">
             <a href="getActivity?activityID=1">
-                <img src="./images/placeholder.jpeg" alt="immagine progetto 1" height="150px" width="150px">
+                <img src="<%=activity1.getImageSource()%>" alt="Mensa"  style="max-width:250px">
             </a>
             <h2><%=activity1.getTitle()%></h2>
             <p class="text"><%=activity1.getPreview()%></p>
@@ -38,7 +38,7 @@
 
             <section class="activity" id="2">
                 <a href="getActivity?activityID=2">
-                    <img src="./images/placeholder.jpeg" alt="immagine progetto 1" height="150px" width="150px">
+                    <img src="<%=activity2.getImageSource()%>" alt="Edilizia" style="max-width:250px">
                 </a>
                 <h2><%=activity2.getTitle()%></h2>
                 <p class="text"><%=activity2.getPreview()%></p>
@@ -46,7 +46,7 @@
 
             <section class="activity" id="3">
                 <a href="getActivity?activityID=3">
-                    <img src="./images/placeholder.jpeg" alt="immagine progetto 3" height="150px" width="150px">
+                    <img src="<%=activity3.getImageSource()%>" alt="Corsi di formazione" style="max-width:250px">
                 </a>
                 <h2><%=activity3.getTitle()%></h2>
                 <p class="text"><%=activity3.getPreview()%></p>
