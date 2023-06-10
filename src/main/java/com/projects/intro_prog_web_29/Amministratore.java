@@ -6,11 +6,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.FileWriter;
+import org.json.simple.JSONObject;
 
 @WebServlet(name = "Amministratore", urlPatterns = { "/admin" })
 public class Amministratore extends HttpServlet {
@@ -18,11 +19,13 @@ public class Amministratore extends HttpServlet {
   String user = "App";
   String password = "pw";
   Connection con;
-  ArrayList<String> simpatizzanti;
-  ArrayList<String> aderenti;
-  float[] donations = new float[12];
-  Map<String, Integer> visits = new HashMap<String, Integer>();
+  ArrayList<String> simpatizzanti; // to store simatizzanti usernames
+  ArrayList<String> aderenti; // to store aderenti usernames
+  //float[] donations = new float[12];
+  // Map<String, Integer> visits = new HashMap<String, Integer>();
   int totalVisits = 0;
+  JSONObject visits = new JSONObject();
+  JSONObject donations = new JSONObject();
 
   public void init() {
     // Initialize the database connection for the entire servlet
@@ -39,12 +42,16 @@ public class Amministratore extends HttpServlet {
     response.setContentType("text/html;charset=UTF-8");
 
     try {
+
       // Check if there are users in the database
       String query = "SELECT username, userType FROM users WHERE userType!='ADMIN'";
       Statement stmt = con.createStatement();
       ResultSet res = stmt.executeQuery(query);
+      // initialize arraylists
       simpatizzanti = new ArrayList<String>();
       aderenti = new ArrayList<String>();
+
+      // gets users from database and saves them by type
       while (res.next()) {
         if (res.getString(2).equals("SIMPA")) {
           //simpatizzanti[simpa-1]=
@@ -53,25 +60,63 @@ public class Amministratore extends HttpServlet {
           aderenti.add(res.getString(1));
         }
       }
-      // gets donations from database and saves them by month
+
+      // gets donations from database and saves them by month in a json file
       query = "SELECT MONTH(date) AS month, SUM(amount) AS monthly_sum " +
           "FROM donations GROUP BY MONTH(date)" +
           "ORDER BY month";
       stmt = con.createStatement();
       res = stmt.executeQuery(query);
-      int i = 0;
+      String month="";
       while (res.next()) {
-          donations[i] = res.getFloat(2);
-          i++;
+        switch (res.getString(1)){
+          case "1": month="January"; break;
+          case "2": month="February"; break;
+          case "3": month="March"; break;
+          case "4": month="April"; break;
+          case "5": month="May"; break;
+          case "6": month="June"; break;
+          case "7": month="July"; break;
+          case "8": month="August"; break;
+          case "9": month="September"; break;
+          case "10": month="October"; break;
+          case "11": month="November"; break;
+          case "12": month="December"; break;
+          default: month=""; break;
+        }
+        donations.put(month, res.getFloat(2));
       }
+      String donationsString = donations.toJSONString();
+      String contextPath = getServletContext().getRealPath("/");
+      contextPath=contextPath.replace("\\", "/");
+      String donationsPath = contextPath+ "donations.json";
+      File donationsFile = new File(donationsPath);
+      if (!donationsFile.exists()) {
+        donationsFile.createNewFile();
+      }
+      FileWriter donationsWriter = new FileWriter(donationsFile);
+      donationsWriter.write(donationsString);
+      donationsWriter.close();
 
+
+      // gets visits from database and saves them by page and in total in a json file
       query = "SELECT * FROM visit_counter ";
       stmt = con.createStatement();
       res = stmt.executeQuery(query);
+      /*while (res.next()) {
+        visits.put(res.getString(1), res.getInt(2));
+        totalVisits += res.getInt(2);
+      }*/
       while (res.next()) {
         visits.put(res.getString(1), res.getInt(2));
         totalVisits += res.getInt(2);
       }
+      visits.put("totalVisits", totalVisits);
+      String visitsString = visits.toJSONString();
+      String visitsPath = contextPath + "visits.json";
+      FileWriter visitsWriter = new FileWriter(visitsPath);
+      visitsWriter.write(visitsString);
+      visitsWriter.close();
 
       // stampa di controllo per me -------------------------
       System.out.println("utenti: ");
@@ -81,6 +126,8 @@ public class Amministratore extends HttpServlet {
       for (String user : aderenti) {
         System.out.println("° " + user);
       }
+      System.out.println(visitsPath);
+      /* 
       // print all donation by month
       System.out.println("donazioni: ");  
       for (float donation : donations) {
@@ -92,13 +139,13 @@ public class Amministratore extends HttpServlet {
         System.out.println("° " + entry.getKey() + " " + entry.getValue());
       }
       System.out.println("totale visite: " + totalVisits);
-      
+      */
       // -----------------------------------------------------
       request.setAttribute("simpatizzanti", simpatizzanti);
       request.setAttribute("aderenti", aderenti);
-      request.setAttribute("donations", donations);
-      request.setAttribute("visitsPages", visits);
-      request.setAttribute("totalVisits", totalVisits);
+      request.setAttribute("donationsPath", donationsPath);
+      request.setAttribute("visitsPath", visitsPath);
+      //request.setAttribute("totalVisits", totalVisits);
       RequestDispatcher rd = request.getRequestDispatcher("/amministratore.jsp");
       rd.forward(request, response);
 

@@ -10,8 +10,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/db.lck" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/log1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/logmirror.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c4a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c4a1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c4b0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c4b0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c4c1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c4c1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Amministratore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Amministratore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Initializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/donations.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,14 +99,14 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\webapp" />
+      <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\java" />
+      <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\java\com\projects\intro_prog_web_29" />
       <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\webapp\WEB-INF" />
       <recent name="D:\Valeria\Uni\ESAMI\Intro_Prog_Web\intro_prog_web_29\src\main\webapp\stylesheets" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/stylesheets" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/tags" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.73" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.79" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8084/intro_prog_web_29/simpatizzante.jsp" />
       <deployment>
         <artifact name="intro_prog_web_29:war exploded">
@@ -224,6 +238,8 @@
       <workItem from="1685522055760" duration="298000" />
       <workItem from="1685699867011" duration="990000" />
       <workItem from="1686133502277" duration="1425000" />
+      <workItem from="1686325109703" duration="5489000" />
+      <workItem from="1686389127541" duration="4263000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>
