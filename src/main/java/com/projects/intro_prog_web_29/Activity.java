@@ -39,6 +39,6 @@ public class Activity implements Serializable {
     }
 
     public String getImageSource(){
-        return getImageSource();
+        return imageSource;
     }
 }

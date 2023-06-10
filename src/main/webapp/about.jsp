@@ -18,8 +18,9 @@
     <h1 id="title" class="title"></h1>
     <div class="content">
     <div class="text-image">
-        <img src="./images/placeholder.jpeg" class="image">
-        <p class="text" id="text-0">
+        <img src="./images/img1.jpg" class="image">
+        <p id="text-0" class="text">
+                <br><br>
         </p>
     </div>
 
@@ -27,19 +28,20 @@
             <p id="text-1" class="text">
 
             </p>
-            <img src="./images/placeholder.jpeg" class="image">
+            <img src="./images/img2.jpg" class="image">
         </div>
 
         <div class="text-image">
-            <img src="./images/placeholder.jpeg" class="image">
-            <p id="text-2"  class="text">
+            <img src="./images/img3.jpg" class="image">
+            <p id="text-2" class="text">
+                <br><br>
             </p>
         </div>
 
         <div class="text-image">
             <p id="text-3" class="text">
             </p>
-            <img src="./images/placeholder.jpeg" class="image">
+            <img src="./images/img4.jpg" class="image">
         </div>
 
     </div>

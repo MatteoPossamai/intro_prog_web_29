@@ -16,5 +16,10 @@
   "contactsContent" : {
     "title" : "Contatti",
     "description" : "Ci puoi venire a trovare in Via Sommarive 29000, Trento, Italia. Se hai bisogno di ulteriori informazioni puoi chiamarci al numero 0461 827188 oppure compila il form sottostante e ti risponderemo via email."
+  },
+
+  "activitiesContent" : {
+    "title" : "Attivita'",
+    "description" : "Offriamo una gamma di servizi per supportare e migliorare le comunità in aree chiave. Crediamo fortemente che la base fondamentale da cui partire per cominciare a costruire un sentimento di comunita' sia aiutare il prossimo. <br> Ed e' esattamente quello che proviamo a fare. "
   }
 }
