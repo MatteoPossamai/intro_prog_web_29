@@ -29,7 +29,7 @@
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: 'body='+ encodeURIComponent("activities")
+        body: 'body='+ encodeURIComponent("Attività")
     })
 </script>
     <h1 class="title">Attivita'</h1>

@@ -22,7 +22,7 @@
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: 'body=' + encodeURIComponent("amministratore")
+      body: 'body=' + encodeURIComponent("Amministratore")
     })
   </script>
   <script src="http://code.highcharts.com/highcharts.js"></script>
@@ -161,23 +161,17 @@
     function print_visits() {
       console.log("${visitsPath}");
       document.getElementById("info-title").innerHTML = "Visite al sito: "
-
       let request = new XMLHttpRequest();
-      let path = "${visitsPath}";
+      let path = "./visits.json";
       request.open('GET', path, true);
-      //alert("in funzione");
       request.onreadystatechange = function (visits) {
         if (request.readyState === 4 && request.status === 200) {
           visits = JSON.parse(request.responseText);
-          }
-          //alert(JSON.stringify(visits));
-        let output = "<b>Visite totali: </b> " + visits.totalVisits + "<br>";
+          let totalVisits = visits.totalVisits;
+          alert("IF");
+        }
+        let output = "<b>Visite totali: </b> " + totalVisits + "<br>";
         output += "<b>Visite per pagina: </b><br>";
-        alert("1: "+output);
-        // qui creo i grafici da mostrare
-        //showGraph(visits, 'graph_container');
-        bad_graph();
-        alert("2: "+output);
         document.getElementById('info-div').innerHTML = output;
         alert("fine funzione");
         }
@@ -185,7 +179,7 @@
     }
 
     function print_donations() {
-      document.getElementById("info-title").innerHTML = "Donazioni nell'ultimo anno: "
+      /*document.getElementById("info-title").innerHTML = "Donazioni nell'ultimo anno: "
       let request = new XMLHttpRequest();
       let donations = {}
       let path = "./donations.json";
@@ -204,63 +198,7 @@
       };
       // qui creo i grafici da mostrare
       document.getElementById('info-div').innerHTML = JSON.stringify(donations);
-      request.send();
-    }
-    function bad_graph(){
-        var chart = Highcharts.chart('graph_container', {
-          chart: {
-            referTo: 'graph_container',
-            type: 'bar'
-          },
-          title: {
-              text: 'Fruit Consumption'
-          },
-          xAxis: {
-              categories: ['Apples', 'Bananas', 'Oranges']
-          },
-          yAxis: {
-              title: {
-                  text: 'Fruit eaten'
-              }
-          },
-          series: [{
-              name: 'Jamie',
-              data: [1, 0, 4]
-          }, {
-              name: 'John',
-              data: [5, 7, 3]
-          }],
-        });
-    }
-    function showGraph(values, div) {
-
-      var data = Object.entries(values).map(function ([key, value]) {
-        return { x: key, y: value };
-      });
-      alert(JSON.stringify(data));
-      var chart = Highcharts.chart(div, {
-        chart: {
-          type: 'line'
-        },
-        title: {
-          text: 'Visite per pagina'
-        },
-        xAxis: {
-          title: {
-            text: 'Pagina'
-          }
-        },
-        yAxis: {
-          title: {
-            text: 'Visite'
-          }
-        },
-        series: [{
-          name: 'Visite',
-          data: data
-        }]
-      });
-      alert("finito")
+      request.send();*/
     }
 
   </script>

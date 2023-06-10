@@ -10,7 +10,7 @@
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'body='+ encodeURIComponent("about")
+            body: 'body='+ encodeURIComponent("About")
         })
     </script>
 

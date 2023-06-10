@@ -8,7 +8,7 @@
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'body='+ encodeURIComponent("invio-confermato")
+            body: 'body='+ encodeURIComponent("Invio confermato")
         })
     </script>
     <link href="stylesheets/invio-confermato.css" rel="stylesheet" type="text/css">

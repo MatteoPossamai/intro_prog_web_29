@@ -8,7 +8,7 @@
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'body='+ encodeURIComponent("contact")
+            body: 'body='+ encodeURIComponent("Contatti")
         })
     </script>
     <script>

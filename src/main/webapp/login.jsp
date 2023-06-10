@@ -9,7 +9,7 @@
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'body='+ encodeURIComponent("login")
+            body: 'body='+ encodeURIComponent("Login")
         })
     </script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/stylesheets/login.css" type="text/css"/>

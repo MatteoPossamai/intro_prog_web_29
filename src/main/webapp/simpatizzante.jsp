@@ -9,7 +9,7 @@
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'body='+ encodeURIComponent("simpatizzante")
+            body: 'body='+ encodeURIComponent("Simpatizzante")
         })
     </script>
     <link href="stylesheets/simpatizzante.css" rel="stylesheet" type="text/css">

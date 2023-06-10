@@ -11,7 +11,7 @@
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'body='+ encodeURIComponent("register")
+            body: 'body='+ encodeURIComponent("Registrazione")
         })
     </script>
 <main>

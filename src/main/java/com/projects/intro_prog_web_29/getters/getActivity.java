@@ -12,7 +12,7 @@ public class getActivity extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String activityID = request.getParameter("activityID");
-        System.out.println(activityID);
+        //System.out.println(activityID);
         Activity activity = new Activity();
 
         if(activityID.equals("1")){

@@ -50,10 +50,10 @@ public class VisitCounterServlet extends HttpServlet {
         visitCounter.count = res.getInt(1);
       }
       // increments counter
-      visitCounter.count++;
+      visitCounter.increase();
 
       // stampa di controllo per me
-      System.out.println("visite " + pageName + ": " + visitCounter.count);
+      //System.out.println("visite " + pageName + ": " + visitCounter.count);
 
       // saves the new count in the database
       query = "UPDATE visit_counter SET visits = " + visitCounter.count + " WHERE pageName = " + "'" + pageName + "'";
@@ -70,7 +70,7 @@ public class VisitCounterServlet extends HttpServlet {
     } catch (SQLException ex) {
       ex.printStackTrace();
     }
-    System.out.println("destroy---------------------------------------------------------------------");
+    //System.out.println("destroy---------------------------------------------------------------------");
   }
 
 }

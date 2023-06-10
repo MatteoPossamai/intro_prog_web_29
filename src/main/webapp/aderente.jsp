@@ -17,7 +17,7 @@
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: 'body=' + encodeURIComponent("aderente")
+                body: 'body=' + encodeURIComponent("Aderente")
             })
         </script>
         <jsp:include page="menu-private.jsp" />

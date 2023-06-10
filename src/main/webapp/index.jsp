@@ -9,7 +9,7 @@
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'body='+ encodeURIComponent("home")
+            body: 'body='+ encodeURIComponent("Home")
         })
     </script>
     <link href="stylesheets/index.css" rel="stylesheet" type="text/css">

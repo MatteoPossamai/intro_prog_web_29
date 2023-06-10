@@ -23,7 +23,7 @@ public class Amministratore extends HttpServlet {
   ArrayList<String> aderenti; // to store aderenti usernames
   //float[] donations = new float[12];
   // Map<String, Integer> visits = new HashMap<String, Integer>();
-  int totalVisits = 0;
+  int totalVisits;
   JSONObject visits = new JSONObject();
   JSONObject donations = new JSONObject();
 
@@ -54,7 +54,6 @@ public class Amministratore extends HttpServlet {
       // gets users from database and saves them by type
       while (res.next()) {
         if (res.getString(2).equals("SIMPA")) {
-          //simpatizzanti[simpa-1]=
           simpatizzanti.add(res.getString(1));
         } else if (res.getString(2).equals("ADERE")) {
           aderenti.add(res.getString(1));
@@ -67,24 +66,8 @@ public class Amministratore extends HttpServlet {
           "ORDER BY month";
       stmt = con.createStatement();
       res = stmt.executeQuery(query);
-      String month="";
       while (res.next()) {
-        switch (res.getString(1)){
-          case "1": month="January"; break;
-          case "2": month="February"; break;
-          case "3": month="March"; break;
-          case "4": month="April"; break;
-          case "5": month="May"; break;
-          case "6": month="June"; break;
-          case "7": month="July"; break;
-          case "8": month="August"; break;
-          case "9": month="September"; break;
-          case "10": month="October"; break;
-          case "11": month="November"; break;
-          case "12": month="December"; break;
-          default: month=""; break;
-        }
-        donations.put(month, res.getFloat(2));
+        donations.put(res.getInt(1), res.getFloat(2));
       }
       String donationsString = donations.toJSONString();
       String contextPath = getServletContext().getRealPath("/");
@@ -103,21 +86,27 @@ public class Amministratore extends HttpServlet {
       query = "SELECT * FROM visit_counter ";
       stmt = con.createStatement();
       res = stmt.executeQuery(query);
-      /*while (res.next()) {
-        visits.put(res.getString(1), res.getInt(2));
-        totalVisits += res.getInt(2);
-      }*/
+      String page;
+      int count;
+      totalVisits = 0;
       while (res.next()) {
-        visits.put(res.getString(1), res.getInt(2));
-        totalVisits += res.getInt(2);
+        page = res.getString(1);
+        count = res.getInt(2);
+        if( page.equals("Amministratore")){
+          System.out.println("admin!!*****************************************");
+          count++;
+        }
+        visits.put(page, count);
+        totalVisits += count;
+        System.out.println(page+": "+count+"-----------------------------------------------------");
       }
-      visits.put("totalVisits", totalVisits);
+      visits.put("TotalVisits", totalVisits);
       String visitsString = visits.toJSONString();
       String visitsPath = contextPath + "visits.json";
       FileWriter visitsWriter = new FileWriter(visitsPath);
       visitsWriter.write(visitsString);
       visitsWriter.close();
-
+/* 
       // stampa di controllo per me -------------------------
       System.out.println("utenti: ");
       for (String user : simpatizzanti) {
@@ -127,7 +116,7 @@ public class Amministratore extends HttpServlet {
         System.out.println("° " + user);
       }
       System.out.println(visitsPath);
-      /* 
+      
       // print all donation by month
       System.out.println("donazioni: ");  
       for (float donation : donations) {
@@ -160,7 +149,7 @@ public class Amministratore extends HttpServlet {
     } catch (SQLException ex) {
       ex.printStackTrace();
     }
-    System.out.println("destroy---------------------------------------------------------------------");
+    //System.out.println("destroy---------------------------------------------------------------------");
   }
 
 }

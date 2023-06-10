@@ -72,7 +72,7 @@ public class SimpatizzanteServlet extends HttpServlet {
     } catch (SQLException ex) {
       ex.printStackTrace();
     }
-    System.out.println("destroy---------------------------------------------------------------------");
+//System.out.println("destroy---------------------------------------------------------------------");
   }
 
 }
