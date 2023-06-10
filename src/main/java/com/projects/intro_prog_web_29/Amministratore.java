@@ -69,22 +69,7 @@ public class Amministratore extends HttpServlet {
       res = stmt.executeQuery(query);
       String month="";
       while (res.next()) {
-        switch (res.getString(1)){
-          case "1": month="January"; break;
-          case "2": month="February"; break;
-          case "3": month="March"; break;
-          case "4": month="April"; break;
-          case "5": month="May"; break;
-          case "6": month="June"; break;
-          case "7": month="July"; break;
-          case "8": month="August"; break;
-          case "9": month="September"; break;
-          case "10": month="October"; break;
-          case "11": month="November"; break;
-          case "12": month="December"; break;
-          default: month=""; break;
-        }
-        donations.put(month, res.getFloat(2));
+        donations.put(res.getInt(1), res.getFloat(2));
       }
       String donationsString = donations.toJSONString();
       String contextPath = getServletContext().getRealPath("/");
