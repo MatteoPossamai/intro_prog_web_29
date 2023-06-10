@@ -61,20 +61,14 @@ public class Login extends HttpServlet {
                 request.getSession().setAttribute("userType", userType);
                 String encode_url = request.getContextPath() + AuthBasic.redirect_pages.get(userType);
                 boolean cookiesEnabled = (boolean) request.getServletContext().getAttribute("cookiesEnabled");
-                System.out.println("I cookie abilitati ? " + cookiesEnabled);
                 if (cookiesEnabled) {
                     if (CookieCheck.checkCookie(request.getCookies(), request)) {
-                        System.out.println("Ora creo il cookie con username " + username);
-                        Cookie ck = new Cookie("username", username);
-                        ck.setMaxAge(3600);
+                        Cookie ck = createUserCookie(username, 3600);
                         response.addCookie(ck);
                     }
-                    User.LoggedUser = username;
-                    response.sendRedirect(encode_url);
-                } else if (!cookiesEnabled) {
-                    User.LoggedUser = username;
-                    response.sendRedirect(response.encodeURL(encode_url));
                 }
+                User.LoggedUser = username;
+                response.sendRedirect(response.encodeURL(encode_url));
             } else {
                 // If the username and password are incorrect, redirect to the login page
                 // with an error message, to let the user know that the username or password is incorrect
@@ -84,6 +78,12 @@ public class Login extends HttpServlet {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    protected Cookie createUserCookie(String value, int maxAge) {
+        Cookie cookie = new Cookie("username", value);
+        cookie.setMaxAge(maxAge);
+        return cookie;
     }
 
 }
