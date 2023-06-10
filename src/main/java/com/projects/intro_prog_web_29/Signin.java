@@ -45,6 +45,8 @@ public class Signin extends HttpServlet {
         // Make the date format compatible with the database
         String data_nascita_date = data_nascita.substring(0,4) + "-" + data_nascita.substring(5,7) + "-" + data_nascita.substring(8,10) + " 12:00:00";
         String telefono = request.getParameter("telefono");
+        // Check if user is not underage
+            // ToDo Controllo che l'utente non sia minorenne
         // The password check is already done on the frontend, so it is not necessary to check it here
 
         try{
