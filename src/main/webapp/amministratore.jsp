@@ -25,8 +25,7 @@
       body: 'body=' + encodeURIComponent("Amministratore")
     })
   </script>
-  <script src="http://code.highcharts.com/highcharts.js"></script>
-<% 
+<%
   ArrayList<String> simpatizzanti=(ArrayList<String>)request.getAttribute("simpatizzanti");
   Iterator simpaIterator = simpatizzanti.iterator();
   ArrayList<String> aderenti=(ArrayList<String>)request.getAttribute("aderenti");
@@ -74,13 +73,41 @@
       </div>
       <img class="close" src="images/x-symbol.svg" onclick="closeInfo()">
     </div>
+
+    <div id="graph-container"></div>
   </main>
   <jsp:include page="phrase.jsp" />
   <jsp:include page="footer.jsp" />
 
-
+  <script src="https://code.highcharts.com/highcharts.js"></script>
 
   <script>
+
+    function createChart(xKey, yKey, type) {
+      var container = document.getElementById('info-div');
+
+      Highcharts.chart(container, {
+        chart: {
+          type: type
+        },
+        title: {
+          text: 'Chart Title'
+        },
+        xAxis: {
+          categories: xKey
+        },
+        yAxis: {
+          title: {
+            text: 'Value'
+          }
+        },
+        series: [{
+          name: 'Series 1',
+          data: yKey
+        }]
+      });
+    }
+
     function first_print_visits() {
       changeAppearance();
       print_visits();
@@ -163,45 +190,53 @@
       document.getElementById("info-title").innerHTML = "Visite al sito: "
       let request = new XMLHttpRequest();
       let path = "./visits.json";
+      let path = "./visits.json";
       request.open('GET', path, true);
       request.onreadystatechange = function (visits) {
         if (request.readyState === 4 && request.status === 200) {
           visits = JSON.parse(request.responseText);
-          let totalVisits = visits.totalVisits;
-          alert("IF");
-        }
-        let output = "<b>Visite totali: </b> " + totalVisits + "<br>";
+          }
+        let keys = Object.keys(visits).slice(1);
+        let values = Object.values(visits).slice(1);
+
+        let output = "<b>Visite totali: </b> " + visits.totalVisits + "<br>";
         output += "<b>Visite per pagina: </b><br>";
-        document.getElementById('info-div').innerHTML = output;
-        alert("fine funzione");
-        }
+        // qui creo i grafici da mostrare
+        //showGraph(visits, 'graph_container');
+        createChart(keys,values, "column");
+
+      }
       request.send();
+
     }
 
     function print_donations() {
-      /*document.getElementById("info-title").innerHTML = "Donazioni nell'ultimo anno: "
+      console.log("${visitsPath}");
+      document.getElementById("info-title").innerHTML = "Donazioni al sito: "
+
       let request = new XMLHttpRequest();
-      let donations = {}
       let path = "./donations.json";
       request.open('GET', path, true);
-
-      request.onreadystatechange = function () {
+      request.onreadystatechange = function (visits) {
         if (request.readyState === 4 && request.status === 200) {
-          visits = JSON.parse(request.responseText);
-          alert(JSON.stringify(donations));
-          document.getElementById('info-div').innerHTML = "ciao";
+          donations = JSON.parse(request.responseText);
         }
-        let output = "<b>Donazioni per mese: </b><br> <div class='donations' id='graph_container'></div>";
-        // qui creo i grafici da mostrare
-        showGraph(donations, "graph_container");
-        document.getElementById('info-div').innerHTML = output;
-      };
-      // qui creo i grafici da mostrare
-      document.getElementById('info-div').innerHTML = JSON.stringify(donations);
-      request.send();*/
+        let keys = Object.keys(donations);
+        let months=[];
+        let values = Object.values(donations);
+        alert(keys[1]);
+
+        createChart(keys,values, "line");
+
+      }
+      request.send();
+
     }
 
+
   </script>
+
+
 </body>
 
 </html>
