@@ -21,7 +21,7 @@ public class Amministratore extends HttpServlet {
   Connection con;
   ArrayList<String> simpatizzanti; // to store simatizzanti usernames
   ArrayList<String> aderenti; // to store aderenti usernames
-  //float[] donations = new float[12];
+  // float[] donations = new float[12];
   // Map<String, Integer> visits = new HashMap<String, Integer>();
   int totalVisits;
   JSONObject visits = new JSONObject();
@@ -40,12 +40,21 @@ public class Amministratore extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     response.setContentType("text/html;charset=UTF-8");
-
+    String action = request.getParameter("action");
+    if (action==null){
+      action="";
+    }
+    Statement stmt;
+    String query;
     try {
-
+      stmt = con.createStatement();
+      if (action.equals("reset")) {
+        query = "UPDATE visit_counter SET visits = 0";
+        stmt.executeUpdate(query);
+      }
       // Check if there are users in the database
-      String query = "SELECT username, userType FROM users WHERE userType!='ADMIN'";
-      Statement stmt = con.createStatement();
+      query = "SELECT username, userType FROM users WHERE userType!='ADMIN'";
+      stmt = con.createStatement();
       ResultSet res = stmt.executeQuery(query);
       // initialize arraylists
       simpatizzanti = new ArrayList<String>();
@@ -71,8 +80,8 @@ public class Amministratore extends HttpServlet {
       }
       String donationsString = donations.toJSONString();
       String contextPath = getServletContext().getRealPath("/");
-      contextPath=contextPath.replace("\\", "/");
-      String donationsPath = contextPath+ "donations.json";
+      contextPath = contextPath.replace("\\", "/");
+      String donationsPath = contextPath + "donations.json";
       File donationsFile = new File(donationsPath);
       if (!donationsFile.exists()) {
         donationsFile.createNewFile();
@@ -80,7 +89,6 @@ public class Amministratore extends HttpServlet {
       FileWriter donationsWriter = new FileWriter(donationsFile);
       donationsWriter.write(donationsString);
       donationsWriter.close();
-
 
       // gets visits from database and saves them by page and in total in a json file
       query = "SELECT * FROM visit_counter ";
@@ -92,13 +100,14 @@ public class Amministratore extends HttpServlet {
       while (res.next()) {
         page = res.getString(1);
         count = res.getInt(2);
-        if( page.equals("Amministratore")){
-          //System.out.println("admin!!*****************************************");
+        if (page.equals("Amministratore")) {
+          // System.out.println("admin!!*****************************************");
           count++;
         }
         visits.put(page, count);
         totalVisits += count;
-        //System.out.println(page+": "+count+"-----------------------------------------------------");
+        // System.out.println(page+":
+        // "+count+"-----------------------------------------------------");
       }
       visits.put("TotalVisits", totalVisits);
       String visitsString = visits.toJSONString();

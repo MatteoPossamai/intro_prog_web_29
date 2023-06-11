@@ -213,7 +213,7 @@
         let output = "<b>Visite totali: </b> " + numberOfVisits  + "<br>";
         output += "<div id='graph-container' style='height: 400px'></div>" +
                   "<div id='button-container'>" +
-                "<button class='button'>Reset visite </button></div>";
+                "<a href='admin?action=reset'><button id='reset-visite' class='button'>Reset visite </button></a></div>";
         document.getElementById("info-div").innerHTML=output;
 
         if (visits.hasOwnProperty(totalVisitsKey)) {

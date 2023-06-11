@@ -26,15 +26,13 @@
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: 'body='+ encodeURIComponent(<%=activity.getTitle()%>)
+        body: 'body='+ encodeURIComponent("<%=activity.getTitle()%>")
     })
 </script>
      <h1 class="title"><%=activity.getTitle()%></h1>
      <div class="content">
 
         <div class="text-image">
-            <% System.out.println(activity.getImageSource());%>
-
             <img src="<%=activity.getImageSource()%>" class="image">
             <p class="text"><%=activity.getDescription()%></p>
         </div>

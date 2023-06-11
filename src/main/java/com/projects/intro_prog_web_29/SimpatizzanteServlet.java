@@ -69,11 +69,11 @@ public class SimpatizzanteServlet extends HttpServlet {
         }
         // gets activity images and titles
         activity1.setTitle("Mensa");
-        activity1.setImageSource("src/main/webapp/images/act-1.jpg");
+        activity1.setImageSource("images/act-1.jpg");
         activity2.setTitle("Edilizia");
-        activity2.setImageSource("src/main/webapp/images/act-2.jpeg");
+        activity2.setImageSource("images/act-2.jpeg");
         activity3.setTitle("Corsi di formazione");
-        activity3.setImageSource("src/main/webapp/images/act-3.jpg");
+        activity3.setImageSource("images/act-3.jpeg");
        
         // set the user info as request attributes
 

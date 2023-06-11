@@ -13,14 +13,38 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mydb/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/db.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mydb/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/log.ctrl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/log1.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mydb/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c590.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c590.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c101.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c111.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c121.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c130.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c141.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c20.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c31.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c41.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c51.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c5b0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c5b0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c5c1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c5c1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c5d0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c5d0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c5e1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c5e1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c60.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c71.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c81.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c90.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/ca1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/cb1.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/cf0.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/d590.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mydb/seg0/d5a1.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/AuthBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/AuthBasic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Amministratore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Amministratore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/SimpatizzanteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/SimpatizzanteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/aderente.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/aderente.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/activity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/activity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/simpa1.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/aderente.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/aderente.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/stylesheets/simpatizzante.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/stylesheets/simpatizzante.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,6 +236,7 @@
       <workItem from="1686325109703" duration="5489000" />
       <workItem from="1686389127541" duration="11782000" />
       <workItem from="1686496258040" duration="3607000" />
+      <workItem from="1686515632189" duration="723000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>
