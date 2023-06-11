@@ -12,7 +12,7 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-	<link href="stylesheets/activities.css" rel="stylesheet" type="text/css">
+	<link href="stylesheets/simpatizzante.css" rel="stylesheet" type="text/css">
 	<link href="stylesheets/global.css" rel="stylesheet" type="text/css">
 	<title>Tum4World</title>
 </head>
@@ -44,11 +44,11 @@
 		<div>
 			<h2>Scegli a quali attività vuoi iscriverti!</h2>
 
-			<form class="simpatizzante-form" method="post">
+			<form class="simpatizzante-form" method="get">
 				<table class="simpatizzante-table">
 					<tr>
 						<td>
-							<img src="<%=activity1.getImageSource()%>" class="image" onclick="checkCheckbox('attivita1')">
+							<img src="<%=activity1.getImageSource()%>" class="image-choice" onclick="checkCheckbox('attivita1')">
 							<br>
 							<input type="checkbox" id="attivita1" name='<%=activity1.getTitle()%>'
 								value="<%=activity1.getTitle()%>">
@@ -58,7 +58,7 @@
 						</td>
 
 						<td>
-							<img src="<%=activity2.getImageSource()%>" class="image" onclick="checkCheckbox('attivita2')">
+							<img src="<%=activity2.getImageSource()%>" class="image-choice" onclick="checkCheckbox('attivita2')">
 							<br>
 							<input type="checkbox" id="attivita2" name="<%=activity2.getTitle()%>"
 								value="<%=activity2.getTitle()%>">
@@ -67,7 +67,7 @@
 							</label>
 						</td>
 						<td>
-							<img src="<%=activity3.getImageSource()%>" class="image" onclick="checkCheckbox('attivita3')">
+							<img src="<%=activity3.getImageSource()%>" class="image-choice" onclick="checkCheckbox('attivita3')">
 							<br>
 							<input type="checkbox" id="attivita3" name="<%=activity3.getTitle()%>"
 								value="<%=activity3.getTitle()%>"><label class="simpatizzante-label" for="attivita3">
