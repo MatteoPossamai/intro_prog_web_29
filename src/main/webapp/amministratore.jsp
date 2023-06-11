@@ -190,14 +190,21 @@
       document.getElementById("info-title").innerHTML = "Visite al sito: "
       let request = new XMLHttpRequest();
       let path = "./visits.json";
-      let path = "./visits.json";
       request.open('GET', path, true);
       request.onreadystatechange = function (visits) {
         if (request.readyState === 4 && request.status === 200) {
           visits = JSON.parse(request.responseText);
           }
-        let keys = Object.keys(visits).slice(1);
-        let values = Object.values(visits).slice(1);
+
+        const totalVisitsKey = 'TotalVisits';
+
+        if (visits.hasOwnProperty(totalVisitsKey)) {
+          delete visits[totalVisitsKey];
+        }
+
+
+        let keys = Object.keys(visits);
+        let values = Object.values(visits);
 
         let output = "<b>Visite totali: </b> " + visits.totalVisits + "<br>";
         output += "<b>Visite per pagina: </b><br>";
