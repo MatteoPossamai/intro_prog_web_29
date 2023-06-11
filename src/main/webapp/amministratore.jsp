@@ -47,9 +47,7 @@
       <div class="button-container">
         <button class="button" id="mostra-visite" onclick="first_print_visits()">Mostra le visite del
           sito</button>
-        <button class="button" id="mostra-donazioni" onclick="first_print_donations()">Mostra le donazioni
-          del
-          sito</button>
+        <button class="button" id="mostra-donazioni" onclick="first_print_donations()">Mostra le donazioni del sito</button>
       </div>
     </div>
 
@@ -58,23 +56,17 @@
         <button class="button" onclick="get('utenti')">Visualizza gli utenti del sito</button>
         <button class="button" onclick="get('simpatizzanti')">Visualizza i simpatizzanti del sito</button>
         <button class="button" onclick="get('aderenti')">Visualizza gli aderenti al sito</button>
-        <button class=" button" id="mostra-visite2" onclick="print_visits()">Mostra le visite del
-          sito</button>
-        <button class="button" id="mostra-donazioni2" onclick="print_donations()">Mostra le donazioni del
-          sito</button>
+        <button class=" button" id="mostra-visite2" onclick="print_visits()">Mostra le visite del sito</button>
+        <button class="button" id="mostra-donazioni2" onclick="print_donations()">Mostra le donazioni del sito</button>
       </div>
       <div class="super-info">
         <div class="info">
           <h2 id="info-title"></h2>
-          <div id="info-div">
-            <div class='visits' id='graph_container' style='height: 300px'></div>
-          </div>
+          <div id="info-div"></div>
         </div>
       </div>
       <img class="close" src="images/x-symbol.svg" onclick="closeInfo()">
     </div>
-
-    <div id="graph-container"></div>
   </main>
   <jsp:include page="phrase.jsp" />
   <jsp:include page="footer.jsp" />
@@ -83,26 +75,25 @@
 
   <script>
 
-    function createChart(xKey, yKey, type) {
-      var container = document.getElementById('info-div');
+    function createChart(xKey, yKey, type, yTitle) {
+      var container = document.getElementById('graph-container');
 
       Highcharts.chart(container, {
         chart: {
           type: type
         },
         title: {
-          text: 'Chart Title'
+          text: 'Visite per pagina'
         },
         xAxis: {
           categories: xKey
         },
         yAxis: {
           title: {
-            text: 'Value'
+            text: yTitle
           }
         },
         series: [{
-          name: 'Series 1',
           data: yKey
         }]
       });
@@ -118,26 +109,37 @@
     }
     function get(type) {
       switch (type) {
-        case "utenti": Document.getElementById("info-title").innerText = "Utenti iscritti: "; break;
-        case "simpatizzanti": Document.getElementById("info-title").innerText = "Simpatizzanti iscritti: "; break;
-        case "aderenti": Document.getElementById("info-title").innerText = "Aderenti iscritti: "; break;
+        case "utenti": document.getElementById("info-title").innerHTML = "Utenti iscritti: "; break;
+        case "simpatizzanti": document.getElementById("info-title").innerHTML = "Simpatizzanti iscritti: "; break;
+        case "aderenti": document.getElementById("info-title").innerHTML = "Aderenti iscritti: "; break;
       }
-      // prende dal db i dati e li stampa con una lista <li>
+      // prende dalla servlet i dati e li stampa con una lista <li>
       var output = '';
       var simpatizzanti = [<% while (simpaIterator.hasNext()) { out.println("'" + simpaIterator.next() + "',"); } %>];
       var aderenti = [<% while (aderIterator.hasNext()) { out.println("'" + aderIterator.next() + "',"); } %>];
       if (type === "simpatizzanti" || type === "utenti") {
-        console.log("********************************* for simpa");
+        if(simpatizzanti.length === 0 ){
+            console.log("non ci sono simpa");
+            if (type === "simpatizzanti") {
+                output += 'Non ci sono simpatizzanti iscritti al momento';
+            }
+        }
         for (var i = 0; i < simpatizzanti.length; i++) {
-          //
-          console.log(i + ") simpa:" + simpatizzanti[i] + "-------------------------");
-          output += '<li class="user_simpa">' + simpatizzanti[i] + '</li>';
+            console.log(i + ") simpa:" + simpatizzanti[i] + "-------------------------");
+            output += '<li class="user_simpa">' + simpatizzanti[i] + '</li>';
         }
       }
       if (type == "aderenti" || type === "utenti") {
         console.log("********************************* for ade");
+        if(aderenti.length === 0){
+            console.log("non ci sono simpa");
+            if (type === "aderenti") {
+                output += 'Non ci sono aderenti iscritti al momento';
+            } else if (simpatizzanti.length === 0){
+                output+="Non ci sono utenti iscritti al momento";
+            }
+        }
         for (var i = 0; i < aderenti.length; i++) {
-          //
           console.log(i + ") ader:" + aderenti[i] + "-------------------------");
           output += '<li class="user_ader">' + aderenti[i] + '</li>';
         }
@@ -146,7 +148,7 @@
       document.getElementById('info-div').innerHTML = output;
     }
     function getArrayElementsAsJavaScriptArray(array) {
-      var result = '';
+      let result = '';
       for (var i = 0; i < array.length; i++) {
         result += "'" + array[i] + "'";
         if (i < array.length - 1) {
@@ -157,11 +159,11 @@
     }
     function firstClick(element) {
       changeAppearance();
-      get(element)
+      get(element);
     }
     function closeInfo() {
-      var hide = document.getElementById("info-container")
-      var show = document.getElementById("basic-container")
+      let hide = document.getElementById("info-container")
+      let show = document.getElementById("basic-container")
       if (hide.style.display === "none") {
         hide.style.display = "flex";
         hide.style.flexDirection = "row";
@@ -172,8 +174,8 @@
     }
     function changeAppearance() {
       console.log("entro in funzione")
-      var hide = document.getElementById("basic-container");
-      var show = document.getElementById("info-container");
+      let hide = document.getElementById("basic-container");
+      let show = document.getElementById("info-container");
       if (hide.style.display === "none") {
         hide.style.display = "block";
       } else {
@@ -186,10 +188,8 @@
     }
 
     function print_visits() {
-      console.log("${visitsPath}");
       document.getElementById("info-title").innerHTML = "Visite al sito: "
       let request = new XMLHttpRequest();
-      let path = "./visits.json";
       let path = "./visits.json";
       request.open('GET', path, true);
       request.onreadystatechange = function (visits) {
@@ -200,20 +200,16 @@
         let values = Object.values(visits).slice(1);
 
         let output = "<b>Visite totali: </b> " + visits.totalVisits + "<br>";
-        output += "<b>Visite per pagina: </b><br>";
-        // qui creo i grafici da mostrare
-        //showGraph(visits, 'graph_container');
+        output += "<b>Visite per pagina: </b><br><div id='graph-container' style='height: 300px'></div>";
+        document.getElementById("info-div").innerHTML=output;
         createChart(keys,values, "column");
-
       }
       request.send();
 
     }
 
     function print_donations() {
-      console.log("${visitsPath}");
       document.getElementById("info-title").innerHTML = "Donazioni al sito: "
-
       let request = new XMLHttpRequest();
       let path = "./donations.json";
       request.open('GET', path, true);

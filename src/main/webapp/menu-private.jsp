@@ -10,12 +10,12 @@
     </div>
   </a>
   <main class="private-menu">
-    <a href="index.jsp" class="menu-item">Home</a>
-    <a href="about.jsp" class="menu-item">Chi siamo</a>
-    <a href="activities.jsp" class="menu-item">Attivita'</a>
-    <a href="contact.jsp" class="menu-item">Contatti</a>
-    <a href="login.jsp" class="menu-item">Sign In</a>
-    <a href="register.jsp" class="menu-item">Login</a>
+    <a href="home" class="menu-item">Home</a>
+    <a href="about" class="menu-item">Chi siamo</a>
+    <a href="activities" class="menu-item">Attivita'</a>
+    <a href="contatti" class="menu-item">Contatti</a>
+    <a href="login" class="menu-item">Sign In</a>
+    <a href="" class="menu-item">Login</a>
     <a href="logout" class="menu-item">Logout</a>
   </main>
 </header>
