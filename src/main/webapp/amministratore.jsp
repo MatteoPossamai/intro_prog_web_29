@@ -230,6 +230,9 @@
         }
         let keys = Object.keys(donations);
         let months=[];
+        for (i = 0; i<= keys.length; i++){
+          alert(keys[i]);
+        }
         let values = Object.values(donations);
         alert(keys[1]);
 

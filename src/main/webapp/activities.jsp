@@ -30,7 +30,7 @@
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: 'body='+ encodeURIComponent("Attività")
+        body: 'body='+ encodeURIComponent("Attivita")
     })
 </script>
     <h1 class="title">Attivita'</h1>

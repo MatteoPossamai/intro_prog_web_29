@@ -26,6 +26,20 @@
     </c:if>
     <form id="form" class="form" method="post" action="signin">
         <div class="form-control">
+            <label for="username">Nome</label>
+            <input type="text" placeholder="Nome" id="name" name="name" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
+            <label for="username">Cognome</label>
+            <input type="text" placeholder="Cognome" id="surname" name="surname" />
+            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-exclamation-circle"></i>
+            <small>Error message</small>
+        </div>
+        <div class="form-control">
             <label for="username">Username</label>
             <input type="text" placeholder="Username" id="username" name="username" />
             <i class="fas fa-check-circle"></i>
@@ -82,6 +96,8 @@
 </t:base>
 <script>
     const form = document.getElementById('form');
+    const name = document.getElementById('name');
+    const surname = document.getElementById('surname');
     const username = document.getElementById('username');
     const email = document.getElementById('email');
     const password = document.getElementById('password');
@@ -101,10 +117,26 @@
     function checkInputs() {
         let res = true;
         // trim to remove the whitespaces
+        const nameValue = name.value.trim();
+        const surnameValue = surname.value.trim();
         const usernameValue = username.value.trim();
         const emailValue = email.value.trim();
         const passwordValue = password.value.trim();
         const password2Value = password2.value.trim();
+
+        if(nameValue === '') {
+            setErrorFor(name, 'Name cannot be blank');
+            res = false;
+        } else {
+            setSuccessFor(name);
+        }
+
+        if(surnameValue === '') {
+            setErrorFor(surname, 'Surname cannot be blank');
+            res = false;
+        } else {
+            setSuccessFor(surname);
+        }
 
         if(usernameValue === '') {
             setErrorFor(username, 'Username cannot be blank');
