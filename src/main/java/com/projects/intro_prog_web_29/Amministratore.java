@@ -93,12 +93,12 @@ public class Amministratore extends HttpServlet {
         page = res.getString(1);
         count = res.getInt(2);
         if( page.equals("Amministratore")){
-          System.out.println("admin!!*****************************************");
+          //System.out.println("admin!!*****************************************");
           count++;
         }
         visits.put(page, count);
         totalVisits += count;
-        System.out.println(page+": "+count+"-----------------------------------------------------");
+        //System.out.println(page+": "+count+"-----------------------------------------------------");
       }
       visits.put("TotalVisits", totalVisits);
       String visitsString = visits.toJSONString();
@@ -106,35 +106,12 @@ public class Amministratore extends HttpServlet {
       FileWriter visitsWriter = new FileWriter(visitsPath);
       visitsWriter.write(visitsString);
       visitsWriter.close();
-/* 
-      // stampa di controllo per me -------------------------
-      System.out.println("utenti: ");
-      for (String user : simpatizzanti) {
-        System.out.println("° " + user);
-      }
-      for (String user : aderenti) {
-        System.out.println("° " + user);
-      }
-      System.out.println(visitsPath);
-      
-      // print all donation by month
-      System.out.println("donazioni: ");  
-      for (float donation : donations) {
-        System.out.println("° " + donation);
-      }
 
-      System.out.println("visite: ");
-      for (Map.Entry<String, Integer> entry : visits.entrySet()) {
-        System.out.println("° " + entry.getKey() + " " + entry.getValue());
-      }
-      System.out.println("totale visite: " + totalVisits);
-      */
       // -----------------------------------------------------
       request.setAttribute("simpatizzanti", simpatizzanti);
       request.setAttribute("aderenti", aderenti);
       request.setAttribute("donationsPath", donationsPath);
       request.setAttribute("visitsPath", visitsPath);
-      //request.setAttribute("totalVisits", totalVisits);
       RequestDispatcher rd = request.getRequestDispatcher("/amministratore.jsp");
       rd.forward(request, response);
 
@@ -149,7 +126,6 @@ public class Amministratore extends HttpServlet {
     } catch (SQLException ex) {
       ex.printStackTrace();
     }
-    //System.out.println("destroy---------------------------------------------------------------------");
   }
 
 }

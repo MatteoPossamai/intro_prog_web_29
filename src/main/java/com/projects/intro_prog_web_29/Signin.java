@@ -37,6 +37,8 @@ public class Signin extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         // Get all the data from the form
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
@@ -63,7 +65,7 @@ public class Signin extends HttpServlet {
                 request.getRequestDispatcher("/register.jsp").forward(request, response);
             }  else {
                 // Otherwise write the user in the database, and redirect him to the success page
-                query = "INSERT INTO users VALUES ('" + username + "', '" + email + "', '" + password +
+                query = "INSERT INTO users VALUES ('" + username + "', '" + name + "', '"  + surname + "', '" + email + "', '" + password +
                         "', '" + data_nascita_date + "', '" + telefono + "', '" + role + "')";
                 stmt.executeUpdate(query);
                 System.out.println("CIAO");

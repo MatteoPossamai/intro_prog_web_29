@@ -6,12 +6,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-// import java.io.File;
 import java.io.IOException;
 import java.sql.*;
-import java.util.ArrayList;
-// import java.io.FileWriter;
-// import org.json.simple.JSONObject;
+
 
 @WebServlet(name = "Simpatizzante", urlPatterns = { "/simpatizzante" })
 public class SimpatizzanteServlet extends HttpServlet {
