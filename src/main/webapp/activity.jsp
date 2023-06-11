@@ -6,6 +6,7 @@
 
 <html>
 <head>
+
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
     <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
@@ -17,6 +18,7 @@
 
 <jsp:include page="header.jsp"></jsp:include>
 <body>
+<script type="text/javascript" src="${pageContext.request.contextPath}/index.js"></script>
 
 <script>
     fetch("visits", {
@@ -31,11 +33,14 @@
      <div class="content">
 
         <div class="text-image">
-            <img src="./images/placeholder.jpeg" class="image">
+            <% System.out.println(activity.getImageSource());%>
+
+            <img src="<%=activity.getImageSource()%>" class="image">
             <p class="text"><%=activity.getDescription()%></p>
         </div>
      </div>
 </body>
+<jsp:include page="phrase.jsp"></jsp:include>
 <jsp:include page="footer.jsp"></jsp:include>
 
 </html>

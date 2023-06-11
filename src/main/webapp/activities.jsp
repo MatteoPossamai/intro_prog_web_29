@@ -19,6 +19,7 @@
     <link href="stylesheets/global.css" rel="stylesheet" type="text/css">
     <title>Tum4World</title>
 </head>
+<script type="text/javascript" src="${pageContext.request.contextPath}/index.js"></script>
 
     <jsp:include page="header.jsp"></jsp:include>
 
@@ -65,6 +66,8 @@
     </main>
     </div>
 </body>
+<jsp:include page="phrase.jsp"></jsp:include>
+
 <jsp:include page="footer.jsp"></jsp:include>
 
 <script>

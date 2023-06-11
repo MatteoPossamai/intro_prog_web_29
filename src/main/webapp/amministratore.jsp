@@ -6,6 +6,7 @@
 <html>
 
 <head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href="stylesheets/amministratore.css" rel="stylesheet" type="text/css">
@@ -16,6 +17,9 @@
 
 
 <body>
+
+<script type="text/javascript" src="${pageContext.request.contextPath}/index.js"></script>
+
   <script>
     fetch("visits", {
       method: 'POST',
@@ -68,14 +72,12 @@
       <img class="close" src="images/x-symbol.svg" onclick="closeInfo()">
     </div>
   </main>
-  <jsp:include page="phrase.jsp" />
-  <jsp:include page="footer.jsp" />
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
 
   <script>
 
-    function createChart(xKey, yKey, type, yTitle) {
+    function createChart(xKey, yKey, type, yTitle, chartTitle) {
       var container = document.getElementById('graph-container');
 
       Highcharts.chart(container, {
@@ -83,7 +85,7 @@
           type: type
         },
         title: {
-          text: 'Visite per pagina'
+          text: chartTitle
         },
         xAxis: {
           categories: xKey
@@ -196,6 +198,7 @@
         if (request.readyState === 4 && request.status === 200) {
           visits = JSON.parse(request.responseText);
           }
+        let numberOfVisits = visits.TotalVisits;
 
         const totalVisitsKey = 'TotalVisits';
 
@@ -203,14 +206,19 @@
           delete visits[totalVisitsKey];
         }
 
-
         let keys = Object.keys(visits);
         let values = Object.values(visits);
 
-        let output = "<b>Visite totali: </b> " + visits.totalVisits + "<br>";
-        output += "<b>Visite per pagina: </b><br><div id='graph-container' style='height: 300px'></div>";
+
+        let output = "<b>Visite totali: </b> " + numberOfVisits  + "<br>";
+        output += "<div id='graph-container' style='height: 400px'></div>";
         document.getElementById("info-div").innerHTML=output;
-        createChart(keys,values, "column");
+
+        if (visits.hasOwnProperty(totalVisitsKey)) {
+          delete visits[totalVisitsKey];
+        }
+
+        createChart(keys,values, "column", "visite", "Visite per pagina");
       }
       request.send();
 
@@ -225,15 +233,35 @@
         if (request.readyState === 4 && request.status === 200) {
           donations = JSON.parse(request.responseText);
         }
-        let keys = Object.keys(donations);
-        let months=[];
-        for (i = 0; i<= keys.length; i++){
-          alert(keys[i]);
-        }
-        let values = Object.values(donations);
-        alert(keys[1]);
 
-        createChart(keys,values, "line");
+        let keys = Object.keys(donations);
+        let values = Object.values(donations);
+
+        let months=[];
+        for (let i = 0; i< keys.length; i++){
+          switch (keys[i]){
+            case '1' : months[i] = 'January'; break;
+            case '2' : months[i] = 'February'; break;
+            case '3' : months[i] = 'March'; break;
+            case '4': months[i] = 'April'; break;
+            case '5' : months[i] = 'May'; break;
+            case '6' : months[i] = 'June'; break;
+            case '7' : months[i] = 'July'; break;
+            case '8' : months[i] = 'August'; break;
+            case '9' : months[i] = 'September'; break;
+            case '10' : months[i] = 'October'; break;
+            case '11' : months[i] = 'November'; break;
+            case '12' : months[i] = 'December'; break;
+
+            default: alert(i); break;
+
+          }
+        }
+        let output = "";
+        output += "<div id='graph-container' style='height: 300px'></div>";
+        document.getElementById("info-div").innerHTML=output;
+
+        createChart(months,values, "line", "euro", "Donazioni annuali");
 
       }
       request.send();
@@ -245,5 +273,9 @@
 
 
 </body>
+
+<jsp:include page="phrase.jsp" />
+<jsp:include page="footer.jsp" />
+
 
 </html>

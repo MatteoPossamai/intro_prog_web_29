@@ -15,7 +15,7 @@
     </script>
     <main>
         <section class="text-image" id="1">
-            <p>Registrazione confermata</p>
+            <h1 style="margin-top: 200px">Registrazione confermata</h1>
         </section>
     </main>
 
