@@ -41,14 +41,11 @@
      if(cookie != null)
          {
             request.getServletContext().setAttribute("cookiesEnabled", true);
-            System.out.println("I cookie sono abilitati JSP ? " );
          }
      else
      {
-         System.out.println("Sono disabilitati");
          request.getServletContext().setAttribute("cookiesEnabled", false);
      }
 
     %>
-    //ToDo qualche errore con l'attributo del servletContext, rileva entrambi come veri, da rivedere.
 </script>

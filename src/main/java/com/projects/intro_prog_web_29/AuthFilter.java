@@ -27,22 +27,17 @@ public class AuthFilter implements Filter {
         HttpServletRequest hreq=(HttpServletRequest) request;
         HttpSession session = hreq.getSession(false);
         boolean cookiesEnabled = (boolean) hreq.getServletContext().getAttribute("cookiesEnabled");
-        System.out.println("Attributo servlet Context : " + cookiesEnabled);
-        System.out.println("Entro nel doFilter");
         Cookie[] cookieArray = hreq.getCookies();
         hreq.setAttribute("invalidate", false);
         if(cookiesEnabled) {
-            System.out.println("I cookie sono abilitati");
             try {
                 CookieCheck.manageCookie(cookieArray, hreq);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
-            } {
-
             }
         }
-        // Get from the URL the jsp page we are in
         boolean invalidate = (boolean) request.getAttribute("invalidate");
+        // Get from the URL the jsp page we are in
         String page = hreq.getRequestURI().substring(hreq.getContextPath().length());
         if(session == null || session.getAttribute("username") == null || invalidate){
             // If the user is not logged in, redirect to the login page, because no page in the array
@@ -53,6 +48,10 @@ public class AuthFilter implements Filter {
         }else{
             // Otherwise check if the user has the permission to access the page, if it is the correct page to stay in
             String role = (String) session.getAttribute("userType");
+            String username = (String) session.getAttribute("username");
+            String psw = (String) session.getAttribute("password");
+            System.out.println("Username, password, role: ");
+            System.out.println(username + psw + role);
             String page_url = AuthBasic.redirect_pages.get(role);
             // Otherwise, it gets redirected to the page that corresponds to the user role
             if(!page.equals(page_url)){
