@@ -47,3 +47,6 @@ body {
     text-decoration: none;
     cursor: pointer;
 }
+.image-choice{
+    max-height: 150px;
+}

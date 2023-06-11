@@ -9,6 +9,6 @@ public class AuthBasic {
     public static Map<String, String> redirect_pages  = new HashMap<String, String>() {{
         put("ADMIN", "/admin");
         put("SIMPA", "/simpatizzante");
-        put("ADERE", "/aderente.jsp");
+        put("ADERE", "/aderente");
     }};
 }

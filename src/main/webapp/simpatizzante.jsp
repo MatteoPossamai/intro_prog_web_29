@@ -12,7 +12,7 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
 	<link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
 	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-	<link href="stylesheets/activities.css" rel="stylesheet" type="text/css">
+	<link href="stylesheets/simpatizzaante.css" rel="stylesheet" type="text/css">
 	<link href="stylesheets/global.css" rel="stylesheet" type="text/css">
 	<title>Tum4World</title>
 </head>
@@ -37,14 +37,13 @@
 			<h1 class="title">Benvenuto/a Simpatizzante!</h1>
 			<div style="display: flex; gap: 100px">
 				<button class="button" onclick="show('popup-profilo')">Visualizza i tuoi dati</button>
-				<button class="button" id="elimina-iscrizione" value="Cancella la mia iscrizione"
-					onclick="show('popup-cancella')">Cancella la mia iscrizione</button>
+				<a href="simpatizzante?action=delete"><button class="button" id="elimina-iscrizione" value="Cancella la mia iscrizione">Cancella la mia iscrizione</button></a>
 			</div>
 		</div>
 		<div>
 			<h2>Scegli a quali attività vuoi iscriverti!</h2>
 
-			<form class="simpatizzante-form" method="post">
+			<form class="simpatizzante-form" method="get">
 				<table class="simpatizzante-table">
 					<tr>
 						<td>
@@ -85,12 +84,6 @@
 		<div class="simpatizzante-popup-content">
 			<span class="close" onclick="hide('popup-profilo')">&times;</span>
 			<p>Informazioni del profilo</p>
-		</div>
-	</div>
-	<div id="popup-cancella" class="simpatizzante-popup-cancella">
-		<div class="simpatizzante-popup-content">
-			<span class="close" onclick="hide('popup-cancella')">&times;</span>
-			<p>La cancellazione dal sito è andata a buon fine</p>
 		</div>
 	</div>
 </body>
