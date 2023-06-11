@@ -8,7 +8,7 @@ public class AuthBasic {
     // It has been put in a different file to avoid code duplication
     public static Map<String, String> redirect_pages  = new HashMap<String, String>() {{
         put("ADMIN", "/admin");
-        put("SIMPA", "/simpatizzante.jsp");
+        put("SIMPA", "/simpatizzante");
         put("ADERE", "/aderente.jsp");
     }};
 }
