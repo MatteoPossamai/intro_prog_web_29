@@ -10,37 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/db.lck" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/db.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/log/log.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/log.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/log/log1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/log1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/log/logmirror.ctrl" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/log/logmirror.ctrl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c101.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c101.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c111.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c111.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c121.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c121.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c130.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c130.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c141.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c141.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c20.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c20.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c31.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c31.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c41.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c41.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c4e0.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c4f1.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c51.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c51.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c590.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c590.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c5a1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c5a1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c60.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c60.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c71.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c71.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c81.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c81.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/c90.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/c90.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/ca1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/ca1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/cb1.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/cb1.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Mydb/seg0/cf0.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Mydb/seg0/cf0.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/AuthBasic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/AuthBasic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Logout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/SimpatizzanteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/SimpatizzanteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/simpatizzante.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/amministratore.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

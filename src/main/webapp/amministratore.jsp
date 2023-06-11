@@ -211,7 +211,9 @@
 
 
         let output = "<b>Visite totali: </b> " + numberOfVisits  + "<br>";
-        output += "<div id='graph-container' style='height: 400px'></div>";
+        output += "<div id='graph-container' style='height: 400px'></div>" +
+                  "<div id='button-container'>" +
+                "<button class='button'>Reset visite </button></div>";
         document.getElementById("info-div").innerHTML=output;
 
         if (visits.hasOwnProperty(totalVisitsKey)) {
@@ -219,6 +221,7 @@
         }
 
         createChart(keys,values, "column", "visite", "Visite per pagina");
+
       }
       request.send();
 
