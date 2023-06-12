@@ -8,12 +8,15 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.*;
 
+// Servlet to track the number of visits to the pages of the website
 @WebServlet(name = "VisitCounterServlet", urlPatterns = { "/visits" })
 public class VisitCounterServlet extends HttpServlet {
+  // data to conect to the database
   String dbURL = "jdbc:derby://localhost:1527/Mydb";
   String user = "App";
   String password = "pw";
   Connection con;
+  // visit counter object
   VisitCounter visitCounter = new VisitCounter();
 
   public void init() {
@@ -52,9 +55,6 @@ public class VisitCounterServlet extends HttpServlet {
       // increments counter
       visitCounter.increase();
 
-      // stampa di controllo per me
-      //System.out.println("visite " + pageName + ": " + visitCounter.count);
-
       // saves the new count in the database
       query = "UPDATE visit_counter SET visits = " + visitCounter.count + " WHERE pageName = " + "'" + pageName + "'";
       stmt.executeUpdate(query);
@@ -65,12 +65,12 @@ public class VisitCounterServlet extends HttpServlet {
   }
 
   public void destroy() {
+    // Close the database connection for the entire servlet
     try {
       con.close();
     } catch (SQLException ex) {
       ex.printStackTrace();
     }
-    //System.out.println("destroy---------------------------------------------------------------------");
   }
 
 }

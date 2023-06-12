@@ -61,7 +61,7 @@ public class Signin extends HttpServlet {
             if (username_exists) {
                 // If there is already a user with the same username, redirect to the registration page
                 // with an error message, to let the user know that the username is already taken
-                request.setAttribute("error", "Username already exists");
+                request.setAttribute("error", "29: Username already exists");
                 request.getRequestDispatcher("/register.jsp").forward(request, response);
             }  else {
                 // Otherwise write the user in the database, and redirect him to the success page

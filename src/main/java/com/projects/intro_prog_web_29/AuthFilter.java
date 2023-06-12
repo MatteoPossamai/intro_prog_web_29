@@ -32,7 +32,7 @@ public class AuthFilter implements Filter {
         if(session == null || session.getAttribute("username") == null){
             // If the user is not logged in, redirect to the login page, because no page in the array
             // is accessible if not logged in
-            request.setAttribute("error", "Non sei loggato, effettua il login per accedere a questa pagina");
+            request.setAttribute("error", "29: Non sei loggato, effettua il login per accedere a questa pagina");
             request.getRequestDispatcher("/login.jsp").forward(request,response);
             return;
         }else{
@@ -42,7 +42,7 @@ public class AuthFilter implements Filter {
 
             // Otherwise, it gets redirected to the page that corresponds to the user role
             if(!page.equals(page_url)){
-                request.setAttribute("error", "Non hai i permessi per accedere a questa pagina");
+                request.setAttribute("error", "29: Non hai i permessi per accedere a questa pagina");
                 request.getRequestDispatcher("/login.jsp").forward(request,response);
                 return;
             }

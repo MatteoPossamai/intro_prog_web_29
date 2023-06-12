@@ -55,20 +55,15 @@ public class Login extends HttpServlet {
 			}
 
 			if (password_correct) {
-				// if there was a nother user logged in, logs them out
-				if(request.getSession(false) != null){
-					request.getSession(false).invalidate();
-				}
 				// If the user exists and the password provided is correct, then log the user in
 				request.getSession().setAttribute("username", username);
 				request.getSession().setAttribute("userType", userType);
-				//User.LoggedUser = username;
 				response.sendRedirect(request.getContextPath() + AuthBasic.redirect_pages.get(userType));
 			} else {
 				// If the username and password are incorrect, redirect to the login page
 				// with an error message, to let the user know that the username or password is
 				// incorrect
-				request.setAttribute("error", "Invalid username or password");
+				request.setAttribute("error", "29: Invalid username or password");
 				request.getRequestDispatcher("/login.jsp").forward(request, response);
 			}
 		} catch (SQLException e) {
