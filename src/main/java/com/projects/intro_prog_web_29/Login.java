@@ -70,7 +70,6 @@ public class Login extends HttpServlet {
                         response.addCookie(ck);
                     }
                 }
-                User.LoggedUser = username;
                 response.sendRedirect(response.encodeURL(encode_url));
             } else {
                 // If the username and password are incorrect, redirect to the login page
