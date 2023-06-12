@@ -14,7 +14,7 @@
     <link href="stylesheets/invio-confermato.css" rel="stylesheet" type="text/css">
 <div class="container" style="margin-top: 300px">
 <div class="text-image">
-    <img src="./images/placeholder.jpeg" class="image">
+    <img src="./images/img7.jpg" class="image">
     <div class="text">
         <h1>Grazie per il tuo messaggio, ti risponderemo
             a breve</h1>
