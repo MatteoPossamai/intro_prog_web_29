@@ -14,7 +14,7 @@
 	</head>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/index.js"></script>
 
-	<jsp:include page="header.jsp"></jsp:include>
+	<jsp:include page="menu-private.jsp"></jsp:include>
 
 	<script>
 		fetch("visits", {
