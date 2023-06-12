@@ -48,6 +48,10 @@
         });
 
 
+        /*
+               * Script per prendere il content da content.json
+        * */
+
         let filePath = './content.json';
         let request = new XMLHttpRequest();
         request.open('GET',filePath,true);

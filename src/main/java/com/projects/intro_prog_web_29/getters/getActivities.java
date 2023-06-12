@@ -7,6 +7,11 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+/*
+ *  Getter per la pagina activities.jsp, per mantenere il paradigma
+ *  MVC
+ * */
+
 @WebServlet(name = "getActivities", value = "/activities")
 public class getActivities extends HttpServlet {
     @Override
@@ -33,6 +38,11 @@ public class getActivities extends HttpServlet {
         String imageSource2 = "images/act-2.jpeg";
         String imageSource3 = "images/act-3.jpeg";
 
+        /*
+        * Creazione dei bean per le tre attivita', utilizzando
+        * la funzione createActivity
+        * */
+
         Activity a1 = new Activity();
         Activity a2 = new Activity();
         Activity a3 = new Activity();
@@ -48,6 +58,10 @@ public class getActivities extends HttpServlet {
         rd.forward(request,response);
 
     }
+
+    /*
+    * Funzione che chiama tutte le setter per il bean dell'attivita'
+    * */
 
     public void createActivity(Activity activity, String title, String preview, String description, String imageSource){
         activity.setTitle(title);

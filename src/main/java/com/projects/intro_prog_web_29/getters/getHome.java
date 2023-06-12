@@ -4,7 +4,10 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-
+/*
+ *  Getter per la pagina index.jsp, per mantenere il paradigma
+ *  MVC
+ * */
 @WebServlet(name = "getHome", value = "/home")
 public class getHome extends HttpServlet {
     @Override

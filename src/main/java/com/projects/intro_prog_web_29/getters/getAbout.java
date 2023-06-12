@@ -7,6 +7,11 @@ import java.io.IOException;
 
 @WebServlet(name = "getAbout", value = "/chi-siamo")
 public class getAbout extends HttpServlet {
+
+    /*
+    *  Getter per la pagina chi-siamo.jsp, per mantenere il paradigma
+    *  MVC
+    * */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RequestDispatcher rd = getServletContext().getRequestDispatcher("/about.jsp");

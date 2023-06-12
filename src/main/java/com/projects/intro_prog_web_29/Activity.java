@@ -1,7 +1,9 @@
 package com.projects.intro_prog_web_29;
 
 import java.io.Serializable;
-
+/*
+ *  Inizializzazione del Bean per creare le attivita'
+ * */
 public class Activity implements Serializable {
     String title;
     String preview;
