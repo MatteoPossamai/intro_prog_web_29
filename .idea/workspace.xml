@@ -10,13 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mydb/seg0/c5b0.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mydb/seg0/c5c1.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mydb/seg0/c5d0.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Mydb/seg0/c5e1.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/derby.log" beforeDir="false" afterPath="$PROJECT_DIR$/derby.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/testingCharts.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,6 +219,7 @@
       <workItem from="1686561668770" duration="1116000" />
       <workItem from="1686578899727" duration="2973000" />
       <workItem from="1686594740255" duration="1142000" />
+      <workItem from="1686596089364" duration="425000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>

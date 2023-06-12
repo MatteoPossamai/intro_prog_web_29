@@ -69,7 +69,7 @@
         </div>
         <div class="form-control">
             <label for="telefono">Telefono</label>
-            <input type="tel" id="telefono" name="telefono"/>
+            <input type="number" id="telefono" min="9" name="telefono"/>
             <i class="fas fa-check-circle"></i>
             <i class="fas fa-exclamation-circle"></i>
             <small>Error message</small>
