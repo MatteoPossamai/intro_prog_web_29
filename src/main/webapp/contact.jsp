@@ -21,12 +21,12 @@
     <form class="contact-form" method="post" id="contact-form">
         <label>
             Nome
-            <input type="text" name="nome">
+            <input type="text" name="nome" id="nome">
         </label>
 
         <label>
             Cognome
-            <input type="text" name="cognome">
+            <input type="text" name="cognome" id="cognome">
         </label>
         </div>
         <div class="row">
@@ -47,7 +47,7 @@
         </div>
         <label>
             Messaggio
-            <textarea rows="5"></textarea>
+            <textarea rows="5" id="messaggio"></textarea>
         </label>
         <div class="row" style="justify-content: center">
             <input class="button" type="reset">
@@ -58,26 +58,45 @@
 <script>
     const form = document.getElementById('contact-form');
     const email = document.getElementById('email');
+    const nome = document.getElementById('nome');
+    const cognome = document.getElementById('cognome');
+    const messaggio = document.getElementById('messaggio');
     form.addEventListener('submit', e => {
         e.preventDefault();
 
         // If all the check succeed, send the form
-        if (checkEmail()) {
+        if (checkInputs()) {
             form.submit();
         }
 
     });
 
-    function checkEmail() {
-        if(isEmail(email))
-        {
-            return true;
+    function checkInputs() {
+        let res = true;
+        // trim to remove the whitespaces
+        const nomeValue = nome.value.trim();
+        const cognomeValue = cognome.value.trim();
+        const emailValue = email.value.trim();
+        const messaggioValue = messaggio.value.trim();
+        if (nomeValue === '') {
+            res = false;
+            alert("Nome vuoto");
+        } else if (cognomeValue === '') {
+            res = false;
+            alert("Cognome vuoto");
+        } else if (emailValue === '') {
+            res = false;
+            alert("Email vuota");
+        } else if (!isEmail(emailValue)) {
+            res = false;
+            alert("Email non valida");
         }
-        else
+        else if(messaggioValue === '')
         {
-            alert("Format email sbagliato");
-            return false;
+            res = false;
+            alert("Messaggio vuoto");
         }
+        return res;
     }
     function isEmail(email) {
         return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
