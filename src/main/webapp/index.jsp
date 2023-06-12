@@ -26,7 +26,7 @@
 </div>
 
 <div class="cta">
-    <img src="./images/img6.jpg" class="logo" alt="template_image">
+    <img src="./images/logo.png" class="logo" alt="template_image">
     <div class="button-container">
         <button id="download" class="button index-button">Vuoi saperne di piu?</button>
     </div>
