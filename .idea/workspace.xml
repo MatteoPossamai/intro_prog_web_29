@@ -10,12 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829ed97e-3124-4ed3-86a8-01c851670a88" name="Changes" comment="Tested the signup and the login for normal users, modifying the SQL schema and the date format.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Initializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Initializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Signin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/projects/intro_prog_web_29/Signin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/cookie.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/cookie.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/testingCharts.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,25 +53,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/ivan/Documents/Unitn/Web/testing/intro_prog_web_29",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.43800697",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ivan/Documents/Unitn/Web/testing/intro_prog_web_29&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.43800697&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/images" />
@@ -218,6 +214,7 @@
       <workItem from="1686561668770" duration="1116000" />
       <workItem from="1686578899727" duration="2973000" />
       <workItem from="1686594740255" duration="1142000" />
+      <workItem from="1686596089364" duration="425000" />
     </task>
     <task id="LOCAL-00001" summary="Addded basic part of the contact, activities and single activity pages, plus the header and the footer code.">
       <created>1683391009313</created>
