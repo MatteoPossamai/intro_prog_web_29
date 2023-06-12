@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebFilter(filterName = "auth", urlPatterns = {"/amministratore.jsp", "/aderente.jsp", "/simpatizzante.jsp"})
+@WebFilter(filterName = "auth", urlPatterns = {"/amministratore.jsp", "/aderente.jsp", "/simpatizzante.jsp", "/admin", "/aderente", "/simpatizzante"})
 public class AuthFilter implements Filter {
     // Filter to check if a user can be in a page or not
 
@@ -43,7 +43,7 @@ public class AuthFilter implements Filter {
             // Otherwise, it gets redirected to the page that corresponds to the user role
             if(!page.equals(page_url)){
                 request.setAttribute("error", "Non hai i permessi per accedere a questa pagina");
-                request.getRequestDispatcher(page_url).forward(request,response);
+                request.getRequestDispatcher("/login.jsp").forward(request,response);
                 return;
             }
         }
