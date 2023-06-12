@@ -62,7 +62,6 @@ public class CookieCheck {
             if (cookieFor.getName().equals("cookie")) {
                 if (cookieFor.getValue().equals("true")) {
                     returnValue = true;
-                } else {
                 }
                 break;
             }

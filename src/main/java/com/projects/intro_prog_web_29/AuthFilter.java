@@ -29,7 +29,7 @@ public class AuthFilter implements Filter {
         boolean cookiesEnabled = (boolean) hreq.getServletContext().getAttribute("cookiesEnabled");
         Cookie[] cookieArray = hreq.getCookies();
         hreq.setAttribute("invalidate", false);
-        if(cookiesEnabled) {
+        if(cookiesEnabled){
             try {
                 CookieCheck.manageCookie(cookieArray, hreq);
             } catch (SQLException e) {
@@ -53,8 +53,13 @@ public class AuthFilter implements Filter {
             System.out.println("Username, password, role: ");
             System.out.println(username + psw + role);
             String page_url = AuthBasic.redirect_pages.get(role);
+            System.out.println("Page_url:" + page_url);
+            System.out.println("Page:" + page);
+            System.out.println("Cookies Enabled: " + cookiesEnabled);
+            System.out.println("SessionId: " + hreq.getRequestedSessionId());
+            System.out.println("Le pagine sono uguali? " + page.equals(page_url));
             // Otherwise, it gets redirected to the page that corresponds to the user role
-            if(!page.equals(page_url)){
+            if(!page.equals(page_url) && cookiesEnabled){
                 request.setAttribute("error", "Non hai i permessi per accedere a questa pagina");
                 request.getRequestDispatcher("/login.jsp").forward(request,response);
                 return;

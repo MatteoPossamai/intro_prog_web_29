@@ -123,6 +123,8 @@
         const emailValue = email.value.trim();
         const passwordValue = password.value.trim();
         const password2Value = password2.value.trim();
+        const dateValue = date.value.trim();
+        const userDate = new Date(date.value);
 
         if(nameValue === '') {
             setErrorFor(name, 'Name cannot be blank');
@@ -137,7 +139,6 @@
         } else {
             setSuccessFor(surname);
         }
-        const userDate = new Date(date.value);
         if(usernameValue === '') {
             setErrorFor(username, 'Username cannot be blank');
             res = false;
@@ -176,10 +177,19 @@
             setSuccessFor(password2);
         }
 
-        if(getAge(userDate) < 18){;
+        if(dateValue === ''){
             res = false;
-            setErrorFor(date, 'Cannot be underage');
-        }else{
+            setErrorFor(date, 'Cannot be null');
+        }else if((getAge(userDate) < 18) && getAge(userDate) > 0) {
+            res = false;
+            setErrorFor(date, "Cannot be underage");
+        }
+        else if(getAge(userDate) < 0 || getAge(userDate) > 150)
+        {
+            res = false;
+            setErrorFor(date, "Wrong date");
+        }
+        else{
             setSuccessFor(date);
         }
         return res;

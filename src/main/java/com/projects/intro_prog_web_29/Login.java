@@ -39,7 +39,9 @@ public class Login extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Get the username and password from the request
         String username = request.getParameter("username");
+        System.out.println("Username: " + username);
         String password = request.getParameter("password");
+        System.out.println("Password: " + password);
         try {
             // Query the database to get the user
             String query = "SELECT * FROM users WHERE username = '" + username + "'";
@@ -56,6 +58,7 @@ public class Login extends HttpServlet {
 			}
 
             if (password_correct) {
+                System.out.println("Password Corretta");
                 // If the user exists and the password provided is correct, then log the user in
                 request.getSession().setAttribute("username", username);
                 request.getSession().setAttribute("userType", userType);
