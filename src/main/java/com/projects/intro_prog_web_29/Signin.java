@@ -61,18 +61,16 @@ public class Signin extends HttpServlet {
             if (username_exists) {
                 // If there is already a user with the same username, redirect to the registration page
                 // with an error message, to let the user know that the username is already taken
-                request.setAttribute("error", "29: Username already exists");
+                request.setAttribute("error", "29: Username gia' esistente");
                 request.getRequestDispatcher("/register.jsp").forward(request, response);
             }  else {
                 // Otherwise write the user in the database, and redirect him to the success page
                 query = "INSERT INTO users VALUES ('" + username + "', '" + name + "', '"  + surname + "', '" + email + "', '" + password +
                         "', '" + data_nascita_date + "', '" + telefono + "', '" + role + "')";
                 stmt.executeUpdate(query);
-                System.out.println("CIAO");
                 request.getRequestDispatcher("/registrazione_confermata.jsp").forward(request, response);
             }
         }catch (SQLException e){
-            System.out.println("CIAO2");
 
 
             e.printStackTrace();
