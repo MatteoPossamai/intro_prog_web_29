@@ -1,6 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
+<%--Unico bean per caricare l'attivita' specifica selezionata
+ in activities.jsp --%>
+
 <jsp:useBean id="activity" scope="request"
              class="com.projects.intro_prog_web_29.Activity"></jsp:useBean>
 

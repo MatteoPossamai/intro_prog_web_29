@@ -11,7 +11,6 @@ public class User {
   String phone;
   String username;
   String password;
-  static String LoggedUser;
 
   public User(String username) {
     // Constructor

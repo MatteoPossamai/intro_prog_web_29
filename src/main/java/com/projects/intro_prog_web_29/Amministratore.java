@@ -19,11 +19,11 @@ public class Amministratore extends HttpServlet {
   String user = "App";
   String password = "pw";
   Connection con;
-  ArrayList<String> simpatizzanti; // to store simatizzanti usernames
+  ArrayList<String> simpatizzanti; // to store simpatizzanti usernames
   ArrayList<String> aderenti; // to store aderenti usernames
-  // float[] donations = new float[12];
-  // Map<String, Integer> visits = new HashMap<String, Integer>();
+
   int totalVisits;
+  // to store donations and visits
   JSONObject visits = new JSONObject();
   JSONObject donations = new JSONObject();
 
@@ -40,14 +40,18 @@ public class Amministratore extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     response.setContentType("text/html;charset=UTF-8");
+    // get the action from the request
     String action = request.getParameter("action");
+    // initializes the action if it is null
     if (action==null){
       action="";
     }
+    // declares variables for the database queries
     Statement stmt;
     String query;
     try {
       stmt = con.createStatement();
+      // if the acion is reset, sets the visits for each page to 0
       if (action.equals("reset")) {
         query = "UPDATE visit_counter SET visits = 0";
         stmt.executeUpdate(query);
@@ -75,6 +79,7 @@ public class Amministratore extends HttpServlet {
           "ORDER BY month";
       stmt = con.createStatement();
       res = stmt.executeQuery(query);
+      // saves donations in the json file
       while (res.next()) {
         donations.put(res.getInt(1), res.getFloat(2));
       }
@@ -101,13 +106,10 @@ public class Amministratore extends HttpServlet {
         page = res.getString(1);
         count = res.getInt(2);
         if (page.equals("Amministratore")) {
-          // System.out.println("admin!!*****************************************");
           count++;
         }
         visits.put(page, count);
         totalVisits += count;
-        // System.out.println(page+":
-        // "+count+"-----------------------------------------------------");
       }
       visits.put("TotalVisits", totalVisits);
       String visitsString = visits.toJSONString();
@@ -116,7 +118,7 @@ public class Amministratore extends HttpServlet {
       visitsWriter.write(visitsString);
       visitsWriter.close();
 
-      // -----------------------------------------------------
+      // sets attributes for the jsp page
       request.setAttribute("simpatizzanti", simpatizzanti);
       request.setAttribute("aderenti", aderenti);
       request.setAttribute("donationsPath", donationsPath);
@@ -131,6 +133,7 @@ public class Amministratore extends HttpServlet {
 
   public void destroy() {
     try {
+      //closes the connection to the database
       con.close();
     } catch (SQLException ex) {
       ex.printStackTrace();

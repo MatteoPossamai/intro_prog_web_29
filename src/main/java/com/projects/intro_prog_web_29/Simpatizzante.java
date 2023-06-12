@@ -1,5 +1,6 @@
 package com.projects.intro_prog_web_29;
 
+// class Simpatizzante per salvare utenti di tipo simpatizzante. E' un sottotipo di utente
 public class Simpatizzante extends User {
   String activity[] = new String[3];
 

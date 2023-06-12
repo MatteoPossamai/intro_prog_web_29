@@ -9,11 +9,19 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.Properties;
 
+/*
+ *  Servlet per la simulazione dell'invio email
+ * */
 
 @WebServlet(name = "EmailHandler", value = "/EmailHandler")
 public class EmailHandler extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        /*
+        * Le prossime linee prendono dal form nei contatti tutte le
+        * informazioni necessarie
+        * */
 
         String from = request.getParameter("from");
         String to = "tum4world@nessunonoluogonoesiste.com";
@@ -23,11 +31,16 @@ public class EmailHandler extends HttpServlet {
         String smtpHost = "tum4SMTP";
         int port = 587;
 
+        /*
+        * Proprieta' che andrebbero utilizzate da Session per poi utilizzare
+        * il protocollo SMTP
+        * */
+
         Properties properties = new Properties();
-        properties.put("mail.smtp.auth", "false");
-        properties.put("mail.smtp.ssl.enable", "true");
+        properties.put("mail.smtp.auth", "false"); //smtp non avra' bisogno di autenticazione
+        properties.put("mail.smtp.ssl.enable", "true"); //smtp utilizzera' smtp
         properties.put("mail.smtp.user", "user");
-        properties.put("mail.smtp.host", smtpHost);
+        properties.put("mail.smtp.host", smtpHost); //setting dell'host e della port
         properties.put("mail.smtp.port", port);
 
 

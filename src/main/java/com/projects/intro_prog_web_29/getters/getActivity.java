@@ -7,6 +7,10 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
+/*
+ *  Getter per la pagina activity.jsp, per mantenere il paradigma
+ *  MVC
+ * */
 @WebServlet(name = "getActivity", value = "/getActivity")
 public class getActivity extends HttpServlet {
     @Override

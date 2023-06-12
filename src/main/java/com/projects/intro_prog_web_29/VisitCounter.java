@@ -2,6 +2,7 @@ package com.projects.intro_prog_web_29;
 
 import java.io.Serializable;
 
+// class VisitCounter to save the number of visits to the website
 public class VisitCounter implements Serializable {
     int count = 0;
     public void increase() {

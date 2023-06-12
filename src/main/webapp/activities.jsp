@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
+<%--Bean per creare e utilizzare le attivita' nella jsp--%>
+
 <jsp:useBean id="activity1" scope="request"
              class="com.projects.intro_prog_web_29.Activity"></jsp:useBean>
 
@@ -71,6 +73,9 @@
 <jsp:include page="footer.jsp"></jsp:include>
 
 <script>
+    /*
+       * Script per prendere il content da content.json
+       * */
     let filePath = './content.json';
     let request = new XMLHttpRequest();
     request.open('GET',filePath,true);
