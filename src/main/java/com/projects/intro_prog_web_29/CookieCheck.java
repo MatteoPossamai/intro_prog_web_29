@@ -58,6 +58,10 @@ public class CookieCheck {
 
     public static boolean checkCookie(Cookie[] cookie, HttpServletRequest request) {
         boolean returnValue = false;
+        if(cookie == null)
+        {
+            request.getSession().invalidate();
+        }
         for (Cookie cookieFor : cookie) {
             if (cookieFor.getName().equals("cookie")) {
                 if (cookieFor.getValue().equals("true")) {
