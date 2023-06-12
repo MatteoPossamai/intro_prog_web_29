@@ -74,7 +74,7 @@ public class Login extends HttpServlet {
             } else {
                 // If the username and password are incorrect, redirect to the login page
                 // with an error message, to let the user know that the username or password is incorrect
-                request.setAttribute("error", "Invalid username or password");
+                request.setAttribute("error", "29: Username o password non validi");
                 request.getRequestDispatcher("/login.jsp").forward(request, response);
             }
         } catch (SQLException e) {

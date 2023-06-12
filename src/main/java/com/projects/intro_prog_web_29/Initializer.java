@@ -37,7 +37,9 @@ public class Initializer extends HttpServlet {
 				stmt.executeUpdate(query);
 
 				// Insert the admin user
-				query = "INSERT INTO users VALUES ('admin', '', '', 'admin@admin.com', '29Adm1n!', '2002-10-20 12:00:00', '000 0000 000',  'ADMIN')";
+				query = "INSERT INTO users VALUES ('admin', '', '', 'admin@admin.com', '29Adm1n!', '2002-10-20 12:00:00', '000 0000 000',  'ADMIN')," +
+						"('simpa1', 'Simpa', 'Simpatico', 'simpa@simpa.com', 'Vimd123!', '2002-10-20 12:00:00', '000 0000 000',  'SIMPA')," +
+						"('ader1', 'Ader', 'Aderente', 'ader@ader.com', 'Vimd123!', '2002-10-20 12:00:00', '000 0000 000',  'ADERE')";
 				stmt.executeUpdate(query);
 			}
 

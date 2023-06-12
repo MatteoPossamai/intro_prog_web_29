@@ -10,12 +10,11 @@
 <div id="cookies" class="cookie-consent-banner">
     <div class="cookie-consent-banner__inner">
         <div class="cookie-consent-banner__copy">
-            <div class="cookie-consent-banner__header">THIS WEBSITE USES COOKIES</div>
-            <div class="cookie-consent-banner__description">We use cookies to personalise content and ads,
-                to provide social media features and to analyse our traffic. We also share information about
-                your use of our site with our social media, advertising and analytics partners who may combine
-                it with other information that you’ve provided to them or that they’ve collected from your use of
-                their services. You consent to our cookies if you continue to use our website.
+            <div class="cookie-consent-banner__header">QUESTO SITO USA I COOKIES</div>
+            <div class="cookie-consent-banner__description">
+                Utilizziamo i cookies per personalizzare il contenuto e per analizzare il nostro traffico.
+                Non condivideremo i tuoi dati se non per utilizzo di statistica.
+
             </div>
         </div>
 
@@ -25,7 +24,7 @@
             </button>
 
             <button id="cookie-btn-decline" class="cookie-consent-banner__cta cookie-consent-banner__cta--secondary">
-                Decline
+                Rifiuta
             </button>
 
         </div>

@@ -60,7 +60,7 @@
 
             <label>
                 Email
-                <input type="email" id="from" id="email" name="from">
+                <input type="email" id="from" name="from">
             </label>
 
             <label>
@@ -74,7 +74,7 @@
         </div>
         <label>
             Messaggio
-            <textarea id="content" name="content" rows="5" id="messaggio"></textarea>
+            <textarea id="content" name="content" rows="5"></textarea>
         </label>
         <div class="row" style="justify-content: center">
             <input class="button" type="reset">
@@ -86,10 +86,10 @@
 </t:base>
 <script>
     const form = document.getElementById('contact-form');
-    const email = document.getElementById('email');
+    const email = document.getElementById('from');
     const nome = document.getElementById('nome');
     const cognome = document.getElementById('cognome');
-    const messaggio = document.getElementById('messaggio');
+    const content = document.getElementById('content');
     form.addEventListener('submit', e => {
         e.preventDefault();
 
@@ -106,7 +106,7 @@
         const nomeValue = nome.value.trim();
         const cognomeValue = cognome.value.trim();
         const emailValue = email.value.trim();
-        const messaggioValue = messaggio.value.trim();
+        const contentValue = content.value.trim();
         if (nomeValue === '') {
             res = false;
             alert("Nome vuoto");
@@ -120,7 +120,7 @@
             res = false;
             alert("Email non valida");
         }
-        else if(messaggioValue === '')
+        else if(contentValue === '')
         {
             res = false;
             alert("Messaggio vuoto");

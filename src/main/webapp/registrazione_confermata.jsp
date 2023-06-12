@@ -10,7 +10,7 @@
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: 'body='+ encodeURIComponent("Registrazione confermata")
+            body: 'body='+ encodeURIComponent("Registrazione Confermata")
         })
     </script>
     <main>
