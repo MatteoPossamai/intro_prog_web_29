@@ -3,9 +3,11 @@ package com.projects.intro_prog_web_29;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.sql.SQLException;
 
 @WebFilter(filterName = "auth", urlPatterns = {"/amministratore.jsp", "/aderente.jsp", "/simpatizzante.jsp", "/admin", "/aderente", "/simpatizzante"})
 public class AuthFilter implements Filter {
@@ -24,12 +26,20 @@ public class AuthFilter implements Filter {
         // Read the request and get the session
         HttpServletRequest hreq=(HttpServletRequest) request;
         HttpSession session = hreq.getSession(false);
-
+        boolean cookiesEnabled = (boolean) hreq.getServletContext().getAttribute("cookiesEnabled");
+        Cookie[] cookieArray = hreq.getCookies();
+        hreq.setAttribute("invalidate", false);
+        if(cookiesEnabled) {
+            try {
+                CookieCheck.manageCookie(cookieArray, hreq);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        boolean invalidate = (boolean) request.getAttribute("invalidate");
         // Get from the URL the jsp page we are in
         String page = hreq.getRequestURI().substring(hreq.getContextPath().length());
-
-
-        if(session == null || session.getAttribute("username") == null){
+        if(session == null || session.getAttribute("username") == null || invalidate){
             // If the user is not logged in, redirect to the login page, because no page in the array
             // is accessible if not logged in
             request.setAttribute("error", "Non sei loggato, effettua il login per accedere a questa pagina");
@@ -38,8 +48,11 @@ public class AuthFilter implements Filter {
         }else{
             // Otherwise check if the user has the permission to access the page, if it is the correct page to stay in
             String role = (String) session.getAttribute("userType");
+            String username = (String) session.getAttribute("username");
+            String psw = (String) session.getAttribute("password");
+            System.out.println("Username, password, role: ");
+            System.out.println(username + psw + role);
             String page_url = AuthBasic.redirect_pages.get(role);
-
             // Otherwise, it gets redirected to the page that corresponds to the user role
             if(!page.equals(page_url)){
                 request.setAttribute("error", "Non hai i permessi per accedere a questa pagina");

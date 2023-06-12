@@ -103,7 +103,7 @@
     const password = document.getElementById('password');
     const password2 = document.getElementById('password2');
     const  passwordPattern = /^(?=.*\d)(?=.*[$!?])(?=.*[Mm])(?=.*[Ii])(?=.*[Vv])(?=.*[Dd])(?=.*[A-Z])[A-Za-z\d$!?]{8}$/;
-
+    const date = document.getElementById('date');
     form.addEventListener('submit', e => {
         e.preventDefault();
 
@@ -137,7 +137,7 @@
         } else {
             setSuccessFor(surname);
         }
-
+        const userDate = new Date(date.value);
         if(usernameValue === '') {
             setErrorFor(username, 'Username cannot be blank');
             res = false;
@@ -175,7 +175,25 @@
         } else{
             setSuccessFor(password2);
         }
+
+        if(getAge(userDate) < 18){;
+            res = false;
+            setErrorFor(date, 'Cannot be underage');
+        }else{
+            setSuccessFor(date);
+        }
         return res;
+    }
+
+    function getAge(dateString) {
+        var today = new Date();
+        var birthDate = new Date(dateString);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
     }
 
     function setErrorFor(input, message) {

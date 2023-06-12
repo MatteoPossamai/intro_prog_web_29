@@ -2,6 +2,7 @@ package com.projects.intro_prog_web_29;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -34,16 +35,16 @@ public class Login extends HttpServlet {
 		}
 	}
 
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// Get the username and password from the request
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
-		try {
-			// Query the database to get the user
-			String query = "SELECT * FROM users WHERE username = '" + username + "'";
-			Statement stmt = this.con.createStatement();
-			ResultSet res = stmt.executeQuery(query);
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Get the username and password from the request
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        try {
+            // Query the database to get the user
+            String query = "SELECT * FROM users WHERE username = '" + username + "'";
+            Statement stmt = this.con.createStatement();
+            ResultSet res = stmt.executeQuery(query);
 
 			// Check if the user exists and if the password is correct
 			boolean password_correct = false;
@@ -54,26 +55,35 @@ public class Login extends HttpServlet {
 				userType = res.getString("userType");
 			}
 
-			if (password_correct) {
-				// if there was a nother user logged in, logs them out
-				if(request.getSession(false) != null){
-					request.getSession(false).invalidate();
-				}
-				// If the user exists and the password provided is correct, then log the user in
-				request.getSession().setAttribute("username", username);
-				request.getSession().setAttribute("userType", userType);
-				//User.LoggedUser = username;
-				response.sendRedirect(request.getContextPath() + AuthBasic.redirect_pages.get(userType));
-			} else {
-				// If the username and password are incorrect, redirect to the login page
-				// with an error message, to let the user know that the username or password is
-				// incorrect
-				request.setAttribute("error", "Invalid username or password");
-				request.getRequestDispatcher("/login.jsp").forward(request, response);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
+            if (password_correct) {
+                // If the user exists and the password provided is correct, then log the user in
+                request.getSession().setAttribute("username", username);
+                request.getSession().setAttribute("userType", userType);
+                String encode_url = request.getContextPath() + AuthBasic.redirect_pages.get(userType);
+                boolean cookiesEnabled = (boolean) request.getServletContext().getAttribute("cookiesEnabled");
+                if (cookiesEnabled) {
+                    if (CookieCheck.checkCookie(request.getCookies(), request)) {
+                        Cookie ck = createUserCookie(username, 3600);
+                        response.addCookie(ck);
+                    }
+                }
+                User.LoggedUser = username;
+                response.sendRedirect(response.encodeURL(encode_url));
+            } else {
+                // If the username and password are incorrect, redirect to the login page
+                // with an error message, to let the user know that the username or password is incorrect
+                request.setAttribute("error", "Invalid username or password");
+                request.getRequestDispatcher("/login.jsp").forward(request, response);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    protected Cookie createUserCookie(String value, int maxAge) {
+        Cookie cookie = new Cookie("username", value);
+        cookie.setMaxAge(maxAge);
+        return cookie;
+    }
 
 }
